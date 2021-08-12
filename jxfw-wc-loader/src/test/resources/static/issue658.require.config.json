@@ -1,0 +1,15 @@
+{
+  "paths": {
+    "underscore": "vendor/underscore",
+    "jquery": "vendor/jquery/jquery"
+  },
+  "shim": {
+    "bootstrap": [
+      "jquery"
+    ],
+    "vendor/history": [
+      "jquery"
+    ]
+  },
+  "waitSeconds": 5
+}

@@ -1,0 +1,30 @@
+{
+  "scenarioName": "BooksTest",
+  "exportTime": "2017-03-23T11:20:53.525",
+  "objects": [
+    {
+      "__metadata": {
+        "type": "Book",
+        "ts": 1
+      },
+      "id": "Book-ID-1",
+      "title": "The Divine Comedy"
+    },
+    {
+      "__metadata": {
+        "type": "Book",
+        "ts": 1
+      },
+      "id": "Book-ID-2",
+      "title": "War and Peace"
+    },
+    {
+      "__metadata": {
+        "type": "Book",
+        "ts": 1
+      },
+      "id": "Book-ID-3",
+      "title": "Independent People"
+    }
+  ]
+}

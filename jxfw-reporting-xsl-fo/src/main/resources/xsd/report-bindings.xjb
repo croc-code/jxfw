@@ -1,0 +1,25 @@
+<jxb:bindings version="2.1" xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc">
+    <!-- всем типам добавлен пост-префикс Class -->
+    <jxb:bindings schemaLocation="Croc.XmlFramework.ReportService.xsd">
+        <jxb:schemaBindings>
+            <jxb:nameXmlTransform>
+                <jxb:typeName suffix="Class"/>
+                <jxb:anonymousTypeName suffix="Class"/>
+                <jxb:elementName suffix="Class"/>
+            </jxb:nameXmlTransform>
+        </jxb:schemaBindings>
+        <jxb:globalBindings generateElementProperty="false">
+            <jxb:javaType
+                    name="java.lang.Integer"
+                    xmlType="xs:integer"
+                    parseMethod="javax.xml.bind.DatatypeConverter.parseInt"
+                    printMethod="javax.xml.bind.DatatypeConverter.printInt"/>
+        </jxb:globalBindings>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="Croc.XmlFramework.ReportService.xsd" node="/xs:schema/xs:element[@name='report']/xs:complexType/xs:complexContent/xs:extension/xs:sequence/xs:element[@name='data-sources']/xs:complexType/xs:sequence/xs:choice">
+        <jxb:property name="AbstractDataSource"/>
+    </jxb:bindings>
+
+</jxb:bindings>

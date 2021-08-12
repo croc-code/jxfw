@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xfw:XFWPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xfw="http://ru.croc.ctp.jxfw/metamodel" name="jxfwmodel" nsURI="http://ru.croc.ctp.jxfw/XFWPackage/jxfwmodel" nsPrefix="jxfwmodel">
+  <eSubpackages xsi:type="xfw:XFWPackage" name="ru.croc.ctp.jxfw.domain" nsURI="http://ru.croc.ctp.jxfw/XFWPackage/ru.croc.ctp.jxfw.domain" nsPrefix="ru.croc.ctp.jxfw.domain">
+    <eClassifiers xsi:type="xfw:XFWClass" name="MultiModuleParent" instanceClassName="ru.croc.ctp.jxfw.domain.MultiModuleParent" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="multiModuleParent" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+  </eSubpackages>
+</xfw:XFWPackage>

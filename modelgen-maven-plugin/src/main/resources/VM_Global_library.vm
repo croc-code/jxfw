@@ -1,0 +1,59 @@
+##
+## Macro - printRow
+##         This macro is used by #showDebugPopup to display velocity debugging information
+##
+#macro (printRow $name $value)
+        #set ($rowLength = $value.length()/57+1)
+        #if ($rowLength > 15)
+                #set ($rowLength = 15)
+        #end
+        #if ($velocityCount)
+                #if (($velocityCount % 2) == 0)
+                        _velocity_console.document.write("<tr bgcolor=#fafafa>");
+                #else
+                        _velocity_console.document.write("<tr bgcolor=#eeeeee>");
+                #end
+        #else
+                _velocity_console.document.write("<tr bgcolor=#eeeeee>");
+        #end
+        _velocity_console.document.write("<td valign=top><tt><font color=maroon>$" + "$name" + "</font></tt></td>");
+        #if ($rowLength == 1)
+                _velocity_console.document.write("<td><tt><font color=green>$value</font></tt></td></tr>");
+        #else
+                _velocity_console.document.write("<td><tt><font color=green><textarea rows=$rowLength cols=57>");
+                _velocity_console.document.write("$value");
+                _velocity_console.document.write("</textarea></font></tt></td></tr>");
+        #end
+#end
+
+##
+## Macro - showDebugPopup
+##         This macro shows a Velocity debugging popup
+##
+#macro (showDebugPopup)
+<script language=javascript>
+        _velocity_console = window.open("",true,"width=680,height=600,resizable,scrollbars=yes");
+        _velocity_console.document.write("<html><head><title>Velocity Debugging Console</title></head><body bgcolor=#ffffff>");
+        _velocity_console.document.write("<table border=0 width=100%>");
+        _velocity_console.document.write("<tr bgcolor=#000000><th colspan='2'><b><font color=#FFFFFF>Velocity Debug Console</font></b></td></tr>");
+        _velocity_console.document.write("<tr bgcolor=#cccccc><td colspan='2'><b>Velocity Context Values:</b></td></tr>");
+        #foreach ($name in ${context.getKeys()})
+                #if($context.get($name))
+                        #set($nameString = $name)
+                        #set($invalidMsg = "INVALID VTL: ")
+                        #if($name.matches(".*[:|{|}| ].*"))
+                                #set($nameString = $invalidMsg.concat($nameString))
+                        #end
+                        #if($name.matches("[_|0-9].*"))
+                                #set($nameString = $invalidMsg.concat($nameString))
+                        #end
+                        #if(!$nameString.matches("INVALID VTL:.*"))
+                                #printRow($nameString $context.get($name).toString().replaceAll("\n", "\\n").replaceAll("\r", ""))
+                        #end
+                #end
+        #end
+        _velocity_console.document.write("</table>");
+        _velocity_console.document.write("</body></html>");
+        _velocity_console.document.close();
+</script>
+#end

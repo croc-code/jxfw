@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="metamodel" nsURI="http://ru.croc.ctp.jxfw/metamodel" nsPrefix="xfw">
+  <eClassifiers xsi:type="ecore:EClass" name="XFWPackage" eSuperTypes="http://www.eclipse.org/emf/2002/Ecore#//EPackage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="XFWClass" eSuperTypes="http://www.eclipse.org/emf/2002/Ecore#//EClass">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="persistenceModule" unique="false"
+        upperBound="10" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="complexType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="keyTypeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="persistenceType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="XFWAttribute" eSuperTypes="http://www.eclipse.org/emf/2002/Ecore#//EAttribute">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxLength" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Максимальное количество символов для значений строковых атрибутов"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="XFWReference" eSuperTypes="http://www.eclipse.org/emf/2002/Ecore#//EReference"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="LocalDateTime" instanceClassName="java.time.LocalDateTime"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Blob" instanceClassName="java.sql.Blob"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="ZonedDateTime" instanceClassName="java.time.ZonedDateTime"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Period" instanceClassName="java.time.Period"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="UUID" instanceClassName="java.util.UUID"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="LocalDateTime_Java7" instanceClassName="org.threeten.bp.LocalDateTime"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="ZonedDateTime_Java7" instanceClassName="org.threeten.bp.ZonedDateTime"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Period_Java7" instanceClassName="org.threeten.bp.Period"/>
+  <eClassifiers xsi:type="ecore:EClass" name="XFWDataSource" eSuperTypes="http://www.eclipse.org/emf/2002/Ecore#//EClass">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestMapping" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="general" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="XFWOperation" eSuperTypes="http://www.eclipse.org/emf/2002/Ecore#//EOperation"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Tuple" instanceClassName="com.querydsl.core.Tuple"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="ObjectFilter" instanceClassName="ru.croc.ctp.jxfw.core.facade.webclient.ObjectFilter"
+      serializable="false"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Duration" instanceClassName="java.time.Duration"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Duration_Java7" instanceClassName="org.threeten.bp.Duration"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="LocalDate" instanceClassName="java.time.LocalDate"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="LocalDate_Java7" instanceClassName="org.threeten.bp.LocalDate"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="LocalTime" instanceClassName="java.time.LocalTime"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="LocalTime_Java7" instanceClassName="org.threeten.bp.LocalTime"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Set" instanceClassName="java.util.Set"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="List" instanceClassName="java.util.List"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Timestamp" instanceClassName="java.sql.Timestamp"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="DomainObject" instanceClassName="ru.croc.ctp.jxfw.core.domain.DomainObject"
+      serializable="false"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Map" instanceClassName="java.util.Map"/>
+</ecore:EPackage>

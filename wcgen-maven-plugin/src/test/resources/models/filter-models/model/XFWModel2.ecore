@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xfw:XFWPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xfw="http://ru.croc.ctp.jxfw/metamodel" name="jxfwmodel" nsURI="http://ru.croc.ctp.jxfw/XFWPackage/jxfwmodel" nsPrefix="jxfwmodel">
+  <eSubpackages xsi:type="xfw:XFWPackage" name="ru.croc.ctp.integration.domain" nsURI="http://ru.croc.ctp.jxfw/XFWPackage/ru.croc.ctp.integration.domain" nsPrefix="ru.croc.ctp.integration.domain">
+    <eClassifiers xsi:type="xfw:XFWClass" name="MessageType" instanceClassName="ru.croc.ctp.integration.domain.MessageType" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWObject">
+        <details key="isReadonly" value="false"/>
+        <details key="persistence" value="FULL"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/Entity">
+        <details key="name" value=""/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWToString">
+        <details key="includeFieldNames" value="true"/>
+        <details key="of" value="[]"/>
+        <details key="exclude" value="[]"/>
+        <details key="callSuper" value="false"/>
+        <details key="hashcode" value="false"/>
+        <details key="identityHashcode" value="false"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/SuppressWarnings">
+        <details key="value" value="[all]"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="name" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="handler" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="id" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Id"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="ts" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Version"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//ELongObject"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+  </eSubpackages>
+</xfw:XFWPackage>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xfw="http://ru.croc.ctp.jxfw/metamodel">
+    <xfw:XFWPackage name="org" nsURI="http://ru.croc.ctp.jxfw/XFWPackage/org" nsPrefix="org">
+        <eSubpackages href="#/1"/>
+    </xfw:XFWPackage>
+    <xfw:XFWPackage name="test" nsURI="http://ru.croc.ctp.jxfw/XFWPackage/org/test" nsPrefix="org.test">
+        <eClassifiers xsi:type="xfw:XFWDataSource" name="getStrings" instanceClassName="org.test.DataSources" requestMapping="Strings">
+            <eOperations xsi:type="xfw:XFWOperation" name="getStrings" eType="/3/Object">
+                <eParameters name="listStrings">
+                    <eType xsi:type="ecore:EDataType" href="http://ru.croc.ctp.jxfw/metamodel#//List"/>
+                </eParameters>
+                <eParameters name="setStrings">
+                    <eType xsi:type="ecore:EDataType" href="http://ru.croc.ctp.jxfw/metamodel#//Set"/>
+                </eParameters>
+            </eOperations>
+        </eClassifiers>
+    </xfw:XFWPackage>
+    <xfw:XFWPackage name="java" nsURI="http://ru.croc.ctp.jxfw/XFWPackage/java" nsPrefix="java">
+        <eSubpackages href="#/3"/>
+    </xfw:XFWPackage>
+    <xfw:XFWPackage name="lang" nsURI="http://ru.croc.ctp.jxfw/XFWPackage/java/lang" nsPrefix="java.lang">
+        <eClassifiers xsi:type="xfw:XFWClass" name="Object" instanceClassName="java.lang.Object"/>
+    </xfw:XFWPackage>
+</xmi:XMI>

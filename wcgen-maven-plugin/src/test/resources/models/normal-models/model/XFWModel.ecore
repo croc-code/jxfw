@@ -1,0 +1,880 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xfw="http://ru.croc.ctp.jxfw/metamodel">
+  <xfw:XFWPackage name="ru" nsURI="http://ru.croc.ctp.jxfw/metamodel" nsPrefix="ru">
+    <eSubpackages href="#/1"/>
+  </xfw:XFWPackage>
+  <xfw:XFWPackage name="croc" nsURI="http://ru.croc.ctp.jxfw/metamodel" nsPrefix="ru.croc">
+    <eSubpackages href="#/2"/>
+  </xfw:XFWPackage>
+  <xfw:XFWPackage name="ctp" nsURI="http://ru.croc.ctp.jxfw/metamodel" nsPrefix="ru.croc.ctp">
+    <eSubpackages href="#/3"/>
+  </xfw:XFWPackage>
+  <xfw:XFWPackage name="dms" nsURI="http://ru.croc.ctp.jxfw/metamodel" nsPrefix="ru.croc.ctp.dms">
+    <eSubpackages href="#/4"/>
+  </xfw:XFWPackage>
+  <xfw:XFWPackage name="domain" nsURI="http://ru.croc.ctp.jxfw/metamodel" nsPrefix="ru.croc.ctp.dms.domain">
+    <eSubpackages href="#/5"/>
+    <eSubpackages href="#/6"/>
+  </xfw:XFWPackage>
+  <xfw:XFWPackage name="cmis" nsURI="http://ru.croc.ctp.jxfw/metamodel" nsPrefix="ru.croc.ctp.dms.domain.cmis">
+    <eClassifiers xsi:type="xfw:XFWClass" name="Folder" instanceClassName="ru.croc.ctp.dms.domain.cmis.Folder"
+        keyTypeName="java.lang.String">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n"/>
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <persistenceModule>CMIS</persistenceModule>
+    </eClassifiers>
+    <eSubpackages href="#/7"/>
+  </xfw:XFWPackage>
+  <xfw:XFWPackage name="jpa" nsURI="http://ru.croc.ctp.jxfw/metamodel" nsPrefix="ru.croc.ctp.dms.domain.jpa">
+    <eClassifiers xsi:type="xfw:XFWClass" name="CMObject" instanceClassName="ru.croc.ctp.dms.domain.jpa.CMObject"
+        keyTypeName="java.lang.String">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n"/>
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="id" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Id"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="ts" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Version"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//ELongObject"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="caption" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Наименование"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="comments" upperBound="-1"
+          eType="#/6/Comment" unsettable="true" eOpposite="#/6/Comment/object">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Обсуждение"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWOneToMany"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="List"/>
+          <details key="actualType" value="Comment"/>
+          <details key="mappedBy" value="object"/>
+          <details key="targetEntity" value="Comment"/>
+          <details key="targetEntityQN" value="ru.croc.ctp.dms.domain.jpa.Comment"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="Document" instanceClassName="ru.croc.ctp.dms.domain.jpa.Document"
+        eSuperTypes="#/6/CMObject" keyTypeName="java.lang.String">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Документ"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="regNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Регистрационный номер"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="64"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="inReplyTo" eType="#/6/Document"
+          unsettable="true" eOpposite="#/6/Document/replies">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="В ответ на"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWManyToOne"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="Document"/>
+          <details key="actualType" value="Document"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="replies" upperBound="-1"
+          eType="#/6/Document" unsettable="true" eOpposite="#/6/Document/inReplyTo">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWOneToMany"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="List"/>
+          <details key="actualType" value="Document"/>
+          <details key="mappedBy" value="inReplyTo"/>
+          <details key="targetEntity" value="Document"/>
+          <details key="targetEntityQN" value="ru.croc.ctp.dms.domain.jpa.Document"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="activity" eType="#/6/Activity"
+          unsettable="true" eOpposite="#/6/Activity/documents">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Активность"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWManyToOne"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="Activity"/>
+          <details key="actualType" value="Activity"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="files" upperBound="-1"
+          eType="#/6/File" unsettable="true" eOpposite="#/6/File/document">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Файлы"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWOneToMany"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="List"/>
+          <details key="actualType" value="File"/>
+          <details key="mappedBy" value="document"/>
+          <details key="targetEntity" value="File"/>
+          <details key="targetEntityQN" value="ru.croc.ctp.dms.domain.jpa.File"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="caption" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Наименование"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="comments" upperBound="-1"
+          eType="#/6/Comment" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Обсуждение"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWOneToMany"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="List"/>
+          <details key="actualType" value="Comment"/>
+          <details key="mappedBy" value="object"/>
+          <details key="targetEntity" value="Comment"/>
+          <details key="targetEntityQN" value="ru.croc.ctp.dms.domain.jpa.Comment"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="InLetter" instanceClassName="ru.croc.ctp.dms.domain.jpa.InLetter"
+        eSuperTypes="#/6/Document" keyTypeName="java.lang.String">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n"/>
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="regNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Регистрационный номер"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="64"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="inReplyTo" eType="#/6/Document"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="В ответ на"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWManyToOne"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="Document"/>
+          <details key="actualType" value="Document"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="replies" upperBound="-1"
+          eType="#/6/Document" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWOneToMany"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="List"/>
+          <details key="actualType" value="Document"/>
+          <details key="mappedBy" value="inReplyTo"/>
+          <details key="targetEntity" value="Document"/>
+          <details key="targetEntityQN" value="ru.croc.ctp.dms.domain.jpa.Document"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="activity" eType="#/6/Activity"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Активность"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWManyToOne"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="Activity"/>
+          <details key="actualType" value="Activity"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="files" upperBound="-1"
+          eType="#/6/File" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Файлы"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWOneToMany"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="List"/>
+          <details key="actualType" value="File"/>
+          <details key="mappedBy" value="document"/>
+          <details key="targetEntity" value="File"/>
+          <details key="targetEntityQN" value="ru.croc.ctp.dms.domain.jpa.File"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="caption" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Наименование"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="comments" upperBound="-1"
+          eType="#/6/Comment" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Обсуждение"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWOneToMany"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="List"/>
+          <details key="actualType" value="Comment"/>
+          <details key="mappedBy" value="object"/>
+          <details key="targetEntity" value="Comment"/>
+          <details key="targetEntityQN" value="ru.croc.ctp.dms.domain.jpa.Comment"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="Contract" instanceClassName="ru.croc.ctp.dms.domain.jpa.Contract"
+        eSuperTypes="#/6/Document" keyTypeName="java.lang.String">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Договор"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="summ" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Сумма"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="currency" eType="#/6/Currency"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Валюта"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWManyToOne"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="Currency"/>
+          <details key="actualType" value="Currency"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="regNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Регистрационный номер"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="64"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="inReplyTo" eType="#/6/Document"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="В ответ на"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWManyToOne"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="Document"/>
+          <details key="actualType" value="Document"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="replies" upperBound="-1"
+          eType="#/6/Document" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWOneToMany"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="List"/>
+          <details key="actualType" value="Document"/>
+          <details key="mappedBy" value="inReplyTo"/>
+          <details key="targetEntity" value="Document"/>
+          <details key="targetEntityQN" value="ru.croc.ctp.dms.domain.jpa.Document"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="activity" eType="#/6/Activity"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Активность"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWManyToOne"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="Activity"/>
+          <details key="actualType" value="Activity"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="files" upperBound="-1"
+          eType="#/6/File" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Файлы"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWOneToMany"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="List"/>
+          <details key="actualType" value="File"/>
+          <details key="mappedBy" value="document"/>
+          <details key="targetEntity" value="File"/>
+          <details key="targetEntityQN" value="ru.croc.ctp.dms.domain.jpa.File"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="caption" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Наименование"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="comments" upperBound="-1"
+          eType="#/6/Comment" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Обсуждение"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWOneToMany"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="List"/>
+          <details key="actualType" value="Comment"/>
+          <details key="mappedBy" value="object"/>
+          <details key="targetEntity" value="Comment"/>
+          <details key="targetEntityQN" value="ru.croc.ctp.dms.domain.jpa.Comment"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="Comment" instanceClassName="ru.croc.ctp.dms.domain.jpa.Comment"
+        eSuperTypes="#/6/CMObject" keyTypeName="java.lang.String">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Комментарий"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Текст комментария"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="object" eType="#/6/CMObject"
+          unsettable="true" eOpposite="#/6/CMObject/comments">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWManyToOne"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="CMObject"/>
+          <details key="actualType" value="CMObject"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="caption" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Наименование"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="comments" upperBound="-1"
+          eType="#/6/Comment" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Обсуждение"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWOneToMany"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="List"/>
+          <details key="actualType" value="Comment"/>
+          <details key="mappedBy" value="object"/>
+          <details key="targetEntity" value="Comment"/>
+          <details key="targetEntityQN" value="ru.croc.ctp.dms.domain.jpa.Comment"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="Organisation" instanceClassName="ru.croc.ctp.dms.domain.jpa.Organisation"
+        keyTypeName="java.lang.String">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Организация"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="caption" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Наименование"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="Department" instanceClassName="ru.croc.ctp.dms.domain.jpa.Department"
+        keyTypeName="java.lang.String">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Департамент"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="caption" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Наименование"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="organisation" eType="#/6/Organisation"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Организация"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWManyToOne"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="Organisation"/>
+          <details key="actualType" value="Organisation"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="Employee" instanceClassName="ru.croc.ctp.dms.domain.jpa.Employee"
+        keyTypeName="java.lang.String">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Сотрудник"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="lastName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Фамилия"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="department" eType="#/6/Department"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Департамент"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWManyToOne"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="Department"/>
+          <details key="actualType" value="Department"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="File" instanceClassName="ru.croc.ctp.dms.domain.jpa.File"
+        eSuperTypes="#/6/CMObject" keyTypeName="java.lang.String">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Файл"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="content" eType="ecore:EDataType http://ru.croc.ctp.jxfw/metamodel#//Blob"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Файл"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="document" eType="#/6/Document"
+          unsettable="true" eOpposite="#/6/Document/files">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWManyToOne"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="Document"/>
+          <details key="actualType" value="Document"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="caption" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Наименование"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="comments" upperBound="-1"
+          eType="#/6/Comment" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Обсуждение"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWOneToMany"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="List"/>
+          <details key="actualType" value="Comment"/>
+          <details key="mappedBy" value="object"/>
+          <details key="targetEntity" value="Comment"/>
+          <details key="targetEntityQN" value="ru.croc.ctp.dms.domain.jpa.Comment"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="Activity" instanceClassName="ru.croc.ctp.dms.domain.jpa.Activity"
+        eSuperTypes="#/6/CMObject" keyTypeName="java.lang.String">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Активность"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="deadLine" eType="ecore:EDataType http://ru.croc.ctp.jxfw/metamodel#//LocalDateTime"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Плановая дата завершения"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="documents" upperBound="-1"
+          eType="#/6/Document" unsettable="true" eOpposite="#/6/Document/activity">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWOneToMany"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="List"/>
+          <details key="actualType" value="Document"/>
+          <details key="mappedBy" value="activity"/>
+          <details key="targetEntity" value="Document"/>
+          <details key="targetEntityQN" value="ru.croc.ctp.dms.domain.jpa.Document"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="caption" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Наименование"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="comments" upperBound="-1"
+          eType="#/6/Comment" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Обсуждение"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWOneToMany"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="List"/>
+          <details key="actualType" value="Comment"/>
+          <details key="mappedBy" value="object"/>
+          <details key="targetEntity" value="Comment"/>
+          <details key="targetEntityQN" value="ru.croc.ctp.dms.domain.jpa.Comment"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="Project" instanceClassName="ru.croc.ctp.dms.domain.jpa.Project"
+        eSuperTypes="#/6/Activity" keyTypeName="java.lang.String">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Проект"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="customer" eType="#/6/Contragent"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Заказчик"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWManyToOne"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="Contragent"/>
+          <details key="actualType" value="Contragent"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="deadLine" eType="ecore:EDataType http://ru.croc.ctp.jxfw/metamodel#//LocalDateTime"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Плановая дата завершения"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="documents" upperBound="-1"
+          eType="#/6/Document" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWOneToMany"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="List"/>
+          <details key="actualType" value="Document"/>
+          <details key="mappedBy" value="activity"/>
+          <details key="targetEntity" value="Document"/>
+          <details key="targetEntityQN" value="ru.croc.ctp.dms.domain.jpa.Document"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="caption" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Наименование"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="comments" upperBound="-1"
+          eType="#/6/Comment" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Обсуждение"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWOneToMany"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="List"/>
+          <details key="actualType" value="Comment"/>
+          <details key="mappedBy" value="object"/>
+          <details key="targetEntity" value="Comment"/>
+          <details key="targetEntityQN" value="ru.croc.ctp.dms.domain.jpa.Comment"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="Message" instanceClassName="ru.croc.ctp.dms.domain.jpa.Message"
+        keyTypeName="java.lang.String">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Сообщение"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="caption" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Тема"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="body" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Содержание"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="2048"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="Task" instanceClassName="ru.croc.ctp.dms.domain.jpa.Task"
+        eSuperTypes="#/6/Message" keyTypeName="java.lang.String">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Задача"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="executor" eType="#/6/Employee"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Ответственный"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWManyToOne"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="Employee"/>
+          <details key="actualType" value="Employee"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="deadLine" eType="ecore:EDataType http://ru.croc.ctp.jxfw/metamodel#//LocalDateTime"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Плановая дата завершения"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="caption" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Тема"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="body" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Содержание"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="2048"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="User" instanceClassName="ru.croc.ctp.dms.domain.jpa.User"
+        keyTypeName="java.lang.String">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Пользователь"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="login" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Логин"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="firstName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Имя"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="lastName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Фамилия"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="photo" eType="ecore:EDataType http://ru.croc.ctp.jxfw/metamodel#//Blob"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Фото"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="password" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Пароль"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="Currency" instanceClassName="ru.croc.ctp.dms.domain.jpa.Currency"
+        keyTypeName="java.lang.String">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Валюта"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="caption" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Наименование"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Код"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="3"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="Contragent" instanceClassName="ru.croc.ctp.dms.domain.jpa.Contragent"
+        keyTypeName="java.lang.String">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Контрагент"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="caption" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Наименование"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+  </xfw:XFWPackage>
+  <xfw:XFWPackage name="datasource" nsURI="http://ru.croc.ctp.jxfw/metamodel" nsPrefix="ru.croc.ctp.dms.domain.cmis.datasource">
+    <eClassifiers xsi:type="xfw:XFWDataSource" name="getRootSubfolders" instanceClassName="ru.croc.ctp.dms.domain.cmis.datasource.DataSources"
+        requestMapping="RootSubfolders">
+      <eOperations xsi:type="xfw:XFWOperation" name="getRootSubfolders" eType="#/5/Folder"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWDataSource" name="getSubfolders" instanceClassName="ru.croc.ctp.dms.domain.cmis.datasource.DataSources"
+        requestMapping="Subfolders">
+      <eOperations xsi:type="xfw:XFWOperation" name="getSubfolders" eType="#/5/Folder">
+        <eParameters name="folder" eType="#/5/Folder"/>
+      </eOperations>
+    </eClassifiers>
+  </xfw:XFWPackage>
+</xmi:XMI>

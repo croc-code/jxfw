@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<xs:schema 
+    targetNamespace="http://www.croc.ru/Schemas/XmlFramework/ReportService" 
+    xmlns="http://www.croc.ru/Schemas/XmlFramework/ReportService" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified"
+    attributeFormDefault="qualified">
+
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.Types.xsd">
+        <xs:annotation>
+            <xs:documentation>Стандартные типы, используемые в ReportService</xs:documentation>
+        </xs:annotation>
+    </xs:include>
+
+    <xs:element name="string-evaluator" substitutionGroup="abstract-formatter">
+        <xs:annotation>
+            <xs:documentation><![CDATA[
+            Форматирование строки.
+            Реализовано: 
+            1) замена подстроки новым значением (в т.ч. значением параметра {@param-name}
+                и значением из рекордсета {#rs-column-name})
+            2) добавление подстроки к исходной спереди / сзади
+            3) проставление значения в случае пустоты исходной строки
+            атрибуты:
+            message - текст ошибки
+            original-value - подстрока, подлежащая замене
+            replace-with - либо новое значение заменяемой подстроки, 
+                либо наименование параметра, значение которого будет им являться
+                либо наименование колонки рекордсета, значение которой (в переданной эвалуатору строке) будет им являться
+                что именно - определяется наличем префиксов @, #, ! (см. MacroProcessor)
+
+            append-before - значение строки (либо наименование параметра, либо наименование столбца рекордсета) 
+                добавляемое к исходной спереди
+                что именно - определяется наличем префиксов @, #, ! (см. MacroProcessor)
+
+            append-after - значение строки (либо наименование параметра, либо наименование столбца рекордсета) 
+                добавляемое к исходной сзади
+                что именно - определяется наличем префиксов @, #, ! (см. MacroProcessor)
+
+            if-empty - значение строки (либо наименование параметра, либо наименование столбца рекордсета) 
+                в случае пустоты исходной строки (либо равенста null или DbNull)
+                что именно - определяется наличем префиксов @, #, ! (см. MacroProcessor)
+            ]]>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="abstract-formatter">
+                    <xs:attribute name="message" type="xs:string" use="optional">
+                        <xs:annotation>
+                            <xs:documentation>Текст ошибки</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="original-value" type="xs:string" use="optional">
+                        <xs:annotation>
+                            <xs:documentation>подстрока, подлежащая замене</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="replace-with" type="xs:string" use="optional">
+                        <xs:annotation>
+                            <xs:documentation><![CDATA[
+                                либо новое значение заменяемой подстроки, 
+                                либо наименование параметра, значение которого будет им являться
+                                либо наименование колонки рекордсета, значение которой (в переданной эвалуатору строке) будет им являться
+                                что именно - определяется наличем префиксов @, #, ! (см. MacroProcessor)
+                        ]]></xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="append-before" type="xs:string" use="optional">
+                        <xs:annotation>
+                            <xs:documentation><![CDATA[
+                                значение строки (либо наименование параметра, либо наименование столбца рекордсета),
+                                добавляемое к исходной спереди
+                                что именно - определяется наличем префиксов @, #, ! (см. MacroProcessor)
+                        ]]></xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="append-after" type="xs:string" use="optional">
+                        <xs:annotation>
+                            <xs:documentation><![CDATA[
+                                значение строки (либо наименование параметра, либо наименование столбца рекордсета),
+                                добавляемое к исходной сзади
+                                что именно - определяется наличем префиксов @, #, ! (см. MacroProcessor)
+                        ]]></xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="if-empty" type="xs:string" use="optional">
+                        <xs:annotation>
+                            <xs:documentation><![CDATA[
+                                значение строки (либо наименование параметра, либо наименование столбца рекордсета) 
+                                в случае пустоты исходной строки (либо равенста null или DbNull)
+                                что именно - определяется наличем префиксов @, #, ! (см. MacroProcessor)
+                        ]]></xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

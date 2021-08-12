@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xfw="http://ru.croc.ctp.jxfw/metamodel">
+  <xfw:XFWPackage name="ru" nsURI="http://ru.croc.ctp.jxfw/XFWPackage/ru" nsPrefix="ru">
+    <eSubpackages href="#/1"/>
+  </xfw:XFWPackage>
+  <xfw:XFWPackage name="croc" nsURI="http://ru.croc.ctp.jxfw/XFWPackage/ru/croc" nsPrefix="ru.croc">
+    <eSubpackages href="#/2"/>
+  </xfw:XFWPackage>
+  <xfw:XFWPackage name="ctp" nsURI="http://ru.croc.ctp.jxfw/XFWPackage/ru/croc/ctp" nsPrefix="ru.croc.ctp">
+    <eSubpackages href="#/3"/>
+  </xfw:XFWPackage>
+  <xfw:XFWPackage name="survey" nsURI="http://ru.croc.ctp.jxfw/XFWPackage/ru/croc/ctp/survey" nsPrefix="ru.croc.ctp.survey">
+    <eSubpackages href="#/4"/>
+    <eSubpackages href="#/5"/>
+  </xfw:XFWPackage>
+  <xfw:XFWPackage name="domain" nsURI="http://ru.croc.ctp.jxfw/XFWPackage/ru/croc/ctp/survey/domain" nsPrefix="ru.croc.ctp.survey.domain">
+    <eClassifiers xsi:type="xfw:XFWClass" name="CommandEntity" instanceClassName="ru.croc.ctp.jxfw.domain.CommandEntity" keyTypeName="java.lang.String" persistenceType="TRANSIENT">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n"/>
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="describe" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="CommandEntityTempFalse" instanceClassName="ru.croc.ctp.jxfw.domain.CommandEntityTempFalse" keyTypeName="java.lang.String" persistenceType="TRANSIENT">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n"/>
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWObject">
+        <details key="persistence" value="TRANSIENT"/>
+        <details key="temp" value="false"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="describe" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="SampleTransientField" instanceClassName="ru.croc.ctp.survey.domain.SampleTransientField" keyTypeName="java.lang.String" persistenceType="FULL">
+          <eAnnotations source="http://www.croc.ru/ctp/model/XFWObject">
+            <details key="isReadonly" value="false"/>
+            <details key="persistence" value="FULL"/>
+            <details key="temp" value="false"/>
+          </eAnnotations>
+          <eAnnotations source="http://www.croc.ru/ctp/model/Entity">
+            <details key="name" value=""/>
+          </eAnnotations>
+          <eAnnotations source="http://www.croc.ru/ctp/model/XFWNewRemoveCheck">
+            <details key="message" value="Illegal domain object state. Cannot be set isRemoved and isNew together."/>
+            <details key="groups" value="[]"/>
+            <details key="payload" value="[]"/>
+          </eAnnotations>
+          <eAnnotations source="http://www.croc.ru/ctp/model/XFWToString">
+            <details key="includeFieldNames" value="true"/>
+            <details key="of" value="[]"/>
+            <details key="exclude" value="[]"/>
+            <details key="callSuper" value="false"/>
+            <details key="hashcode" value="false"/>
+            <details key="identityHashcode" value="false"/>
+          </eAnnotations>
+          <eAnnotations source="http://www.croc.ru/ctp/model/SuppressWarnings">
+            <details key="value" value="[unchecked, rawtypes, deprecation, serial]"/>
+          </eAnnotations>
+          <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="a" unsettable="true">
+            <eAnnotations source="http://www.croc.ru/ctp/model/XFWTransient">
+              <details key="temp" value="true"/>
+            </eAnnotations>
+            <eAnnotations source="http://www.croc.ru/ctp/model/Transient"/>
+            <eAnnotations source="http://www.croc.ru/ctp/model/column">
+              <details key="length" value="255"/>
+            </eAnnotations>
+            <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="id" unsettable="true">
+            <eAnnotations source="http://www.croc.ru/ctp/model/Id"/>
+            <eAnnotations source="http://www.croc.ru/ctp/model/Access">
+              <details key="value" value="PROPERTY"/>
+            </eAnnotations>
+            <eAnnotations source="http://www.croc.ru/ctp/model/column">
+              <details key="length" value="255"/>
+            </eAnnotations>
+            <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="ts" unsettable="true">
+            <eAnnotations source="http://www.croc.ru/ctp/model/Version"/>
+            <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+            <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//ELongObject"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="b" unsettable="true">
+            <eAnnotations source="http://www.croc.ru/ctp/model/XFWTransient">
+              <details key="temp" value="false"/>
+            </eAnnotations>
+            <eAnnotations source="http://www.croc.ru/ctp/model/Transient"/>
+            <eAnnotations source="http://www.croc.ru/ctp/model/column">
+              <details key="length" value="255"/>
+            </eAnnotations>
+            <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="c" unsettable="true">
+            <eAnnotations source="http://www.croc.ru/ctp/model/XFWTransient">
+              <details key="temp" value="true"/>
+            </eAnnotations>
+            <eAnnotations source="http://www.croc.ru/ctp/model/Transient"/>
+            <eAnnotations source="http://www.croc.ru/ctp/model/column">
+              <details key="length" value="255"/>
+            </eAnnotations>
+            <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+          </eStructuralFeatures>
+          <persistenceModule>JPA</persistenceModule>
+        </eClassifiers>
+  </xfw:XFWPackage>
+</xmi:XMI>

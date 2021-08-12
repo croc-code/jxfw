@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="windows-1251" ?> 
+<xs:schema
+    targetNamespace="http://www.croc.ru/Schemas/XmlFramework/ReportService" 
+    xmlns="http://www.croc.ru/Schemas/XmlFramework/ReportService" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified"
+    attributeFormDefault="qualified">
+
+    <xs:element name="storage-data-source" substitutionGroup="abstract-data-source">
+        <xs:annotation><xs:documentation>Данные из XmlStorage. УСТАРЕЛО! Используйте xfw-data-source.</xs:documentation></xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="ado-net-data-source">
+                    <xs:attribute ref="t" use="optional"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>        
+    </xs:element>
+</xs:schema>

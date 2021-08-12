@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transfer-data n="Constants" xmlns:dt="urn:schemas-microsoft-com:datatypes">
+    <head>
+        <export-time dt:dt="dateTime.tz">2016-09-19T10:41:27.879</export-time>
+    </head>
+    <objects>
+        <Book xmlns:dt="urn:schemas-microsoft-com:datatypes" oid="Book-ID-1">
+            <title />
+            <a1 dt:dt="date"/>
+            <a2 dt:dt="i8"/>
+            <a3 dt:dt="i4"/>
+            <a4 dt:dt="i2"/>
+            <a5 dt:dt="boolean"/>
+            <a6 dt:dt="double"/>
+            <a7 dt:dt="byte"/>
+        </Book>
+        <Book xmlns:dt="urn:schemas-microsoft-com:datatypes" oid="Book-ID-2">
+            <a1 dt:dt="date"></a1>
+            <a2 dt:dt="i8"></a2>
+            <a3 dt:dt="i4"></a3>
+            <a4 dt:dt="i2"></a4>
+            <a5 dt:dt="boolean"></a5>
+            <a6 dt:dt="double"></a6>
+            <a7 dt:dt="byte"></a7>
+        </Book>
+    </objects>
+</transfer-data>

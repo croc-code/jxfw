@@ -1,0 +1,1789 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xfw:XFWPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xfw="http://ru.croc.ctp.jxfw/metamodel" name="jxfwmodel" nsURI="http://ru.croc.ctp.jxfw/XFWPackage/jxfwmodel" nsPrefix="jxfwmodel">
+  <eSubpackages xsi:type="xfw:XFWPackage" name="ru.croc.ctp.survey.domain" nsURI="http://ru.croc.ctp.jxfw/XFWPackage/ru.croc.ctp.survey.domain" nsPrefix="ru.croc.ctp.survey.domain">
+    <eClassifiers xsi:type="xfw:XFWClass" name="Option" instanceClassName="ru.croc.ctp.survey.domain.Option" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWToString">
+        <details key="includeFieldNames" value="true"/>
+        <details key="of" value="[]"/>
+        <details key="exclude" value="[]"/>
+        <details key="callSuper" value="false"/>
+        <details key="hashcode" value="false"/>
+        <details key="identityHashcode" value="false"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWObject">
+        <details key="isReadonly" value="false"/>
+        <details key="persistence" value="FULL"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/Table">
+        <details key="name" value="s_option"/>
+        <details key="catalog" value=""/>
+        <details key="schema" value=""/>
+        <details key="uniqueConstraints" value="[]"/>
+        <details key="indexes" value="[]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/Entity">
+        <details key="name" value=""/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/SuppressWarnings">
+        <details key="value" value="[all]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="value" value="&#x412;&#x430;&#x440;&#x438;&#x430;&#x43d;&#x442; &#x43e;&#x442;&#x432;&#x435;&#x442;&#x430;"/>
+        <details key="lang" value="ru"/>
+        <details key="propName" value=""/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="text" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x422;&#x435;&#x43a;&#x441;&#x442; &#x43e;&#x442;&#x432;&#x435;&#x442;&#x430;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="question" eType="//ru.croc.ctp.survey.domain/Question" unsettable="true" eOpposite="//ru.croc.ctp.survey.domain/Question/options">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x412;&#x43e;&#x43f;&#x440;&#x43e;&#x441;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/ManyToOne">
+          <details key="targetEntity" value="void"/>
+          <details key="cascade" value="[]"/>
+          <details key="fetch" value="EAGER"/>
+          <details key="optional" value="true"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWManyToOne"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="Question"/>
+          <details key="actualType" value="ru.croc.ctp.survey.domain.Question"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="votes" upperBound="-1" eType="//ru.croc.ctp.survey.domain/Vote" unsettable="true" eOpposite="//ru.croc.ctp.survey.domain/Vote/option">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x413;&#x43e;&#x43b;&#x43e;&#x441;&#x430;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/NotFound">
+          <details key="action" value="IGNORE"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/OneToMany">
+          <details key="targetEntity" value="ru.croc.ctp.survey.domain.Vote"/>
+          <details key="cascade" value="[]"/>
+          <details key="fetch" value="EAGER"/>
+          <details key="mappedBy" value="option"/>
+          <details key="orphanRemoval" value="true"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWOneToMany"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="Set"/>
+          <details key="actualType" value="ru.croc.ctp.survey.domain.Vote"/>
+          <details key="mappedBy" value="option"/>
+          <details key="targetEntity" value="Vote"/>
+          <details key="targetEntityQN" value="ru.croc.ctp.survey.domain.Vote"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="id" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Id"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="ts" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Version"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//ELongObject"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="Survey" instanceClassName="ru.croc.ctp.survey.domain.Survey" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWToString">
+        <details key="includeFieldNames" value="true"/>
+        <details key="of" value="[]"/>
+        <details key="exclude" value="[]"/>
+        <details key="callSuper" value="false"/>
+        <details key="hashcode" value="false"/>
+        <details key="identityHashcode" value="false"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWObject">
+        <details key="isReadonly" value="false"/>
+        <details key="persistence" value="FULL"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/Entity">
+        <details key="name" value=""/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/SuppressWarnings">
+        <details key="value" value="[all]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="value" value="&#x41e;&#x43f;&#x440;&#x43e;&#x441;"/>
+        <details key="lang" value="ru"/>
+        <details key="propName" value=""/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="title">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x422;&#x435;&#x43c;&#x430; &#x43e;&#x43f;&#x440;&#x43e;&#x441;&#x430;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/XFWBasic">
+          <details key="fetch" value="EAGER"/>
+          <details key="optional" value="false"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/Basic">
+          <details key="fetch" value="EAGER"/>
+          <details key="optional" value="false"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="text" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x422;&#x435;&#x43a;&#x441;&#x442; &#x43e;&#x43f;&#x440;&#x43e;&#x441;&#x430;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="name" value=""/>
+          <details key="unique" value="false"/>
+          <details key="nullable" value="true"/>
+          <details key="insertable" value="true"/>
+          <details key="updatable" value="true"/>
+          <details key="columnDefinition" value=""/>
+          <details key="table" value=""/>
+          <details key="length" value="2500"/>
+          <details key="precision" value="0"/>
+          <details key="scale" value="0"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="2500"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="created" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x421;&#x43e;&#x437;&#x434;&#x430;&#x43d;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/minInclusiveValidation">
+          <details key="value" value="2015-03-01T12:00:00"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://ru.croc.ctp.jxfw/metamodel#//LocalDateTime"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="closed" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x417;&#x430;&#x43a;&#x440;&#x44b;&#x442;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://ru.croc.ctp.jxfw/metamodel#//LocalDateTime"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="suspended" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x41f;&#x440;&#x438;&#x43e;&#x441;&#x442;&#x430;&#x43d;&#x43e;&#x432;&#x43b;&#x435;&#x43d;&#x43e;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="changableVotes">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x41c;&#x43e;&#x436;&#x43d;&#x43e; &#x43c;&#x435;&#x43d;&#x44f;&#x442;&#x44c; &#x43e;&#x442;&#x432;&#x435;&#x442;&#x44b;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/XFWBasic">
+          <details key="fetch" value="EAGER"/>
+          <details key="optional" value="false"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/Basic">
+          <details key="fetch" value="EAGER"/>
+          <details key="optional" value="false"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="allowOptionAdding">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x41c;&#x43e;&#x436;&#x43d;&#x43e; &#x434;&#x43e;&#x431;&#x430;&#x432;&#x43b;&#x44f;&#x442;&#x44c; &#x432;&#x430;&#x440;&#x438;&#x430;&#x43d;&#x442;&#x44b;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/XFWBasic">
+          <details key="fetch" value="EAGER"/>
+          <details key="optional" value="false"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/Basic">
+          <details key="fetch" value="EAGER"/>
+          <details key="optional" value="false"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="showVotesBeforeVote">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x41c;&#x43e;&#x436;&#x43d;&#x43e; &#x432;&#x438;&#x434;&#x435;&#x442;&#x44c; &#x433;&#x43e;&#x43b;&#x43e;&#x441;&#x430; &#x434;&#x43e; &#x433;&#x43e;&#x43b;&#x43e;&#x441;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x44f;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/XFWBasic">
+          <details key="fetch" value="EAGER"/>
+          <details key="optional" value="false"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/Basic">
+          <details key="fetch" value="EAGER"/>
+          <details key="optional" value="false"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="showVoters">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x41c;&#x43e;&#x436;&#x43d;&#x43e; &#x432;&#x438;&#x434;&#x435;&#x442;&#x44c; &#x443;&#x447;&#x430;&#x441;&#x442;&#x43d;&#x438;&#x43a;&#x43e;&#x432;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/XFWBasic">
+          <details key="fetch" value="EAGER"/>
+          <details key="optional" value="false"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/Basic">
+          <details key="fetch" value="EAGER"/>
+          <details key="optional" value="false"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="questions" upperBound="-1" eType="//ru.croc.ctp.survey.domain/Question" unsettable="true" eOpposite="//ru.croc.ctp.survey.domain/Question/survey">
+        <eAnnotations source="http://www.croc.ru/ctp/model/NotFound">
+          <details key="action" value="IGNORE"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/OneToMany">
+          <details key="targetEntity" value="ru.croc.ctp.survey.domain.Question"/>
+          <details key="cascade" value="[]"/>
+          <details key="fetch" value="LAZY"/>
+          <details key="mappedBy" value="survey"/>
+          <details key="orphanRemoval" value="true"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWOneToMany"/>
+          <details key="lazyLoad" value="true"/>
+          <details key="container" value="Set"/>
+          <details key="actualType" value="ru.croc.ctp.survey.domain.Question"/>
+          <details key="mappedBy" value="survey"/>
+          <details key="targetEntity" value="Question"/>
+          <details key="targetEntityQN" value="ru.croc.ctp.survey.domain.Question"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="comments" upperBound="-1" eType="//ru.croc.ctp.survey.domain/Comment" unsettable="true" eOpposite="//ru.croc.ctp.survey.domain/Comment/survey">
+        <eAnnotations source="http://www.croc.ru/ctp/model/NotFound">
+          <details key="action" value="IGNORE"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/OneToMany">
+          <details key="targetEntity" value="ru.croc.ctp.survey.domain.Comment"/>
+          <details key="cascade" value="[]"/>
+          <details key="fetch" value="LAZY"/>
+          <details key="mappedBy" value="survey"/>
+          <details key="orphanRemoval" value="true"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWOneToMany"/>
+          <details key="lazyLoad" value="true"/>
+          <details key="container" value="Set"/>
+          <details key="actualType" value="ru.croc.ctp.survey.domain.Comment"/>
+          <details key="mappedBy" value="survey"/>
+          <details key="targetEntity" value="Comment"/>
+          <details key="targetEntityQN" value="ru.croc.ctp.survey.domain.Comment"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="organizer" eType="//ru.croc.ctp.survey.domain/User" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x41e;&#x440;&#x433;&#x430;&#x43d;&#x438;&#x437;&#x430;&#x442;&#x43e;&#x440;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/ManyToOne">
+          <details key="targetEntity" value="void"/>
+          <details key="cascade" value="[]"/>
+          <details key="fetch" value="EAGER"/>
+          <details key="optional" value="true"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWManyToOne"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="User"/>
+          <details key="actualType" value="ru.croc.ctp.survey.domain.User"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="participants" upperBound="-1" eType="//ru.croc.ctp.survey.domain/SurveyParticipant" unsettable="true" eOpposite="//ru.croc.ctp.survey.domain/SurveyParticipant/survey">
+        <eAnnotations source="http://www.croc.ru/ctp/model/NotFound">
+          <details key="action" value="IGNORE"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/OneToMany">
+          <details key="targetEntity" value="ru.croc.ctp.survey.domain.SurveyParticipant"/>
+          <details key="cascade" value="[]"/>
+          <details key="fetch" value="EAGER"/>
+          <details key="mappedBy" value="survey"/>
+          <details key="orphanRemoval" value="true"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWOneToMany"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="Set"/>
+          <details key="actualType" value="ru.croc.ctp.survey.domain.SurveyParticipant"/>
+          <details key="mappedBy" value="survey"/>
+          <details key="targetEntity" value="SurveyParticipant"/>
+          <details key="targetEntityQN" value="ru.croc.ctp.survey.domain.SurveyParticipant"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="id" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Id"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="ts" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Version"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//ELongObject"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="Question" instanceClassName="ru.croc.ctp.survey.domain.Question" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWToString">
+        <details key="includeFieldNames" value="true"/>
+        <details key="of" value="[]"/>
+        <details key="exclude" value="[]"/>
+        <details key="callSuper" value="false"/>
+        <details key="hashcode" value="false"/>
+        <details key="identityHashcode" value="false"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWObject">
+        <details key="isReadonly" value="false"/>
+        <details key="persistence" value="FULL"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/Entity">
+        <details key="name" value=""/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/SuppressWarnings">
+        <details key="value" value="[all]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="value" value="&#x412;&#x43e;&#x43f;&#x440;&#x43e;&#x441;"/>
+        <details key="lang" value="ru"/>
+        <details key="propName" value=""/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="text">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x422;&#x435;&#x43a;&#x441;&#x442; &#x432;&#x43e;&#x43f;&#x440;&#x43e;&#x441;&#x430;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/XFWBasic">
+          <details key="fetch" value="EAGER"/>
+          <details key="optional" value="false"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/Basic">
+          <details key="fetch" value="EAGER"/>
+          <details key="optional" value="false"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="allowOptionAdding" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x41c;&#x43e;&#x436;&#x43d;&#x43e; &#x434;&#x43e;&#x431;&#x430;&#x432;&#x43b;&#x44f;&#x442;&#x44c; &#x432;&#x430;&#x440;&#x438;&#x430;&#x43d;&#x442;&#x44b;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="survey" eType="//ru.croc.ctp.survey.domain/Survey" unsettable="true" eOpposite="//ru.croc.ctp.survey.domain/Survey/questions">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x420;&#x43e;&#x434;&#x438;&#x442;&#x435;&#x43b;&#x44c;&#x441;&#x43a;&#x438;&#x439; &#x43e;&#x43f;&#x440;&#x43e;&#x441;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/ManyToOne">
+          <details key="targetEntity" value="void"/>
+          <details key="cascade" value="[]"/>
+          <details key="fetch" value="EAGER"/>
+          <details key="optional" value="true"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWManyToOne"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="Survey"/>
+          <details key="actualType" value="ru.croc.ctp.survey.domain.Survey"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="options" upperBound="-1" eType="//ru.croc.ctp.survey.domain/Option" unsettable="true" eOpposite="//ru.croc.ctp.survey.domain/Option/question">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x412;&#x430;&#x440;&#x438;&#x430;&#x43d;&#x442;&#x44b; &#x43e;&#x442;&#x432;&#x435;&#x442;&#x430;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/OrderBy">
+          <details key="value" value="text"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/NotFound">
+          <details key="action" value="IGNORE"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/OneToMany">
+          <details key="targetEntity" value="ru.croc.ctp.survey.domain.Option"/>
+          <details key="cascade" value="[]"/>
+          <details key="fetch" value="EAGER"/>
+          <details key="mappedBy" value="question"/>
+          <details key="orphanRemoval" value="true"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWOneToMany"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="Set"/>
+          <details key="actualType" value="ru.croc.ctp.survey.domain.Option"/>
+          <details key="mappedBy" value="question"/>
+          <details key="targetEntity" value="Option"/>
+          <details key="targetEntityQN" value="ru.croc.ctp.survey.domain.Option"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="votes" upperBound="-1" eType="//ru.croc.ctp.survey.domain/Vote" unsettable="true" eOpposite="//ru.croc.ctp.survey.domain/Vote/question">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x413;&#x43e;&#x43b;&#x43e;&#x441;&#x430;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/NotFound">
+          <details key="action" value="IGNORE"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/OneToMany">
+          <details key="targetEntity" value="ru.croc.ctp.survey.domain.Vote"/>
+          <details key="cascade" value="[]"/>
+          <details key="fetch" value="EAGER"/>
+          <details key="mappedBy" value="question"/>
+          <details key="orphanRemoval" value="true"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWOneToMany"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="Set"/>
+          <details key="actualType" value="ru.croc.ctp.survey.domain.Vote"/>
+          <details key="mappedBy" value="question"/>
+          <details key="targetEntity" value="Vote"/>
+          <details key="targetEntityQN" value="ru.croc.ctp.survey.domain.Vote"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="type" eType="//ru.croc.ctp.survey.domain.enums/QuestionType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x422;&#x438;&#x43f; &#x432;&#x43e;&#x43f;&#x440;&#x43e;&#x441;&#x430;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/XFWBasic">
+          <details key="fetch" value="EAGER"/>
+          <details key="optional" value="false"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/Basic">
+          <details key="fetch" value="EAGER"/>
+          <details key="optional" value="false"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="id" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Id"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="ts" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Version"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//ELongObject"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="Vote" instanceClassName="ru.croc.ctp.survey.domain.Vote" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWToString">
+        <details key="includeFieldNames" value="true"/>
+        <details key="of" value="[]"/>
+        <details key="exclude" value="[]"/>
+        <details key="callSuper" value="false"/>
+        <details key="hashcode" value="false"/>
+        <details key="identityHashcode" value="false"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWObject">
+        <details key="isReadonly" value="false"/>
+        <details key="persistence" value="FULL"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/Entity">
+        <details key="name" value=""/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/SuppressWarnings">
+        <details key="value" value="[all]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="value" value="&#x413;&#x43e;&#x43b;&#x43e;&#x441;"/>
+        <details key="lang" value="ru"/>
+        <details key="propName" value=""/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="text">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x413;&#x43e;&#x43b;&#x43e;&#x441;&#x430;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/XFWBasic">
+          <details key="fetch" value="EAGER"/>
+          <details key="optional" value="false"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/Basic">
+          <details key="fetch" value="EAGER"/>
+          <details key="optional" value="false"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="comments" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x41a;&#x43e;&#x43c;&#x43c;&#x435;&#x43d;&#x442;&#x430;&#x440;&#x438;&#x439; &#x43f;&#x43e;&#x43b;&#x44c;&#x437;&#x43e;&#x432;&#x430;&#x442;&#x435;&#x43b;&#x44f; &#x43a; &#x43e;&#x442;&#x432;&#x435;&#x442;&#x443;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="option" eType="//ru.croc.ctp.survey.domain/Option" unsettable="true" eOpposite="//ru.croc.ctp.survey.domain/Option/votes">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x412;&#x430;&#x440;&#x438;&#x430;&#x43d;&#x442; &#x43e;&#x442;&#x432;&#x435;&#x442;&#x430;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/ManyToOne">
+          <details key="targetEntity" value="void"/>
+          <details key="cascade" value="[]"/>
+          <details key="fetch" value="EAGER"/>
+          <details key="optional" value="true"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWManyToOne"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="Option"/>
+          <details key="actualType" value="ru.croc.ctp.survey.domain.Option"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="question" eType="//ru.croc.ctp.survey.domain/Question" unsettable="true" eOpposite="//ru.croc.ctp.survey.domain/Question/votes">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x412;&#x43e;&#x43f;&#x440;&#x43e;&#x441;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/ManyToOne">
+          <details key="targetEntity" value="void"/>
+          <details key="cascade" value="[]"/>
+          <details key="fetch" value="EAGER"/>
+          <details key="optional" value="true"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWManyToOne"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="Question"/>
+          <details key="actualType" value="ru.croc.ctp.survey.domain.Question"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="user" eType="//ru.croc.ctp.survey.domain/User" unsettable="true" eOpposite="//ru.croc.ctp.survey.domain/User/votes">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x41f;&#x43e;&#x43b;&#x44c;&#x437;&#x43e;&#x432;&#x430;&#x442;&#x435;&#x43b;&#x44c;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/ManyToOne">
+          <details key="targetEntity" value="void"/>
+          <details key="cascade" value="[]"/>
+          <details key="fetch" value="EAGER"/>
+          <details key="optional" value="true"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWManyToOne"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="User"/>
+          <details key="actualType" value="ru.croc.ctp.survey.domain.User"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="id" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Id"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="ts" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Version"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//ELongObject"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="Group" instanceClassName="ru.croc.ctp.survey.domain.Group" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWToString">
+        <details key="includeFieldNames" value="true"/>
+        <details key="of" value="[]"/>
+        <details key="exclude" value="[]"/>
+        <details key="callSuper" value="false"/>
+        <details key="hashcode" value="false"/>
+        <details key="identityHashcode" value="false"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWObject">
+        <details key="isReadonly" value="false"/>
+        <details key="persistence" value="FULL"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/Table">
+        <details key="name" value="group_table"/>
+        <details key="catalog" value=""/>
+        <details key="schema" value=""/>
+        <details key="uniqueConstraints" value="[]"/>
+        <details key="indexes" value="[]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/Entity">
+        <details key="name" value=""/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/SuppressWarnings">
+        <details key="value" value="[all]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="value" value="&#x413;&#x440;&#x443;&#x43f;&#x43f;&#x430;"/>
+        <details key="lang" value="ru"/>
+        <details key="propName" value=""/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="name">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x41d;&#x430;&#x438;&#x43c;&#x435;&#x43d;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x435;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/XFWBasic">
+          <details key="fetch" value="EAGER"/>
+          <details key="optional" value="false"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/Basic">
+          <details key="fetch" value="EAGER"/>
+          <details key="optional" value="false"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="users" upperBound="-1" eType="//ru.croc.ctp.survey.domain/User" unsettable="true" eOpposite="//ru.croc.ctp.survey.domain/User/groups">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x427;&#x43b;&#x435;&#x43d;&#x44b; &#x433;&#x440;&#x443;&#x43f;&#x43f;&#x44b;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/NotFound">
+          <details key="action" value="IGNORE"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/ManyToMany">
+          <details key="targetEntity" value="ru.croc.ctp.survey.domain.User"/>
+          <details key="cascade" value="[]"/>
+          <details key="fetch" value="LAZY"/>
+          <details key="mappedBy" value="groups"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWManyToMany"/>
+          <details key="lazyLoad" value="true"/>
+          <details key="container" value="Set"/>
+          <details key="actualType" value="ru.croc.ctp.survey.domain.User"/>
+          <details key="mappedBy" value="groups"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="roles" upperBound="-1" eType="//ru.croc.ctp.survey.domain.enums/UserRole" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x420;&#x43e;&#x43b;&#x438;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="id" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Id"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="ts" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Version"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//ELongObject"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="SurveyParticipant" instanceClassName="ru.croc.ctp.survey.domain.SurveyParticipant" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWToString">
+        <details key="includeFieldNames" value="true"/>
+        <details key="of" value="[]"/>
+        <details key="exclude" value="[]"/>
+        <details key="callSuper" value="false"/>
+        <details key="hashcode" value="false"/>
+        <details key="identityHashcode" value="false"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWObject">
+        <details key="isReadonly" value="false"/>
+        <details key="persistence" value="FULL"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/Entity">
+        <details key="name" value=""/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/SuppressWarnings">
+        <details key="value" value="[all]"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="role" upperBound="-1" eType="//ru.croc.ctp.survey.domain.enums/ParticipantRole" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="survey" eType="//ru.croc.ctp.survey.domain/Survey" unsettable="true" eOpposite="//ru.croc.ctp.survey.domain/Survey/participants">
+        <eAnnotations source="http://www.croc.ru/ctp/model/ManyToOne">
+          <details key="targetEntity" value="void"/>
+          <details key="cascade" value="[]"/>
+          <details key="fetch" value="EAGER"/>
+          <details key="optional" value="true"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWManyToOne"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="Survey"/>
+          <details key="actualType" value="ru.croc.ctp.survey.domain.Survey"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="user" eType="//ru.croc.ctp.survey.domain/User" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/ManyToOne">
+          <details key="targetEntity" value="void"/>
+          <details key="cascade" value="[]"/>
+          <details key="fetch" value="EAGER"/>
+          <details key="optional" value="true"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWManyToOne"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="User"/>
+          <details key="actualType" value="ru.croc.ctp.survey.domain.User"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="group" eType="//ru.croc.ctp.survey.domain/Group" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/ManyToOne">
+          <details key="targetEntity" value="void"/>
+          <details key="cascade" value="[]"/>
+          <details key="fetch" value="EAGER"/>
+          <details key="optional" value="true"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWManyToOne"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="Group"/>
+          <details key="actualType" value="ru.croc.ctp.survey.domain.Group"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="id" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Id"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="ts" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Version"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//ELongObject"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="SurveyFilter" instanceClassName="ru.croc.ctp.survey.domain.SurveyFilter" keyTypeName="java.lang.String" persistenceType="TRANSIENT">
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWObject">
+        <details key="isReadonly" value="false"/>
+        <details key="persistence" value="TRANSIENT"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWToString">
+        <details key="includeFieldNames" value="true"/>
+        <details key="of" value="[]"/>
+        <details key="exclude" value="[]"/>
+        <details key="callSuper" value="false"/>
+        <details key="hashcode" value="false"/>
+        <details key="identityHashcode" value="false"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/SuppressWarnings">
+        <details key="value" value="[all]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="value" value="&#x424;&#x438;&#x43b;&#x44c;&#x442;&#x440; &#x441;&#x43f;&#x438;&#x441;&#x43a;&#x430; &#x43e;&#x43f;&#x440;&#x43e;&#x441;&#x43e;&#x432;"/>
+        <details key="lang" value="ru"/>
+        <details key="propName" value=""/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="title" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x422;&#x435;&#x43c;&#x430; &#x43e;&#x43f;&#x440;&#x43e;&#x441;&#x430;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="suspended" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x41f;&#x440;&#x438;&#x43e;&#x441;&#x442;&#x430;&#x43d;&#x43e;&#x432;&#x43b;&#x435;&#x43d;&#x43e;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="createdFrom" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x421;&#x43e;&#x437;&#x434;&#x430;&#x43d; &#x441;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://ru.croc.ctp.jxfw/metamodel#//LocalDateTime"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="createdTo" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x421;&#x43e;&#x437;&#x434;&#x430;&#x43d; &#x434;&#x43e;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://ru.croc.ctp.jxfw/metamodel#//LocalDateTime"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="surveyAge" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x412;&#x43e;&#x437;&#x440;&#x430;&#x441;&#x442; &#x43e;&#x43f;&#x440;&#x43e;&#x441;&#x430;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://ru.croc.ctp.jxfw/metamodel#//Duration"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="organizer" eType="//ru.croc.ctp.survey.domain/User" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x41f;&#x43e;&#x43b;&#x44c;&#x437;&#x43e;&#x432;&#x430;&#x442;&#x435;&#x43b;&#x44c;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWManyToOne"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="User"/>
+          <details key="actualType" value="ru.croc.ctp.survey.domain.User"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="organizers" upperBound="-1" eType="//ru.croc.ctp.survey.domain/User" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x41f;&#x43e;&#x43b;&#x44c;&#x437;&#x43e;&#x432;&#x430;&#x442;&#x435;&#x43b;&#x438;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWOneToMany"/>
+          <details key="lazyLoad" value="true"/>
+          <details key="container" value="List"/>
+          <details key="actualType" value="ru.croc.ctp.survey.domain.User"/>
+          <details key="mappedBy" value=""/>
+          <details key="targetEntity" value="void"/>
+          <details key="targetEntityQN" value="void"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="id" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Id"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="ts" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Version"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//ELongObject"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="SurveyPOJO" instanceClassName="ru.croc.ctp.survey.domain.SurveyPOJO" keyTypeName="java.lang.String" persistenceType="TRANSIENT">
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWObject">
+        <details key="isReadonly" value="false"/>
+        <details key="persistence" value="TRANSIENT"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWToString">
+        <details key="includeFieldNames" value="true"/>
+        <details key="of" value="[]"/>
+        <details key="exclude" value="[]"/>
+        <details key="callSuper" value="false"/>
+        <details key="hashcode" value="false"/>
+        <details key="identityHashcode" value="false"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/SuppressWarnings">
+        <details key="value" value="[all]"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="organizer" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="surveyLink" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="title" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="text" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="created" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://ru.croc.ctp.jxfw/metamodel#//LocalDateTime"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="organizerLink" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="id" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Id"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="ts" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Version"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//ELongObject"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="Comment" instanceClassName="ru.croc.ctp.survey.domain.Comment" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWObject">
+        <details key="isReadonly" value="false"/>
+        <details key="persistence" value="FULL"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/Entity">
+        <details key="name" value=""/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWToString">
+        <details key="includeFieldNames" value="true"/>
+        <details key="of" value="[]"/>
+        <details key="exclude" value="[]"/>
+        <details key="callSuper" value="false"/>
+        <details key="hashcode" value="false"/>
+        <details key="identityHashcode" value="false"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/SuppressWarnings">
+        <details key="value" value="[all]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="value" value="&#x41a;&#x43e;&#x43c;&#x43c;&#x435;&#x43d;&#x442;&#x430;&#x440;&#x438;&#x439;"/>
+        <details key="lang" value="ru"/>
+        <details key="propName" value=""/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="text" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x422;&#x435;&#x43a;&#x441;&#x442;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="created" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x421;&#x43e;&#x437;&#x434;&#x430;&#x43d;&#x43e;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://ru.croc.ctp.jxfw/metamodel#//LocalDateTime"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="survey" eType="//ru.croc.ctp.survey.domain/Survey" unsettable="true" eOpposite="//ru.croc.ctp.survey.domain/Survey/comments">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x41e;&#x43f;&#x440;&#x43e;&#x441;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/ManyToOne">
+          <details key="targetEntity" value="void"/>
+          <details key="cascade" value="[]"/>
+          <details key="fetch" value="EAGER"/>
+          <details key="optional" value="true"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWManyToOne"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="Survey"/>
+          <details key="actualType" value="ru.croc.ctp.survey.domain.Survey"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="author" eType="//ru.croc.ctp.survey.domain/User" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x410;&#x432;&#x442;&#x43e;&#x440;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/ManyToOne">
+          <details key="targetEntity" value="void"/>
+          <details key="cascade" value="[]"/>
+          <details key="fetch" value="EAGER"/>
+          <details key="optional" value="true"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWManyToOne"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="User"/>
+          <details key="actualType" value="ru.croc.ctp.survey.domain.User"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="id" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Id"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="ts" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Version"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//ELongObject"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="User" instanceClassName="ru.croc.ctp.survey.domain.User" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWObject">
+        <details key="isReadonly" value="false"/>
+        <details key="persistence" value="FULL"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/Table">
+        <details key="name" value="user_table"/>
+        <details key="catalog" value=""/>
+        <details key="schema" value=""/>
+        <details key="uniqueConstraints" value="[]"/>
+        <details key="indexes" value="[]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/Entity">
+        <details key="name" value=""/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWToString">
+        <details key="includeFieldNames" value="true"/>
+        <details key="of" value="[]"/>
+        <details key="exclude" value="[]"/>
+        <details key="callSuper" value="false"/>
+        <details key="hashcode" value="false"/>
+        <details key="identityHashcode" value="false"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/SuppressWarnings">
+        <details key="value" value="[all]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="value" value="&#x41f;&#x43e;&#x43b;&#x44c;&#x437;&#x43e;&#x432;&#x430;&#x442;&#x435;&#x43b;&#x44c;"/>
+        <details key="lang" value="ru"/>
+        <details key="propName" value=""/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="firstName" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x418;&#x43c;&#x44f;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="lastName" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x424;&#x430;&#x43c;&#x438;&#x43b;&#x438;&#x44f;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="login" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x41b;&#x43e;&#x433;&#x438;&#x43d;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="role" upperBound="-1" eType="//ru.croc.ctp.survey.domain.enums/UserRole" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="avatar" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x424;&#x43e;&#x442;&#x43e;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/XFWBlobInfo">
+          <details key="value" value="true"/>
+          <details key="sizeFieldNameSuffix" value="Size"/>
+          <details key="fileNameFieldNameSuffix" value="FileName"/>
+          <details key="contentTypeFieldNameSuffix" value="MimeContentType"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/blobAdditionalFields">
+          <details key="value" value="true"/>
+          <details key="contentSizeSuffix" value="Size"/>
+          <details key="fileNameSuffix" value="FileName"/>
+          <details key="contenTypeSuffix" value="MimeContentType"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/contentType">
+          <details key="value" value="image"/>
+          <details key="acceptFileTypes" value=".jpg,.jpeg"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://ru.croc.ctp.jxfw/metamodel#//Blob"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="password" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/protectedAttr">
+          <details key="value" value="[PROTECTED]"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="createdTime" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x412;&#x440;&#x435;&#x43c;&#x44f; &#x441;&#x43e;&#x437;&#x434;&#x430;&#x43d;&#x438;&#x44f;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://ru.croc.ctp.jxfw/metamodel#//LocalTime"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="created" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x414;&#x430;&#x442;&#x430; &#x441;&#x43e;&#x437;&#x434;&#x430;&#x43d;&#x438;&#x44f;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://ru.croc.ctp.jxfw/metamodel#//LocalDate"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="lastLogin" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x414;&#x430;&#x442;&#x430; &#x43f;&#x43e;&#x441;&#x43b;&#x435;&#x434;&#x43d;&#x438;&#x435;&#x433;&#x43e; &#x432;&#x445;&#x43e;&#x434;&#x430;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://ru.croc.ctp.jxfw/metamodel#//LocalDateTime"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="lastVisit" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Type">
+          <details key="type" value="org.jadira.usertype.dateandtime.threeten.PersistentZonedDateTime"/>
+          <details key="parameters" value="[]"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://ru.croc.ctp.jxfw/metamodel#//ZonedDateTime"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="votes" upperBound="-1" eType="//ru.croc.ctp.survey.domain/Vote" unsettable="true" eOpposite="//ru.croc.ctp.survey.domain/Vote/user">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x413;&#x43e;&#x43b;&#x43e;&#x441;&#x430;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/NotFound">
+          <details key="action" value="IGNORE"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/OneToMany">
+          <details key="targetEntity" value="ru.croc.ctp.survey.domain.Vote"/>
+          <details key="cascade" value="[]"/>
+          <details key="fetch" value="EAGER"/>
+          <details key="mappedBy" value="user"/>
+          <details key="orphanRemoval" value="true"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWOneToMany"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="Set"/>
+          <details key="actualType" value="ru.croc.ctp.survey.domain.Vote"/>
+          <details key="mappedBy" value="user"/>
+          <details key="targetEntity" value="Vote"/>
+          <details key="targetEntityQN" value="ru.croc.ctp.survey.domain.Vote"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="groups" upperBound="-1" eType="//ru.croc.ctp.survey.domain/Group" unsettable="true" eOpposite="//ru.croc.ctp.survey.domain/Group/users">
+        <eAnnotations source="http://www.croc.ru/ctp/model/NotFound">
+          <details key="action" value="IGNORE"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/ManyToMany">
+          <details key="targetEntity" value="void"/>
+          <details key="cascade" value="[]"/>
+          <details key="fetch" value="EAGER"/>
+          <details key="mappedBy" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWManyToMany"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="Set"/>
+          <details key="actualType" value="ru.croc.ctp.survey.domain.Group"/>
+          <details key="mappedBy" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="address" eType="//ru.croc.ctp.survey.domain.ct/Address">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x410;&#x434;&#x440;&#x435;&#x441;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="karma" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x41a;&#x430;&#x440;&#x43c;&#x430;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="id" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Id"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="ts" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Version"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//ELongObject"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="UserPOJO" instanceClassName="ru.croc.ctp.survey.domain.UserPOJO" keyTypeName="java.lang.String" persistenceType="TRANSIENT">
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWObject">
+        <details key="isReadonly" value="false"/>
+        <details key="persistence" value="TRANSIENT"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWToString">
+        <details key="includeFieldNames" value="true"/>
+        <details key="of" value="[]"/>
+        <details key="exclude" value="[]"/>
+        <details key="callSuper" value="false"/>
+        <details key="hashcode" value="false"/>
+        <details key="identityHashcode" value="false"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/SuppressWarnings">
+        <details key="value" value="[all]"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="firstName" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x418;&#x43c;&#x44f;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="lastName" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x424;&#x430;&#x43c;&#x438;&#x43b;&#x438;&#x44f;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="login" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x41b;&#x43e;&#x433;&#x438;&#x43d;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="address" eType="//ru.croc.ctp.survey.domain.ct/Address">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x410;&#x434;&#x440;&#x435;&#x441;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="id" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Id"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="ts" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Version"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//ELongObject"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="UserExt" instanceClassName="ru.croc.ctp.survey.domain.UserExt" keyTypeName="java.lang.String" persistenceType="TRANSIENT">
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWObject">
+        <details key="isReadonly" value="false"/>
+        <details key="persistence" value="TRANSIENT"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWToString">
+        <details key="includeFieldNames" value="true"/>
+        <details key="of" value="[]"/>
+        <details key="exclude" value="[]"/>
+        <details key="callSuper" value="false"/>
+        <details key="hashcode" value="false"/>
+        <details key="identityHashcode" value="false"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/SuppressWarnings">
+        <details key="value" value="[all]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="value" value="&#x420;&#x430;&#x441;&#x448;&#x438;&#x440;&#x435;&#x43d;&#x43d;&#x44b;&#x439; &#x43f;&#x43e;&#x43b;&#x44c;&#x437;&#x43e;&#x432;&#x430;&#x442;&#x435;&#x43b;&#x44c;"/>
+        <details key="lang" value="ru"/>
+        <details key="propName" value=""/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="firstName" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x418;&#x43c;&#x44f;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="lastName" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x424;&#x430;&#x43c;&#x438;&#x43b;&#x438;&#x44f;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="login" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x41b;&#x43e;&#x433;&#x438;&#x43d;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="user" eType="//ru.croc.ctp.survey.domain/User" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x41e;&#x431;&#x44a;&#x435;&#x43a;&#x442;- &#x43f;&#x43e;&#x43b;&#x44c;&#x437;&#x43e;&#x432;&#x430;&#x442;&#x435;&#x43b;&#x44c;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="id" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Id"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="ts" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Version"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//ELongObject"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="Age" instanceClassName="ru.croc.ctp.survey.domain.Age" keyTypeName="java.lang.String" persistenceType="TRANSIENT">
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWObject">
+        <details key="isReadonly" value="false"/>
+        <details key="persistence" value="TRANSIENT"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWToString">
+        <details key="includeFieldNames" value="true"/>
+        <details key="of" value="[]"/>
+        <details key="exclude" value="[]"/>
+        <details key="callSuper" value="false"/>
+        <details key="hashcode" value="false"/>
+        <details key="identityHashcode" value="false"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/SuppressWarnings">
+        <details key="value" value="[all]"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="birthDay" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="age" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="id" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Id"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="ts" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Version"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//ELongObject"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="GroupFilter" instanceClassName="ru.croc.ctp.survey.domain.GroupFilter" keyTypeName="java.lang.String" persistenceType="TRANSIENT">
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWObject">
+        <details key="isReadonly" value="false"/>
+        <details key="persistence" value="TRANSIENT"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/XFWToString">
+        <details key="includeFieldNames" value="true"/>
+        <details key="of" value="[]"/>
+        <details key="exclude" value="[]"/>
+        <details key="callSuper" value="false"/>
+        <details key="hashcode" value="false"/>
+        <details key="identityHashcode" value="false"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/SuppressWarnings">
+        <details key="value" value="[all]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="value" value="&#x424;&#x438;&#x43b;&#x44c;&#x442;&#x440; &#x441;&#x43f;&#x438;&#x441;&#x43a;&#x430; &#x433;&#x440;&#x443;&#x43f;&#x43f;"/>
+        <details key="lang" value="ru"/>
+        <details key="propName" value=""/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="onlyNotEmpty" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x422;&#x43e;&#x43b;&#x44c;&#x43a;&#x43e; &#x433;&#x440;&#x443;&#x43f;&#x43f;&#x44b; &#x441; &#x447;&#x43b;&#x435;&#x43d;&#x430;&#x43c;&#x438;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="users" upperBound="-1" eType="//ru.croc.ctp.survey.domain/User" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x413;&#x440;&#x443;&#x43f;&#x43f;&#x430; &#x434;&#x43e;&#x43b;&#x436;&#x43d;&#x430; &#x441;&#x43e;&#x434;&#x435;&#x440;&#x436;&#x430;&#x442;&#x44c; &#x445;&#x43e;&#x442;&#x44f; &#x431;&#x44b; &#x43e;&#x434;&#x43d;&#x43e;&#x433;&#x43e; &#x438;&#x437; &#x432;&#x44b;&#x431;&#x440;&#x430;&#x43d;&#x43d;&#x44b;&#x445; &#x43f;&#x43e;&#x43b;&#x44c;&#x437;&#x43e;&#x432;&#x430;&#x442;&#x435;&#x43b;&#x435;&#x439;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWOneToMany"/>
+          <details key="lazyLoad" value="true"/>
+          <details key="container" value="Set"/>
+          <details key="actualType" value="ru.croc.ctp.survey.domain.User"/>
+          <details key="mappedBy" value=""/>
+          <details key="targetEntity" value="void"/>
+          <details key="targetEntityQN" value="void"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="id" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Id"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="ts" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/Version"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//ELongObject"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages xsi:type="xfw:XFWPackage" name="ru.croc.ctp.survey.domain.enums" nsURI="http://ru.croc.ctp.jxfw/XFWPackage/ru.croc.ctp.survey.domain.enums" nsPrefix="ru.croc.ctp.survey.domain.enums">
+    <eClassifiers xsi:type="ecore:EEnum" name="QuestionType" instanceClassName="ru.croc.ctp.survey.domain.enums.QuestionType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/SuppressWarnings">
+        <details key="value" value="[all]"/>
+      </eAnnotations>
+      <eLiterals name="OneOption"/>
+      <eLiterals name="ManyOptions" value="1"/>
+      <eLiterals name="YesNo" value="2"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="UserRole" instanceClassName="ru.croc.ctp.survey.domain.enums.UserRole">
+      <eAnnotations source="http://www.croc.ru/ctp/model/SuppressWarnings">
+        <details key="value" value="[all]"/>
+      </eAnnotations>
+      <eLiterals name="Guest" value="1">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x413;&#x43e;&#x441;&#x442;&#x44c;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="Admin" value="2">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x410;&#x434;&#x43c;&#x438;&#x43d;&#x438;&#x441;&#x442;&#x440;&#x430;&#x442;&#x43e;&#x440;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="User" value="4">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x41f;&#x43e;&#x43b;&#x44c;&#x437;&#x43e;&#x432;&#x430;&#x442;&#x435;&#x43b;&#x44c;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+      </eLiterals>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="ParticipantRole" instanceClassName="ru.croc.ctp.survey.domain.enums.ParticipantRole">
+      <eAnnotations source="http://www.croc.ru/ctp/model/SuppressWarnings">
+        <details key="value" value="[all]"/>
+      </eAnnotations>
+      <eLiterals name="Empty"/>
+      <eLiterals name="Viewer" value="1"/>
+      <eLiterals name="Voter" value="2"/>
+      <eLiterals name="Manager" value="4"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="LocalityType" instanceClassName="ru.croc.ctp.survey.domain.enums.LocalityType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/SuppressWarnings">
+        <details key="value" value="[all]"/>
+      </eAnnotations>
+      <eLiterals name="Town">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x413;&#x43e;&#x440;&#x43e;&#x434;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="Village" value="1">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x414;&#x435;&#x440;&#x435;&#x432;&#x43d;&#x44f;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+      </eLiterals>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages xsi:type="xfw:XFWPackage" name="ru.croc.ctp.survey.domain.ct" nsURI="http://ru.croc.ctp.jxfw/XFWPackage/ru.croc.ctp.survey.domain.ct" nsPrefix="ru.croc.ctp.survey.domain.ct">
+    <eClassifiers xsi:type="xfw:XFWClass" name="Address" instanceClassName="ru.croc.ctp.survey.domain.ct.Address" complexType="true">
+      <eAnnotations source="http://www.croc.ru/ctp/model/Embeddable"/>
+      <eAnnotations source="http://www.croc.ru/ctp/model/Access">
+        <details key="value" value="FIELD"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/SuppressWarnings">
+        <details key="value" value="[all]"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="street" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x423;&#x43b;&#x438;&#x446;&#x430;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="name" value=""/>
+          <details key="unique" value="false"/>
+          <details key="nullable" value="true"/>
+          <details key="insertable" value="true"/>
+          <details key="updatable" value="true"/>
+          <details key="columnDefinition" value=""/>
+          <details key="table" value=""/>
+          <details key="length" value="100"/>
+          <details key="precision" value="0"/>
+          <details key="scale" value="0"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="100"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="house" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x414;&#x43e;&#x43c;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="name" value=""/>
+          <details key="unique" value="false"/>
+          <details key="nullable" value="true"/>
+          <details key="insertable" value="true"/>
+          <details key="updatable" value="true"/>
+          <details key="columnDefinition" value=""/>
+          <details key="table" value=""/>
+          <details key="length" value="5"/>
+          <details key="precision" value="0"/>
+          <details key="scale" value="0"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="5"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="block" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x411;&#x43b;&#x43e;&#x43a;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="name" value=""/>
+          <details key="unique" value="false"/>
+          <details key="nullable" value="true"/>
+          <details key="insertable" value="true"/>
+          <details key="updatable" value="true"/>
+          <details key="columnDefinition" value=""/>
+          <details key="table" value=""/>
+          <details key="length" value="20"/>
+          <details key="precision" value="0"/>
+          <details key="scale" value="0"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="20"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="date" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://ru.croc.ctp.jxfw/metamodel#//LocalDate"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="locality" eType="//ru.croc.ctp.survey.domain.ct/Locality">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="Locality" instanceClassName="ru.croc.ctp.survey.domain.ct.Locality" complexType="true">
+      <eAnnotations source="http://www.croc.ru/ctp/model/Embeddable"/>
+      <eAnnotations source="http://www.croc.ru/ctp/model/Access">
+        <details key="value" value="FIELD"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/SuppressWarnings">
+        <details key="value" value="[all]"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="name" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="type" eType="//ru.croc.ctp.survey.domain.enums/LocalityType" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages xsi:type="xfw:XFWPackage" name="ru.croc.ctp.survey.datasource" nsURI="http://ru.croc.ctp.jxfw/XFWPackage/ru.croc.ctp.survey.datasource" nsPrefix="ru.croc.ctp.survey.datasource">
+    <eClassifiers xsi:type="xfw:XFWDataSource" name="QuestionVotesCounts" instanceClassName="ru.croc.ctp.survey.datasource.QuestionVotesCounts" requestMapping="_plain/QuestionVotesCounts">
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="questionId">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWDataSource" name="SurveysReport" instanceClassName="ru.croc.ctp.survey.datasource.SurveysReport" requestMapping="Surveys">
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="title">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="createdFrom">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="createdTo">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="organizer">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="suspended">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWDataSource" name="UserList" instanceClassName="ru.croc.ctp.survey.datasource.UserList" requestMapping="UserList"/>
+    <eClassifiers xsi:type="xfw:XFWDataSource" name="GroupsEx" instanceClassName="ru.croc.ctp.survey.datasource.GroupsEx" requestMapping="GroupsEx">
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="filter" eType="//ru.croc.ctp.survey.domain/GroupFilter"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWDataSource" name="UserShortList" instanceClassName="ru.croc.ctp.survey.datasource.UserShortList" requestMapping="_plain/UserShortList">
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="searchText">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWDataSource" name="LocalityNames" instanceClassName="ru.croc.ctp.survey.datasource.LocalityNames" requestMapping="_plain/LocalityNames"/>
+    <eClassifiers xsi:type="xfw:XFWDataSource" name="UserExtList" instanceClassName="ru.croc.ctp.survey.datasource.UserExtList" requestMapping="UserExtList"/>
+  </eSubpackages>
+</xfw:XFWPackage>

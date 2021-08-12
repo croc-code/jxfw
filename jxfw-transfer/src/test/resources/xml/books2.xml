@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transfer-data n="Constants" xmlns:dt="urn:schemas-microsoft-com:datatypes">
+    <head>
+        <export-time dt:dt="dateTime.tz">jobExportBooksAndAuthorsToXmlFile</export-time>
+    </head>
+    <objects>
+        <Book xmlns:dt="urn:schemas-microsoft-com:datatypes" oid="Book-ID-1">
+            <author>
+                <Author oid="Author-ID-1"></Author>
+            </author>
+            <title dt:dt="string">The Divine Comedy</title>
+        </Book>
+        <Book xmlns:dt="urn:schemas-microsoft-com:datatypes" oid="Book-ID-2">
+            <author>
+                <Author oid="Author-ID-2"></Author>
+            </author>
+            <title dt:dt="string">War and Peace</title>
+        </Book>
+        <Book xmlns:dt="urn:schemas-microsoft-com:datatypes" oid="Book-ID-3">
+            <author>
+                <Author oid="Author-ID-3"></Author>
+            </author>
+            <title dt:dt="string">Independent People</title>
+        </Book>
+        <Book xmlns:dt="urn:schemas-microsoft-com:datatypes" oid="Book-ID-4">
+            <author>
+                <Author oid="Author-ID-2"></Author>
+            </author>
+            <title dt:dt="string">Анна Каренина</title>
+        </Book>
+        <Author xmlns:dt="urn:schemas-microsoft-com:datatypes" oid="Author-ID-1">
+            <books>
+                <Book oid="Book-ID-1"></Book>
+            </books>
+            <name dt:dt="string">Данте Алигьери</name>
+        </Author>
+        <Author xmlns:dt="urn:schemas-microsoft-com:datatypes" oid="Author-ID-2">
+            <books>
+                <Book oid="Book-ID-4"></Book>
+                <Book oid="Book-ID-2"></Book>
+            </books>
+            <name dt:dt="string">Лев Николаевич Толстой</name>
+        </Author>
+        <Author xmlns:dt="urn:schemas-microsoft-com:datatypes" oid="Author-ID-3">
+            <books>
+                <Book oid="Book-ID-3"></Book>
+            </books>
+            <name dt:dt="string">Лакснесс, Халлдор Кильян</name>
+        </Author>
+    </objects>
+</transfer-data>

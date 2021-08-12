@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>jxfw-fulltext-service</artifactId>
+
+	<parent>
+		<groupId>ru.croc.ctp</groupId>
+		<artifactId>jxfw-build</artifactId>
+		<version>1.9.7-SNAPSHOT</version>
+		<relativePath>../jxfw-build/pom.xml</relativePath>
+	</parent>
+
+	<dependencies>
+		<dependency>
+			<groupId>ru.croc.ctp</groupId>
+			<artifactId>jxfw-core-compile</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>ru.croc.ctp</groupId>
+			<artifactId>jxfw-solr-runtime</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.xtend</groupId>
+				<artifactId>xtend-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>

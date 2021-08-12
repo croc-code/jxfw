@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<xs:schema 
+    xmlns="http://www.croc.ru/Schemas/XmlFramework/ReportService" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:ds="http://www.croc.ru/Schemas/XmlFramework/Data/1.0" 
+    targetNamespace="http://www.croc.ru/Schemas/XmlFramework/ReportService" 
+    elementFormDefault="qualified" 
+    attributeFormDefault="qualified">
+    <xs:annotation>
+        <xs:documentation><![CDATA[
+            Основная схема сборки Croc.XmlFramework.ReportService
+            Содержит схемы профилей всех компонентов сборки
+        ]]></xs:documentation>
+    </xs:annotation>
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.Types.xsd">
+        <xs:annotation>
+            <xs:documentation>Стандартные типы, используемые в ReportService</xs:documentation>
+              </xs:annotation>
+       </xs:include>
+    <!--
+        Стандартные обработчики параметров
+    -->
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.ParamProcessors.FillReportParamProcessor.xsd">
+        <xs:annotation>
+            <xs:documentation>Заполняет значения параметров из источника данных</xs:documentation>
+        </xs:annotation>
+    </xs:include>
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.ParamProcessors.ParamByParamProcessor.xsd">
+        <xs:annotation>
+            <xs:documentation>Заполняет значения параметров на основании значений других параметров</xs:documentation>
+        </xs:annotation>
+    </xs:include>
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.ParamProcessors.ReportParamDefinitionProcessor.xsd">
+        <xs:annotation>
+            <xs:documentation>Проверяет корректность комбинаций заданных параметров</xs:documentation>
+        </xs:annotation>
+    </xs:include>
+    <!--
+        Стандартные источники данных
+    -->
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.DataSources.StorageDataSource.xsd">
+        <xs:annotation>
+            <xs:documentation>Источник данных, использующий XmlStorage</xs:documentation>
+        </xs:annotation>
+    </xs:include>
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.DataSources.ConfigDataSource.xsd">
+        <xs:annotation>
+            <xs:documentation>Источник данных из конфигурационного файла</xs:documentation>
+        </xs:annotation>
+    </xs:include>
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.DataSources.OleDbDataSource.xsd">
+        <xs:annotation>
+            <xs:documentation>Источник данных из OLEDB</xs:documentation>
+        </xs:annotation>
+    </xs:include>
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.DataSources.OdbcDataSource.xsd">
+        <xs:annotation>
+            <xs:documentation>Источник данных из ODBC</xs:documentation>
+        </xs:annotation>
+    </xs:include>
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.DataSources.OlapDataSource.xsd">
+        <xs:annotation>
+            <xs:documentation>Источник данных из OLAP</xs:documentation>
+        </xs:annotation>
+    </xs:include>
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.DataSources.XFWDataSource.xsd">
+        <xs:annotation>
+            <xs:documentation>Источник данных, описание которого соответствует стандартному описанию источника данных 
+            XFW схемы x-net-data-schema</xs:documentation>
+        </xs:annotation>
+    </xs:include>
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.DataSources.JxfwDataSource.xsd">
+        <xs:annotation>
+            <xs:documentation>Источник данных, Jxfw фраемворка</xs:documentation>
+        </xs:annotation>
+    </xs:include>
+    <!--
+        Стандартный форматтер страницы
+    -->
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.LayoutMaster.xsd">
+        <xs:annotation>
+            <xs:documentation>Мастер задания формата страницы</xs:documentation>
+        </xs:annotation>
+    </xs:include>
+    <!--
+        Стандартные фрагменты отчета
+    -->
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.Layouts.EmptyLayout.xsd">
+        <xs:annotation>
+            <xs:documentation>Разделитель</xs:documentation>
+        </xs:annotation>
+    </xs:include>
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.Layouts.HeaderLayout.xsd">
+        <xs:annotation>
+            <xs:documentation>Заголовок</xs:documentation>
+        </xs:annotation>
+    </xs:include>
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.Layouts.MasterDatailLayout.xsd">
+        <xs:annotation>
+            <xs:documentation>Диаграмма</xs:documentation>
+        </xs:annotation>
+    </xs:include>
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.Layouts.TableLayout.xsd">
+        <xs:annotation>
+            <xs:documentation>Таблица</xs:documentation>
+        </xs:annotation>
+    </xs:include>
+    <!--
+        Стандартные форматтеры
+    -->
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.Layouts.Formatters.StringEvaluator.xsd">
+        <xs:annotation>
+            <xs:documentation>Обработка строковых значений</xs:documentation>
+        </xs:annotation>
+    </xs:include>
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.Layouts.Formatters.PercentageEvaluator.xsd">
+        <xs:annotation>
+            <xs:documentation>Вычисление и форматирование процента</xs:documentation>
+        </xs:annotation>
+    </xs:include>
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.Layouts.Formatters.DateTimeEvaluator.xsd">
+        <xs:annotation>
+            <xs:documentation>Форматирование даты / времени</xs:documentation>
+        </xs:annotation>
+    </xs:include>
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.Layouts.Formatters.ImageEvaluator.xsd">
+        <xs:annotation>
+            <xs:documentation>Формирование тега img</xs:documentation>
+        </xs:annotation>
+    </xs:include>
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.Layouts.Formatters.EmptyValueEvaluator.xsd">
+        <xs:annotation>
+            <xs:documentation>Форматирование пустого значения</xs:documentation>
+        </xs:annotation>
+    </xs:include>
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.Layouts.Formatters.HrefEvaluator.xsd">
+        <xs:annotation>
+            <xs:documentation>Форматирование гиперссылок</xs:documentation>
+        </xs:annotation>
+    </xs:include>
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.Layouts.Formatters.TemplateEvaluator.xsd">
+        <xs:annotation>
+            <xs:documentation>Форматирование произвольного выражения с подстановками из параметров, переменных и источника данных</xs:documentation>
+        </xs:annotation>
+    </xs:include>
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.Layouts.Formatters.SimpleReportCellClassEvaluator.xsd">
+        <xs:annotation>
+            <xs:documentation>Форматирование ячейки отчета стилем с подстановками из параметров, переменных и источника данных</xs:documentation>
+        </xs:annotation>   
+    </xs:include>
+    <xs:attribute name="assembly" type="xs:string">
+        <xs:annotation>
+            <xs:documentation>Имя сборки</xs:documentation>
+        </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="class" type="xs:string">
+        <xs:annotation>
+            <xs:documentation>Полное имя класса</xs:documentation>
+        </xs:annotation>
+    </xs:attribute>
+    <xs:element name="layouts">
+        <xs:annotation>
+            <xs:documentation>Набор лэйаутов отчета</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="abstract-layout" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="abstract-data-source" abstract="true">
+        <xs:annotation>
+            <xs:documentation>
+                Абстрактный источник данных
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="abstract-component">
+                <xs:attribute ref="n" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="abstract-data-source" type="abstract-data-source">
+        <xs:annotation>
+            <xs:documentation>
+                Абстрактный элемент источника данных
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+
+    <xs:complexType name="plainsql-data-source">
+        <xs:complexContent>
+            <xs:extension base="abstract-data-source">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+
+    <xs:simpleType name="cmd-type">
+        <xs:annotation>
+            <xs:documentation>Тип запроса</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="text">
+                <xs:annotation>
+                    <xs:documentation>Запрос в видет текста</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="sp">
+                <xs:annotation>
+                    <xs:documentation>Запрос в виде названия ХП</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:attribute name="connection-string" type="xs:string">
+        <xs:annotation>
+            <xs:documentation>Строка подключения</xs:documentation>
+        </xs:annotation>
+    </xs:attribute>
+    <xs:complexType name="ado-net-data-source" abstract="true">
+        <xs:annotation>
+            <xs:documentation>Источник данных, использующий IDbCommand для получения данных</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="abstract-data-source">
+                <xs:sequence>
+                    <xs:element name="cmd">
+                        <xs:annotation>
+                            <xs:documentation>Текст SQL запроса или наименование ХП</xs:documentation>
+                        </xs:annotation>
+                        <xs:complexType>
+                            <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                    <xs:attribute name="type" type="cmd-type" default="text">
+                                        <xs:annotation>
+                                            <xs:documentation>Запрос</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attribute>
+                                    <xs:attribute name="command-timeout" type="xs:int" default="1200" use="optional">
+                                        <xs:annotation>
+                                            <xs:documentation>Время таймаута команды</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attribute>
+                                </xs:extension>
+                            </xs:simpleContent>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="cmd-params" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>Параметры запроса</xs:documentation>
+                        </xs:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="cmd-param" maxOccurs="unbounded">
+                                    <xs:annotation>
+                                        <xs:documentation>Описание параметров запроса</xs:documentation>
+                                    </xs:annotation>
+                                    <xs:complexType>
+                                        <xs:attribute name="n" type="xs:string" use="required">
+                                            <xs:annotation>
+                                                <xs:documentation>Параметр запроса</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:attribute>
+                                        <xs:attribute name="report-param" use="required">
+                                            <xs:annotation>
+                                                <xs:documentation>Наименование параметра из отчета</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:attribute>
+                                        <xs:attribute name="may-be-null" type="xs:boolean" use="optional">
+                                            <xs:annotation>
+                                                <xs:documentation>Признак того, что параметер может быть = NULL</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:attribute>
+                                    </xs:complexType>
+                                </xs:element>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!--
+        Абстрактный компонент формирования отчета
+    -->
+    <xs:complexType name="abstract-report">
+        <xs:annotation>
+            <xs:documentation>Абстрактный компонент формирования отчета</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="abstract-component"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <!--
+        Тип языка сценария
+    -->
+    <xs:simpleType name="language-type">
+        <xs:annotation>
+            <xs:documentation>Тип языка сценария</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="vbscript">
+                <xs:annotation>
+                    <xs:documentation>Visual Basic Sript</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="javascript">
+                <xs:annotation>
+                    <xs:documentation>Java Script</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <!--
+    #################################################################################################
+
+    Croc.XmlFramework.ReportService.Report
+    -->
+
+    <xs:element name="report">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="abstract-report">
+                    <xs:sequence>
+                        <!--
+                            COMMON
+                        -->
+                        <xs:element name="common" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Общие для отчета данные</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <!--
+                                        КЛАССЫ СТИЛЕЙ(АНАЛОГ CSS-классов)
+                                    -->
+                                    <xs:element name="style-class" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:annotation>
+                                            <xs:documentation>Наименование класса стиля</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                            <xs:simpleContent>
+                                                <xs:extension base="xs:string">
+                                                    <xs:attribute name="n" type="xs:string" use="required" form="qualified"/>
+                                                </xs:extension>
+                                            </xs:simpleContent>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <!--
+                                        КЛИЕНТСКИЕ СЦЕНАРИИ
+                                    -->
+                                    <xs:element name="script" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:annotation>
+                                            <xs:documentation>Подключаемые к отчету клиентские сценарии</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                            <xs:simpleContent>
+                                                <xs:extension base="xs:string">
+                                                    <xs:attribute name="src" type="xs:string" use="optional" form="qualified">
+                                                        <xs:annotation>
+                                                            <xs:documentation>Путь к файлу с текстом сценария</xs:documentation>
+                                                        </xs:annotation>
+                                                    </xs:attribute>
+                                                    <xs:attribute name="language" type="language-type" use="optional" default="vbscript" form="qualified">
+                                                        <xs:annotation>
+                                                            <xs:documentation>Язык сценария</xs:documentation>
+                                                        </xs:annotation>
+                                                    </xs:attribute>
+                                                    <xs:attribute name="encoding" type="xs:string" use="optional" default="utf-8" form="qualified">
+                                                        <xs:annotation>
+                                                            <xs:documentation>Кодировка файла сценария</xs:documentation>
+                                                        </xs:annotation>
+                                                    </xs:attribute>
+                                                </xs:extension>
+                                            </xs:simpleContent>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <!--
+                            PARAMS
+                        -->
+                        <xs:element name="params" minOccurs="0">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="param" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:annotation>
+                                            <xs:documentation>
+                                                Описание абстрактного параметра
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                            <xs:attribute ref="n" use="required"/>
+                                            <xs:attribute ref="t" use="optional"/>
+                                            <xs:attribute name="vt" type="var-types" use="required">
+                                                <xs:annotation>
+                                                    <xs:documentation>Тип данных параметра</xs:documentation>
+                                                </xs:annotation>
+                                            </xs:attribute>
+                                            <xs:attribute name="required" type="xs:boolean" default="0">
+                                                <xs:annotation>
+                                                    <xs:documentation>Признак обязательности</xs:documentation>
+                                                </xs:annotation>
+                                            </xs:attribute>
+                                            <xs:attribute name="protected" type="xs:boolean" default="0">
+                                                <xs:annotation>
+                                                    <xs:documentation>Признак "спрятанного" параметра (этот параметр нельзя задать через URL)</xs:documentation>
+                                                </xs:annotation>
+                                            </xs:attribute>
+                                            <xs:attribute name="hidden" type="xs:boolean" default="0">
+                                                <xs:annotation>
+                                                    <xs:documentation>Признак "не показываемого" в фильтре параметра</xs:documentation>
+                                                </xs:annotation>
+                                            </xs:attribute>
+                                            <xs:attribute name="default" type="xs:string">
+                                                <xs:annotation>
+                                                    <xs:documentation>Значение по умолчанию</xs:documentation>
+                                                </xs:annotation>
+                                            </xs:attribute>
+                                            <xs:attribute name="message-if-absent" type="xs:string">
+                                                <xs:annotation>
+                                                    <xs:documentation>Сообщение, выводимое в случае отсутствия обязательного параметра</xs:documentation>
+                                                </xs:annotation>
+                                            </xs:attribute>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <!--
+                            Парамепроцессоры пошли
+                        -->
+                        <xs:element name="param-processors" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Обработчики параметров отчета</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element ref="abstract-param-processor" maxOccurs="unbounded"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <!--
+                            Источники данных пошли
+                        -->
+
+                        <xs:element name="data-sources" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Источники данных</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:choice maxOccurs="unbounded">
+                                        <xs:element name="jxfw-data-source" type="jxfw-data-source"/>
+                                        <xs:element name="plainsql-data-source" type="plainsql-data-source"/>
+                                    </xs:choice>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <!-- 
+                            Задание формата страниц 
+                        -->
+                        <xs:element name="layout-master" type="layout-master" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Мастер определения формата страниц</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <!--
+                            Фрагменты отчета пошли
+                        -->
+                        <xs:choice>
+                            <xs:element ref="layouts" minOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation>Набор лэйаутов отчета</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="page-sequence" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation>Последовательность страниц определенного формата</xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="page-header" minOccurs="0">
+                                            <xs:annotation>
+                                                <xs:documentation>Определение данных, которые будут помещены в верхний колонтитул</xs:documentation>
+                                            </xs:annotation>
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element ref="layouts" minOccurs="0"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="page-body" minOccurs="0">
+                                            <xs:annotation>
+                                                <xs:documentation>Определение данных, которые будут помещены в тело страницы</xs:documentation>
+                                            </xs:annotation>
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element ref="layouts" minOccurs="0"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="page-footer" minOccurs="0">
+                                            <xs:annotation>
+                                                <xs:documentation>Определение данных, которые будут помещены в нижний колонтитул</xs:documentation>
+                                            </xs:annotation>
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element ref="layouts" minOccurs="0"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="master-reference" type="xs:string" use="required" form="qualified">
+                                        <xs:annotation>
+                                            <xs:documentation>Имя page-master'a, используемого для форматирования данных. Определяет формат страницы.</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:choice>
+                    </xs:sequence>
+                    <xs:attribute ref="t" use="required"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

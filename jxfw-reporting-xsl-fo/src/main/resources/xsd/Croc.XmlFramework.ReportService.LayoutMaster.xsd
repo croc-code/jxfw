@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<xs:schema targetNamespace="http://www.croc.ru/Schemas/XmlFramework/ReportService" xmlns="http://www.croc.ru/Schemas/XmlFramework/ReportService"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="qualified">
+    <!-- 
+        Форматы страницы
+    -->
+    <xs:simpleType name="page-format">
+        <xs:annotation>
+            <xs:documentation>Формат страницы</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="A2">
+                <xs:annotation>
+                    <xs:documentation>страница в формате A2</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="A3">
+                <xs:annotation>
+                    <xs:documentation>страница в формате A3</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="A4">
+                <xs:annotation>
+                    <xs:documentation>страница в формате A4</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="A5">
+                <xs:annotation>
+                    <xs:documentation>страница в формате A5</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Letter">
+                <xs:annotation>
+                    <xs:documentation>страница в формате Letter</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <!--
+        Ориентация страницы
+    -->
+    <xs:simpleType name="page-orientation">
+        <xs:annotation>
+            <xs:documentation>Ориентация страницы</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="0"></xs:enumeration>
+            <xs:enumeration value="90"></xs:enumeration>
+            <xs:enumeration value="180"></xs:enumeration>
+            <xs:enumeration value="270"></xs:enumeration>
+            <xs:enumeration value="-90"></xs:enumeration>
+            <xs:enumeration value="-180"></xs:enumeration>
+            <xs:enumeration value="-270"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <!-- 
+        Абстрактный регион страницы
+    -->
+    <xs:complexType name="abstract-page-region">
+        <xs:annotation>
+            <xs:documentation>Абстрактный элемент компоненты форматирования региона страницы</xs:documentation>
+        </xs:annotation>        
+        <xs:attribute name="valign" type="xs:string" use="optional"/>
+        <xs:attribute name="padding" type="xs:string" use="optional" />        
+        <xs:attribute name="padding-left" type="xs:string" use="optional" />    
+        <xs:attribute name="padding-right" type="xs:string" use="optional" />    
+        <xs:attribute name="padding-top" type="xs:string" use="optional" />    
+        <xs:attribute name="padding-bottom" type="xs:string" use="optional" />    
+    </xs:complexType>
+    <!-- 
+        Верхний колонтитул
+    -->
+    <xs:complexType name="region-header">
+        <xs:annotation>
+            <xs:documentation>Элемент форматирования верхнего колонтитула страницы</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="abstract-page-region">
+                <xs:attribute name="extent" type="xs:string" use="optional"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!--
+        Тело страницы
+    -->
+    <xs:complexType name="region-body">
+        <xs:annotation>
+            <xs:documentation>Элемент форматирования основной части страницы</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="abstract-page-region">
+                <xs:attribute name="margin" type="xs:string" use="optional" />
+                <xs:attribute name="margin-left" type="xs:string" use="optional" />
+                <xs:attribute name="margin-right" type="xs:string" use="optional" />
+                <xs:attribute name="margin-top" type="xs:string" use="optional" />
+                <xs:attribute name="margin-bottom" type="xs:string" use="optional" />                
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!--
+        Нижний колонтитул
+    -->
+    <xs:complexType name="region-footer">
+        <xs:annotation>
+            <xs:documentation>Элемент форматирования нижнего колонтитула страницы</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="abstract-page-region">
+                <xs:attribute name="extent" type="xs:string" use="optional"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!--
+        Мастер для определения формата страниц
+    -->
+    <xs:complexType name="layout-master">
+        <xs:annotation>
+            <xs:documentation>Мастер для определения формата страниц</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="page-master" minOccurs="1" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>
+                        Описание формата страницы
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="region-header" type="region-header" form="qualified" minOccurs="0" maxOccurs="1" />
+                        <xs:element name="region-body" type="region-body" form="qualified" minOccurs="0" maxOccurs="1" />
+                        <xs:element name="region-footer" type="region-footer" form="qualified" minOccurs="0" maxOccurs="1" />
+                    </xs:sequence>
+                    <xs:attribute name="n" type="xs:string" use="required" />
+                    <xs:attribute name="page-format" type="page-format" form="qualified" default="A4"></xs:attribute>
+                    <xs:attribute name="page-width" type="xs:string" form="qualified" use="optional"></xs:attribute>
+                    <xs:attribute name="page-height" type="xs:string" form="qualified" use="optional"></xs:attribute>
+                    <xs:attribute name="page-orientation" type="page-orientation" form="qualified" default="0"></xs:attribute>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

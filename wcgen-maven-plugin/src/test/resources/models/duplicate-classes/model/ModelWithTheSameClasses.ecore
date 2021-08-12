@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xfw="http://ru.croc.ctp.jxfw/metamodel">
+  <xfw:XFWPackage name="ru" nsURI="http://ru.croc.ctp.jxfw/metamodel" nsPrefix="ru">
+    <eSubpackages href="#/1"/>
+  </xfw:XFWPackage>
+  <xfw:XFWPackage name="croc" nsURI="http://ru.croc.ctp.jxfw/metamodel" nsPrefix="ru.croc">
+    <eSubpackages href="#/2"/>
+  </xfw:XFWPackage>
+  <xfw:XFWPackage name="ctp" nsURI="http://ru.croc.ctp.jxfw/metamodel" nsPrefix="ru.croc.ctp">
+    <eSubpackages href="#/3"/>
+  </xfw:XFWPackage>
+  <xfw:XFWPackage name="jxfw" nsURI="http://ru.croc.ctp.jxfw/metamodel" nsPrefix="ru.croc.ctp.jxfw">
+    <eSubpackages href="#/4"/>
+    <eSubpackages href="#/11"/>
+  </xfw:XFWPackage>
+  <xfw:XFWPackage name="domain" nsURI="http://ru.croc.ctp.jxfw/metamodel" nsPrefix="ru.croc.ctp.jxfw.domain">
+  </xfw:XFWPackage>
+  <xfw:XFWPackage name="org" nsURI="http://ru.croc.ctp.jxfw/metamodel" nsPrefix="org">
+    <eSubpackages href="#/6"/>
+  </xfw:XFWPackage>
+  <xfw:XFWPackage name="eec" nsURI="http://ru.croc.ctp.jxfw/metamodel" nsPrefix="org.eec">
+    <eSubpackages href="#/7"/>
+  </xfw:XFWPackage>
+  <xfw:XFWPackage name="mscp" nsURI="http://ru.croc.ctp.jxfw/metamodel" nsPrefix="org.eec.mscp">
+    <eSubpackages href="#/8"/>
+  </xfw:XFWPackage>
+  <xfw:XFWPackage name="mm01" nsURI="http://ru.croc.ctp.jxfw/metamodel" nsPrefix="org.eec.mscp.mm01">
+    <eSubpackages href="#/9"/>
+  </xfw:XFWPackage>
+  <xfw:XFWPackage name="domain" nsURI="http://ru.croc.ctp.jxfw/metamodel" nsPrefix="org.eec.mscp.mm01.domain">
+    <eClassifiers xsi:type="xfw:XFWClass" name="DrugRegistrationDetailsType" instanceClassName="org.eec.mscp.mm01.domain.DrugRegistrationDetailsType"
+        keyTypeName="java.lang.String">
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="RegistrationKindCode"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Код вида процедуры регистрации"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+   <eSubpackages href="#/10"/>
+  </xfw:XFWPackage>
+  <xfw:XFWPackage name="dom2" nsURI="http://ru.croc.ctp.jxfw/metamodel" nsPrefix="org.eec.mscp.mm01.domain.dom2">
+    <eClassifiers xsi:type="xfw:XFWClass" name="DrugRegistrationDetailsType" instanceClassName="org.eec.mscp.mm01.domain.dom2.DrugRegistrationDetailsType"
+        keyTypeName="java.lang.String">
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="stringField"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+  </xfw:XFWPackage>
+  <xfw:XFWPackage name="datasource" nsURI="http://ru.croc.ctp.jxfw/metamodel" nsPrefix="ru.croc.ctp.jxfw.datasource">
+  </xfw:XFWPackage>
+</xmi:XMI>

@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xfw:XFWPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xfw="http://ru.croc.ctp.jxfw/metamodel" name="jxfwmodel" nsURI="http://ru.croc.ctp.jxfw/XFWPackage/jxfwmodel" nsPrefix="jxfwmodel">
+  <eSubpackages xsi:type="xfw:XFWPackage" name="ru.croc.ctp.jxfw.domain" nsURI="http://ru.croc.ctp.jxfw/XFWPackage/ru.croc.ctp.jxfw.domain" nsPrefix="ru.croc.ctp.jxfw.domain">
+    <eClassifiers xsi:type="xfw:XFWClass" name="Base" instanceClassName="ru.croc.ctp.jxfw.domain.Base" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="value" value="&#x41b;&#x43e;&#x433;&#x438;&#x43d;"/>
+        <details key="lang" value="ru"/>
+        <details key="propName" value="login"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="value" value="&#x41d;&#x430;&#x437;&#x432;&#x430;&#x43d;&#x438;&#x435;1"/>
+        <details key="lang" value="ru"/>
+        <details key="propName" value="title"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="name" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="Name"/>
+          <details key="lang" value="en"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x418;&#x43c;&#x44f;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="title" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="Title"/>
+          <details key="lang" value="en"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x41d;&#x430;&#x437;&#x432;&#x430;&#x43d;&#x438;&#x435;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="login" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="Ext" instanceClassName="ru.croc.ctp.jxfw.domain.Ext" eSuperTypes="//ru.croc.ctp.jxfw.domain/Base" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="value" value="&#x418;&#x43c;&#x44f;&#x418;&#x43c;&#x44f;"/>
+        <details key="lang" value="ru"/>
+        <details key="propName" value="name"/>
+      </eAnnotations>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="ExtExt" instanceClassName="ru.croc.ctp.jxfw.domain.ExtExt" eSuperTypes="//ru.croc.ctp.jxfw.domain/Ext" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="value" value="&#x41d;&#x430;&#x437;&#x432;&#x430;&#x43d;&#x438;&#x435;&#x41d;&#x430;&#x437;&#x432;&#x430;&#x43d;&#x438;&#x435;"/>
+        <details key="lang" value="ru"/>
+        <details key="propName" value="title"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="prop" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="Person" instanceClassName="ru.croc.ctp.jxfw.domain.Person" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="name" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="Name"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="PersonExt" instanceClassName="ru.croc.ctp.jxfw.domain.PersonExt" eSuperTypes="//ru.croc.ctp.jxfw.domain/Person" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="value" value="PersonExt"/>
+        <details key="lang" value="en"/>
+        <details key="propName" value=""/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="value" value="NewName"/>
+        <details key="lang" value="en"/>
+        <details key="propName" value="name"/>
+      </eAnnotations>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="License" instanceClassName="ru.croc.ctp.jxfw.domain.License" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="suspended" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="created" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://ru.croc.ctp.jxfw/metamodel#//LocalDateTime"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="content" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="binaryContent" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/XFWBlobInfo">
+          <details key="value" value="true"/>
+          <details key="sizeFieldNameSuffix" value="Size"/>
+          <details key="fileNameFieldNameSuffix" value="FileName"/>
+          <details key="contentTypeFieldNameSuffix" value="MimeContentType"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/blobAdditionalFields">
+          <details key="value" value="true"/>
+          <details key="contentSizeSuffix" value="Size"/>
+          <details key="fileNameSuffix" value="FileName"/>
+          <details key="contenTypeSuffix" value="MimeContentType"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://ru.croc.ctp.jxfw/metamodel#//Blob"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="OneFirstUpperDomainClass" instanceClassName="ru.croc.ctp.jxfw.domain.OneFirstUpperDomainClass" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="property" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="TWoFirstUpperDomainClass" instanceClassName="ru.croc.ctp.jxfw.domain.TWoFirstUpperDomainClass" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="property" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="THReeFirstUpperDomainClass" instanceClassName="ru.croc.ctp.jxfw.domain.THReeFirstUpperDomainClass" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="property" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="FOURFirstUpperDomainClass" instanceClassName="ru.croc.ctp.jxfw.domain.FOURFirstUpperDomainClass" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="property" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="URLHolderDomainClass" instanceClassName="ru.croc.ctp.jxfw.domain.URLHolderDomainClass" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="url" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="Permission" instanceClassName="ru.croc.ctp.jxfw.domain.Permission" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="suspended" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="ApplicationDetailsType" instanceClassName="ru.croc.ctp.jxfw.domain.ApplicationDetailsType" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="product" upperBound="-1" eType="//ru.croc.ctp.jxfw.domain/ProductDetailsType" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWOneToMany"/>
+          <details key="lazyLoad" value="true"/>
+          <details key="container" value="List"/>
+          <details key="actualType" value="ru.croc.ctp.jxfw.domain.ProductDetailsType"/>
+          <details key="mappedBy" value=""/>
+          <details key="targetEntity" value="void"/>
+          <details key="targetEntityQN" value="void"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="ProductDetailsType" instanceClassName="ru.croc.ctp.jxfw.domain.ProductDetailsType" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eAnnotations source="http://www.croc.ru/ctp/model/CustomAnnotation">
+        <details key="value" value="string"/>
+        <details key="byteValue" value="0"/>
+        <details key="shortValue" value="1"/>
+        <details key="intValue" value="2"/>
+        <details key="longValue" value="3"/>
+        <details key="floatValue" value="4.0"/>
+        <details key="doubleValue" value="5.0"/>
+        <details key="booleanValue" value="true"/>
+        <details key="charValue" value="a"/>
+        <details key="clazz" value="java.util.List"/>
+        <details key="enumeration" value="VAL1"/>
+        <details key="annotation" value="[annotationType = AnotherCustomAnnotation, value = string, byteValue = 0, shortValue = 1, intValue = 2, longValue = 3, floatValue = 4.0, doubleValue = 5.0, booleanValue = true, charValue = a, clazz = java.util.List, enumeration = VAL1, stringArray = [foo, bar], byteArray = [0, 1], shortArray = [1, 2], intArray = [2, 3], longArray = [3, 4], floatArray = [4.0, 5.0], doubleArray = [5.0, 6.0], booleanArray = [true, false], charArray = [a, b], clazzArray = [java.util.List, java.util.Set], enumerationArray = [VAL1, VAL2]]"/>
+        <details key="stringArray" value="[foo, bar]"/>
+        <details key="byteArray" value="[0, 1]"/>
+        <details key="shortArray" value="[1, 2]"/>
+        <details key="intArray" value="[2, 3]"/>
+        <details key="longArray" value="[3, 4]"/>
+        <details key="floatArray" value="[4.0, 5.0]"/>
+        <details key="doubleArray" value="[5.0, 6.0]"/>
+        <details key="booleanArray" value="[true, false]"/>
+        <details key="charArray" value="[a, b]"/>
+        <details key="clazzArray" value="[java.util.List, java.util.Set]"/>
+        <details key="enumerationArray" value="[VAL1, VAL2]"/>
+        <details key="annotationArray" value="[]"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="productName" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="PrimitiveTypes" instanceClassName="ru.croc.ctp.jxfw.domain.PrimitiveTypes" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="byteType" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EByte"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="shortType" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EShort"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="intType" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="longType" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="doubleType" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="booleanType" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="byteTypeWrapper" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EByteObject"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="shortTypeWrapper" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EShortObject"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="intTypeWrapper" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="longTypeWrapper" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//ELongObject"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="doubleTypeWrapper" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="booleanTypeWrapper" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="bigIntegerType" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="bigDecimalType" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="enumType" eType="//ru.croc.ctp.jxfw.domain.enums/SampleEnumType" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="SampleOfTransient" instanceClassName="ru.croc.ctp.jxfw.domain.SampleOfTransient" keyTypeName="java.lang.String" persistenceType="TRANSIENT">
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="name" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="Book" instanceClassName="ru.croc.ctp.jxfw.domain.Book" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="title" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="EventReadSessionSample" instanceClassName="ru.croc.ctp.jxfw.domain.EventReadSessionSample" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="text" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="EventReadSessionSampleChild" instanceClassName="ru.croc.ctp.jxfw.domain.EventReadSessionSampleChild" eSuperTypes="//ru.croc.ctp.jxfw.domain/EventReadSessionSample" keyTypeName="java.lang.String" persistenceType="FULL">
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="AbstractEventReadSessionSample" instanceClassName="ru.croc.ctp.jxfw.domain.AbstractEventReadSessionSample" abstract="true" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="text" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="AbstractEventReadSessionSampleChild" instanceClassName="ru.croc.ctp.jxfw.domain.AbstractEventReadSessionSampleChild" eSuperTypes="//ru.croc.ctp.jxfw.domain/AbstractEventReadSessionSample" keyTypeName="java.lang.String" persistenceType="FULL">
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="DateVersionField" instanceClassName="ru.croc.ctp.jxfw.domain.DateVersionField" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="name" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="Address" instanceClassName="ru.croc.ctp.jxfw.domain.Address" complexType="true">
+      <eAnnotations source="http://www.croc.ru/ctp/model/CustomAnnotation">
+        <details key="value" value="string"/>
+        <details key="byteValue" value="0"/>
+        <details key="shortValue" value="1"/>
+        <details key="intValue" value="2"/>
+        <details key="longValue" value="3"/>
+        <details key="floatValue" value="4.0"/>
+        <details key="doubleValue" value="5.0"/>
+        <details key="booleanValue" value="true"/>
+        <details key="charValue" value="a"/>
+        <details key="clazz" value="java.util.List"/>
+        <details key="enumeration" value="VAL1"/>
+        <details key="annotation" value="[annotationType = AnotherCustomAnnotation, value = string, byteValue = 0, shortValue = 1, intValue = 2, longValue = 3, floatValue = 4.0, doubleValue = 5.0, booleanValue = true, charValue = a, clazz = java.util.List, enumeration = VAL1, stringArray = [foo, bar], byteArray = [0, 1], shortArray = [1, 2], intArray = [2, 3], longArray = [3, 4], floatArray = [4.0, 5.0], doubleArray = [5.0, 6.0], booleanArray = [true, false], charArray = [a, b], clazzArray = [java.util.List, java.util.Set], enumerationArray = [VAL1, VAL2]]"/>
+        <details key="stringArray" value="[foo, bar]"/>
+        <details key="byteArray" value="[0, 1]"/>
+        <details key="shortArray" value="[1, 2]"/>
+        <details key="intArray" value="[2, 3]"/>
+        <details key="longArray" value="[3, 4]"/>
+        <details key="floatArray" value="[4.0, 5.0]"/>
+        <details key="doubleArray" value="[5.0, 6.0]"/>
+        <details key="booleanArray" value="[true, false]"/>
+        <details key="charArray" value="[a, b]"/>
+        <details key="clazzArray" value="[java.util.List, java.util.Set]"/>
+        <details key="enumerationArray" value="[VAL1, VAL2]"/>
+        <details key="annotationArray" value="[]"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="street" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x423;&#x43b;&#x438;&#x446;&#x430;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="100"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="house" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x414;&#x43e;&#x43c;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="5"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="block" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x411;&#x43b;&#x43e;&#x43a;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="20"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="date" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/CustomAnnotation">
+          <details key="value" value="string"/>
+          <details key="byteValue" value="0"/>
+          <details key="shortValue" value="1"/>
+          <details key="intValue" value="2"/>
+          <details key="longValue" value="3"/>
+          <details key="floatValue" value="4.0"/>
+          <details key="doubleValue" value="5.0"/>
+          <details key="booleanValue" value="true"/>
+          <details key="charValue" value="a"/>
+          <details key="clazz" value="java.util.List"/>
+          <details key="enumeration" value="VAL1"/>
+          <details key="annotation" value="[annotationType = AnotherCustomAnnotation, value = string, byteValue = 0, shortValue = 1, intValue = 2, longValue = 3, floatValue = 4.0, doubleValue = 5.0, booleanValue = true, charValue = a, clazz = java.util.List, enumeration = VAL1, stringArray = [foo, bar], byteArray = [0, 1], shortArray = [1, 2], intArray = [2, 3], longArray = [3, 4], floatArray = [4.0, 5.0], doubleArray = [5.0, 6.0], booleanArray = [true, false], charArray = [a, b], clazzArray = [java.util.List, java.util.Set], enumerationArray = [VAL1, VAL2]]"/>
+          <details key="stringArray" value="[foo, bar]"/>
+          <details key="byteArray" value="[0, 1]"/>
+          <details key="shortArray" value="[1, 2]"/>
+          <details key="intArray" value="[2, 3]"/>
+          <details key="longArray" value="[3, 4]"/>
+          <details key="floatArray" value="[4.0, 5.0]"/>
+          <details key="doubleArray" value="[5.0, 6.0]"/>
+          <details key="booleanArray" value="[true, false]"/>
+          <details key="charArray" value="[a, b]"/>
+          <details key="clazzArray" value="[java.util.List, java.util.Set]"/>
+          <details key="enumerationArray" value="[VAL1, VAL2]"/>
+          <details key="annotationArray" value="[]"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://ru.croc.ctp.jxfw/metamodel#//LocalDate"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="locality" eType="//ru.croc.ctp.jxfw.domain/Locality" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="Locality" instanceClassName="ru.croc.ctp.jxfw.domain.Locality" complexType="true">
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="name" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="AbstractObject" instanceClassName="ru.croc.ctp.jxfw.domain.AbstractObject" abstract="true" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="value" value="AbstractObject"/>
+        <details key="lang" value="en"/>
+        <details key="propName" value=""/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="value" value="&#x410;&#x431;&#x441;&#x442;&#x440;&#x430;&#x43a;&#x442;&#x43d;&#x44b;&#x439; &#x43e;&#x431;&#x44a;&#x435;&#x43a;&#x442;"/>
+        <details key="lang" value="ru"/>
+        <details key="propName" value=""/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="name" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="Name"/>
+          <details key="lang" value="en"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x418;&#x43c;&#x44f;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="PersistentObject" instanceClassName="ru.croc.ctp.jxfw.domain.PersistentObject" eSuperTypes="//ru.croc.ctp.jxfw.domain/AbstractObject" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="value" value="PersistentObject"/>
+        <details key="lang" value="en"/>
+        <details key="propName" value=""/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="value" value="&#x425;&#x440;&#x430;&#x43d;&#x438;&#x43c;&#x44b;&#x439; &#x43e;&#x431;&#x44a;&#x435;&#x43a;&#x442;"/>
+        <details key="lang" value="ru"/>
+        <details key="propName" value=""/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="title" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x41d;&#x430;&#x437;&#x432;&#x430;&#x43d;&#x438;&#x435;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="lang" eType="//ru.croc.ctp.jxfw.domain.enums/Language" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x420;&#x43e;&#x434;&#x43d;&#x43e;&#x439; &#x44f;&#x437;&#x44b;&#x43a;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="TransientObject" instanceClassName="ru.croc.ctp.jxfw.domain.TransientObject" keyTypeName="java.lang.String" persistenceType="TRANSIENT">
+      <eAnnotations source="http://www.croc.ru/ctp/model/CustomAnnotation">
+        <details key="value" value="string"/>
+        <details key="byteValue" value="0"/>
+        <details key="shortValue" value="1"/>
+        <details key="intValue" value="2"/>
+        <details key="longValue" value="3"/>
+        <details key="floatValue" value="4.0"/>
+        <details key="doubleValue" value="5.0"/>
+        <details key="booleanValue" value="true"/>
+        <details key="charValue" value="a"/>
+        <details key="clazz" value="java.util.List"/>
+        <details key="enumeration" value="VAL1"/>
+        <details key="annotation" value="[annotationType = AnotherCustomAnnotation, value = string, byteValue = 0, shortValue = 1, intValue = 2, longValue = 3, floatValue = 4.0, doubleValue = 5.0, booleanValue = true, charValue = a, clazz = java.util.List, enumeration = VAL1, stringArray = [foo, bar], byteArray = [0, 1], shortArray = [1, 2], intArray = [2, 3], longArray = [3, 4], floatArray = [4.0, 5.0], doubleArray = [5.0, 6.0], booleanArray = [true, false], charArray = [a, b], clazzArray = [java.util.List, java.util.Set], enumerationArray = [VAL1, VAL2]]"/>
+        <details key="stringArray" value="[foo, bar]"/>
+        <details key="byteArray" value="[0, 1]"/>
+        <details key="shortArray" value="[1, 2]"/>
+        <details key="intArray" value="[2, 3]"/>
+        <details key="longArray" value="[3, 4]"/>
+        <details key="floatArray" value="[4.0, 5.0]"/>
+        <details key="doubleArray" value="[5.0, 6.0]"/>
+        <details key="booleanArray" value="[true, false]"/>
+        <details key="charArray" value="[a, b]"/>
+        <details key="clazzArray" value="[java.util.List, java.util.Set]"/>
+        <details key="enumerationArray" value="[VAL1, VAL2]"/>
+        <details key="annotationArray" value="[[annotationType = AnotherCustomAnnotation, value = string, byteValue = 0, shortValue = 1, intValue = 2, longValue = 3, floatValue = 4.0, doubleValue = 5.0, booleanValue = true, charValue = a, clazz = java.util.List, enumeration = VAL1, stringArray = [foo, bar], byteArray = [0, 1], shortArray = [1, 2], intArray = [2, 3], longArray = [3, 4], floatArray = [4.0, 5.0], doubleArray = [5.0, 6.0], booleanArray = [true, false], charArray = [a, b], clazzArray = [java.util.List, java.util.Set], enumerationArray = [VAL1, VAL2]], [annotationType = AnotherCustomAnnotation, value = string, byteValue = 0, shortValue = 1, intValue = 2, longValue = 3, floatValue = 4.0, doubleValue = 5.0, booleanValue = true, charValue = a, clazz = java.util.List, enumeration = VAL1, stringArray = [foo, bar], byteArray = [0, 1], shortArray = [1, 2], intArray = [2, 3], longArray = [3, 4], floatArray = [4.0, 5.0], doubleArray = [5.0, 6.0], booleanArray = [true, false], charArray = [a, b], clazzArray = [java.util.List, java.util.Set], enumerationArray = [VAL1, VAL2]]]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="value" value="&#x412;&#x440;&#x435;&#x43c;&#x435;&#x43d;&#x43d;&#x44b;&#x439; &#x43e;&#x431;&#x44a;&#x435;&#x43a;&#x442;"/>
+        <details key="lang" value="ru"/>
+        <details key="propName" value=""/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="address" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x410;&#x434;&#x440;&#x435;&#x441;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/CustomAnnotation">
+          <details key="value" value="string"/>
+          <details key="byteValue" value="0"/>
+          <details key="shortValue" value="1"/>
+          <details key="intValue" value="2"/>
+          <details key="longValue" value="3"/>
+          <details key="floatValue" value="4.0"/>
+          <details key="doubleValue" value="5.0"/>
+          <details key="booleanValue" value="true"/>
+          <details key="charValue" value="a"/>
+          <details key="clazz" value="java.util.List"/>
+          <details key="enumeration" value="VAL1"/>
+          <details key="annotation" value="[annotationType = AnotherCustomAnnotation, value = string, byteValue = 0, shortValue = 1, intValue = 2, longValue = 3, floatValue = 4.0, doubleValue = 5.0, booleanValue = true, charValue = a, clazz = java.util.List, enumeration = VAL1, stringArray = [foo, bar], byteArray = [0, 1], shortArray = [1, 2], intArray = [2, 3], longArray = [3, 4], floatArray = [4.0, 5.0], doubleArray = [5.0, 6.0], booleanArray = [true, false], charArray = [a, b], clazzArray = [java.util.List, java.util.Set], enumerationArray = [VAL1, VAL2]]"/>
+          <details key="stringArray" value="[foo, bar]"/>
+          <details key="byteArray" value="[0, 1]"/>
+          <details key="shortArray" value="[1, 2]"/>
+          <details key="intArray" value="[2, 3]"/>
+          <details key="longArray" value="[3, 4]"/>
+          <details key="floatArray" value="[4.0, 5.0]"/>
+          <details key="doubleArray" value="[5.0, 6.0]"/>
+          <details key="booleanArray" value="[true, false]"/>
+          <details key="charArray" value="[a, b]"/>
+          <details key="clazzArray" value="[java.util.List, java.util.Set]"/>
+          <details key="enumerationArray" value="[VAL1, VAL2]"/>
+          <details key="annotationArray" value="[]"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="BaseA" instanceClassName="ru.croc.ctp.jxfw.domain.BaseA" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="baseA" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="ExtB" instanceClassName="ru.croc.ctp.jxfw.domain.ExtB" eSuperTypes="//ru.croc.ctp.jxfw.domain/BaseB" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="extB" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="BaseB" instanceClassName="ru.croc.ctp.jxfw.domain.BaseB" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="baseB" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="ChildModuleObject" instanceClassName="ru.croc.ctp.jxfw.domain.ChildModuleObject" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eSuperTypes href="XFWModel_ctp-integration.ecore#//ru.croc.ctp.integration.domain/MessageBody"/>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="newField" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="listParentB" upperBound="-1" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWOneToMany"/>
+          <details key="lazyLoad" value="true"/>
+          <details key="container" value="List"/>
+          <details key="actualType" value="ru.croc.ctp.integration.domain.MessageBody"/>
+          <details key="mappedBy" value=""/>
+          <details key="targetEntity" value="void"/>
+          <details key="targetEntityQN" value="void"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="xfw:XFWClass" href="XFWModel_ctp-integration.ecore#//ru.croc.ctp.integration.domain/MessageBody"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="setParentB" upperBound="-1" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWOneToMany"/>
+          <details key="lazyLoad" value="true"/>
+          <details key="container" value="Set"/>
+          <details key="actualType" value="ru.croc.ctp.integration.domain.MessageBody"/>
+          <details key="mappedBy" value=""/>
+          <details key="targetEntity" value="void"/>
+          <details key="targetEntityQN" value="void"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="xfw:XFWClass" href="XFWModel_ctp-integration.ecore#//ru.croc.ctp.integration.domain/MessageBody"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="MultiModuleChild" instanceClassName="ru.croc.ctp.jxfw.domain.MultiModuleChild" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eSuperTypes href="XFWModel_jxfw-multimodule-test-add-domain.ecore#//ru.croc.ctp.jxfw.domain/MultiModuleParent"/>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="multiModuleChild" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="ExtA" instanceClassName="ru.croc.ctp.jxfw.domain.ExtA" eSuperTypes="//ru.croc.ctp.jxfw.domain/BaseA" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="extA" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages xsi:type="xfw:XFWPackage" name="ru.croc.ctp.jxfw.datasources" nsURI="http://ru.croc.ctp.jxfw/XFWPackage/ru.croc.ctp.jxfw.datasources" nsPrefix="ru.croc.ctp.jxfw.datasources">
+    <eClassifiers xsi:type="xfw:XFWDataSource" name="getDomainObjects" instanceClassName="ru.croc.ctp.jxfw.datasources.DataSources" requestMapping="DomainObjectList">
+      <eOperations xsi:type="xfw:XFWOperation" name="getDomainObjects" eType="//ru.croc.ctp.jxfw.domain/License">
+        <eParameters name="localDateParam">
+          <eType xsi:type="ecore:EDataType" href="http://ru.croc.ctp.jxfw/metamodel#//LocalDate"/>
+        </eParameters>
+        <eParameters name="notNullLocalDateParam">
+          <eAnnotations>
+            <details key="message" value="$S,{javax.validation.constraints.NotNull.message} "/>
+            <details key="className" value="javax.validation.constraints.NotNull"/>
+          </eAnnotations>
+          <eType xsi:type="ecore:EDataType" href="http://ru.croc.ctp.jxfw/metamodel#//LocalDate"/>
+        </eParameters>
+        <eParameters name="requiredStringParam">
+          <eAnnotations source="http://www.croc.ru/ctp/model/requestParam">
+            <details key="value" value=""/>
+            <details key="required" value="true"/>
+          </eAnnotations>
+          <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        </eParameters>
+        <eParameters name="optionalStringParam">
+          <eAnnotations source="http://www.croc.ru/ctp/model/requestParam">
+            <details key="value" value=""/>
+            <details key="required" value="false"/>
+          </eAnnotations>
+          <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        </eParameters>
+        <eParameters name="optionalByDefaultNotEmptyStringParam">
+          <eAnnotations>
+            <details key="message" value="$S,{org.hibernate.validator.constraints.NotEmpty.message} "/>
+            <details key="className" value="org.hibernate.validator.constraints.NotEmpty"/>
+          </eAnnotations>
+          <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        </eParameters>
+        <eParameters name="optionalByDefaultStringParam">
+          <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWDataSource" name="getLicencesTest" instanceClassName="ru.croc.ctp.jxfw.datasources.DataSources" requestMapping="getLicencesTest">
+      <eOperations xsi:type="xfw:XFWOperation" name="getLicencesTest" eType="//ru.croc.ctp.jxfw.domain/License">
+        <eParameters name="paramA">
+          <eAnnotations source="http://www.croc.ru/ctp/model/requestParam">
+            <details key="value" value="nameAB"/>
+            <details key="required" value="true"/>
+          </eAnnotations>
+          <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages xsi:type="xfw:XFWPackage" name="ru.croc.ctp.jxfw.domain.enums" nsURI="http://ru.croc.ctp.jxfw/XFWPackage/ru.croc.ctp.jxfw.domain.enums" nsPrefix="ru.croc.ctp.jxfw.domain.enums">
+    <eClassifiers xsi:type="ecore:EEnum" name="SampleEnumType" instanceClassName="ru.croc.ctp.jxfw.domain.enums.SampleEnumType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/enumType">
+        <details key="isFlags" value="true"/>
+      </eAnnotations>
+      <eLiterals name="One" value="1"/>
+      <eLiterals name="Two" value="2"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="Language" instanceClassName="ru.croc.ctp.jxfw.domain.enums.Language">
+      <eAnnotations source="http://www.croc.ru/ctp/model/enumType">
+        <details key="isFlags" value="false"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="value" value="&#x420;&#x43e;&#x434;&#x43d;&#x43e;&#x439; &#x44f;&#x437;&#x44b;&#x43a;"/>
+        <details key="lang" value="ru"/>
+        <details key="propName" value=""/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/CustomAnnotation">
+        <details key="value" value="string"/>
+        <details key="byteValue" value="0"/>
+        <details key="shortValue" value="1"/>
+        <details key="intValue" value="2"/>
+        <details key="longValue" value="3"/>
+        <details key="floatValue" value="4.0"/>
+        <details key="doubleValue" value="5.0"/>
+        <details key="booleanValue" value="true"/>
+        <details key="charValue" value="a"/>
+        <details key="clazz" value="java.util.List"/>
+        <details key="enumeration" value="VAL1"/>
+        <details key="annotation" value="[annotationType = AnotherCustomAnnotation, value = string, byteValue = 0, shortValue = 1, intValue = 2, longValue = 3, floatValue = 4.0, doubleValue = 5.0, booleanValue = true, charValue = a, clazz = java.util.List, enumeration = VAL1, stringArray = [foo, bar], byteArray = [0, 1], shortArray = [1, 2], intArray = [2, 3], longArray = [3, 4], floatArray = [4.0, 5.0], doubleArray = [5.0, 6.0], booleanArray = [true, false], charArray = [a, b], clazzArray = [java.util.List, java.util.Set], enumerationArray = [VAL1, VAL2]]"/>
+        <details key="stringArray" value="[foo, bar]"/>
+        <details key="byteArray" value="[0, 1]"/>
+        <details key="shortArray" value="[1, 2]"/>
+        <details key="intArray" value="[2, 3]"/>
+        <details key="longArray" value="[3, 4]"/>
+        <details key="floatArray" value="[4.0, 5.0]"/>
+        <details key="doubleArray" value="[5.0, 6.0]"/>
+        <details key="booleanArray" value="[true, false]"/>
+        <details key="charArray" value="[a, b]"/>
+        <details key="clazzArray" value="[java.util.List, java.util.Set]"/>
+        <details key="enumerationArray" value="[VAL1, VAL2]"/>
+        <details key="annotationArray" value="[]"/>
+      </eAnnotations>
+      <eLiterals name="RUS" value="10">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x420;&#x443;&#x441;&#x441;&#x43a;&#x438;&#x439;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="Russian"/>
+          <details key="lang" value="en"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="ENG" value="20">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x410;&#x43d;&#x433;&#x43b;&#x438;&#x439;&#x441;&#x43a;&#x438;&#x439;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="English"/>
+          <details key="lang" value="en"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="BEL" value="30">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="value" value="&#x411;&#x435;&#x43b;&#x43e;&#x440;&#x443;&#x441;&#x441;&#x43a;&#x438;&#x439;"/>
+          <details key="lang" value="ru"/>
+          <details key="propName" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/CustomAnnotation">
+          <details key="value" value="string"/>
+          <details key="byteValue" value="0"/>
+          <details key="shortValue" value="1"/>
+          <details key="intValue" value="2"/>
+          <details key="longValue" value="3"/>
+          <details key="floatValue" value="4.0"/>
+          <details key="doubleValue" value="5.0"/>
+          <details key="booleanValue" value="true"/>
+          <details key="charValue" value="a"/>
+          <details key="clazz" value="java.util.List"/>
+          <details key="enumeration" value="VAL1"/>
+          <details key="annotation" value="[annotationType = AnotherCustomAnnotation, value = string, byteValue = 0, shortValue = 1, intValue = 2, longValue = 3, floatValue = 4.0, doubleValue = 5.0, booleanValue = true, charValue = a, clazz = java.util.List, enumeration = VAL1, stringArray = [foo, bar], byteArray = [0, 1], shortArray = [1, 2], intArray = [2, 3], longArray = [3, 4], floatArray = [4.0, 5.0], doubleArray = [5.0, 6.0], booleanArray = [true, false], charArray = [a, b], clazzArray = [java.util.List, java.util.Set], enumerationArray = [VAL1, VAL2]]"/>
+          <details key="stringArray" value="[foo, bar]"/>
+          <details key="byteArray" value="[0, 1]"/>
+          <details key="shortArray" value="[1, 2]"/>
+          <details key="intArray" value="[2, 3]"/>
+          <details key="longArray" value="[3, 4]"/>
+          <details key="floatArray" value="[4.0, 5.0]"/>
+          <details key="doubleArray" value="[5.0, 6.0]"/>
+          <details key="booleanArray" value="[true, false]"/>
+          <details key="charArray" value="[a, b]"/>
+          <details key="clazzArray" value="[java.util.List, java.util.Set]"/>
+          <details key="enumerationArray" value="[VAL1, VAL2]"/>
+          <details key="annotationArray" value="[]"/>
+        </eAnnotations>
+      </eLiterals>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages xsi:type="xfw:XFWPackage" name="ru.croc.ctp.jxfw.domain.sub" nsURI="http://ru.croc.ctp.jxfw/XFWPackage/ru.croc.ctp.jxfw.domain.sub" nsPrefix="ru.croc.ctp.jxfw.domain.sub">
+    <eClassifiers xsi:type="xfw:XFWClass" name="Locality" instanceClassName="ru.croc.ctp.jxfw.domain.sub.Locality" complexType="true">
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="name" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+  </eSubpackages>
+</xfw:XFWPackage>

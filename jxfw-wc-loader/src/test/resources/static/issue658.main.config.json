@@ -1,0 +1,13 @@
+{
+  "require": {
+    "paths": {
+      "underscore": "658"
+    },
+    "shim": {
+      "bootstrap": [
+        "658"
+      ]
+    },
+    "waitSeconds": 658
+  }
+}

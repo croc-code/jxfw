@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<xs:schema 
+    targetNamespace="http://www.croc.ru/Schemas/XmlFramework/ReportService" 
+    xmlns="http://www.croc.ru/Schemas/XmlFramework/ReportService" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified"
+    attributeFormDefault="qualified">
+
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.Types.xsd">
+        <xs:annotation>
+            <xs:documentation>Стандартные типы, используемые в ReportService</xs:documentation>
+        </xs:annotation>
+    </xs:include>
+
+    <xs:element name="template-evaluator" substitutionGroup="abstract-formatter">
+        <xs:annotation>
+            <xs:documentation><![CDATA[
+            Форматирование строки.
+            Вставляет произвольную строку по шаблону, используя значения из источника данных
+            {#field-name}, параметров {@param-name}, переменных уровня фрагмента отчета {$variable-name}
+            ]]>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="abstract-formatter">
+                    <xs:attribute
+                        name="null-template"
+                        type="xs:string"
+                        form="qualified"
+                        use="optional">
+                        <xs:annotation>
+                            <xs:documentation><![CDATA[
+                                Значение в случае отсутствия данных
+                            ]]></xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute
+                        name="template"
+                        type="xs:string"
+                        form="qualified"
+                        use="required">
+                        <xs:annotation>
+                            <xs:documentation><![CDATA[
+Строка по шаблону, использует значения из источника данных {#field-name}, 
+параметров {@param-name}, переменных уровня фрагмента отчета {$variable-name}.
+                            ]]></xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="message" type="xs:string" use="optional">
+                        <xs:annotation>
+                            <xs:documentation>Текст ошибки</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

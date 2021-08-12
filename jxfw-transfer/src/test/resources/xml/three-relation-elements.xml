@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<transfer-data n="ImportSurveys" xmlns:dt="urn:schemas-microsoft-com:datatypes">
+	<head>
+		<export-time dt:dt="dateTime.tz">2016-09-19T10:41:27.879</export-time>
+	</head>
+	<objects>
+		<Survey xmlns:dt="urn:schemas-microsoft-com:datatypes" oid="8de05a6e-b0dd-49fe-a0dc-0aa53bdb0504">
+			<title dt:dt="string">AMN02</title>
+			<openDate dt:dt="date">2006-09-22</openDate>
+		</Survey>
+		<Survey xmlns:dt="urn:schemas-microsoft-com:datatypes" oid="8de05a6e-b0dd-49fe-a0dc-0aa53bdb0503">
+			<title dt:dt="string">AMN01</title>
+			<openDate dt:dt="date">2006-09-22</openDate>
+		</Survey>
+		<Survey xmlns:dt="urn:schemas-microsoft-com:datatypes" oid="8de05a6e-b0dd-49fe-a0dc-0aa53bdb0505">
+			<surveys>
+				<Survey oid="8de05a6e-b0dd-49fe-a0dc-0aa53bdb0504"></Survey>
+				<Survey oid="8de05a6e-b0dd-49fe-a0dc-0aa53bdb0503"></Survey>
+			</surveys>
+		</Survey>
+	</objects>
+</transfer-data>

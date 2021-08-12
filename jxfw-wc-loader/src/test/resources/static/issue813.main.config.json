@@ -1,0 +1,8 @@
+{
+  "security": {
+    "twoFactorAuth": {
+      "enabled": true,
+      "url": "right_url"
+    }
+  }
+}

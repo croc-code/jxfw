@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>jxfw-build</artifactId>
+    <version>1.9.7-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>jXFW build</name>
+
+    <parent>
+        <groupId>ru.croc.ctp</groupId>
+        <artifactId>build-parent</artifactId>
+        <version>1.9.7-SNAPSHOT</version>
+        <relativePath>parent/pom.xml</relativePath>
+    </parent>
+
+    <modules>
+        <module>../jxfw-eclipse-bundles</module>
+        <module>../jxfw-core-runtime</module>
+        <module>../jxfw-core-compile</module>
+        <module>../jxfw-jpa-runtime</module>
+        <module>../jxfw-jpa-compile</module>
+        <module>../jxfw-cass-runtime</module>
+        <module>../jxfw-cass-compile</module>
+        <module>../jxfw-solr-runtime</module>
+        <module>../jxfw-fulltext-service</module>
+        <module>../jxfw-wc-loader</module>
+        <module>../jxfw-transfer</module>
+        <module>../jxfw-transfer-facade-gen-maven-plugin</module>
+        <module>../wcgen-maven-plugin</module>
+        <module>../scriptgen-maven-plugin</module>
+        <module>../jxfw-report-maven-plugin</module>
+        <module>../modelgen-maven-plugin</module>
+        <module>../jxfw-async</module>
+        <module>../jxfw-security</module>
+        <module>../jxfw-security-ldap</module>
+        <module>../jxfw-reporting-xsl-fo</module>
+        <module>../jxfw-export-poi</module>
+        <module>../jxfw-cli</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>ru.croc.ctp</groupId>
+                <artifactId>jxfw-bom</artifactId>
+                <version>1.9.7-SNAPSHOT</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <profiles>
+        <profile>
+            <id>javac-error-prone</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <configuration>
+                            <compilerId>javac-with-errorprone</compilerId>
+                            <forceJavacCompilerUse>true</forceJavacCompilerUse>
+                        </configuration>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.codehaus.plexus</groupId>
+                                <artifactId>plexus-compiler-javac-errorprone</artifactId>
+                                <version>2.5</version>
+                            </dependency>
+                            <!-- override plexus-compiler-javac-errorprone's dependency on Error
+                                Prone with the latest version -->
+                            <dependency>
+                                <groupId>com.google.errorprone</groupId>
+                                <artifactId>error_prone_core</artifactId>
+                                <version>2.0.6</version>
+                            </dependency>
+                        </dependencies>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>javadoc</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>2.10.4</version>
+                        <executions>
+                            <execution>
+                                <id>attach-javadocs</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                                <configuration>
+                                    <additionalparam>-Xdoclint:none</additionalparam>
+                                    <stylesheetfile>${project.basedir}/../javadocstylesheet.css</stylesheetfile>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>

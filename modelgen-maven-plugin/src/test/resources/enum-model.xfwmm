@@ -1,0 +1,1559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xfw="http://ru.croc.ctp.jxfw/metamodel">
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <ecore:EStringToStringMapEntry key="flags" value=""/>
+  <xfw:XFWPackage name="datamodel">
+    <eClassifiers xsi:type="xfw:XFWClass" name="DrugMonitoringDetailsType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Сведения о результатах контроля качества лекарственных средств"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="EDocHeader" lowerBound="1"
+          eType="#/91/CCDTEDocHeaderType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Заголовок электронного документа (сведений)"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="DrugMonitoringItemDetails"
+          lowerBound="1" upperBound="-1" eType="#/91/HCCDTDrugMonitoringItemDetailsType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Сведения о контроле качества лекарственного препарата"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="CCDTEDocHeaderType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Структура заголовка электронного документа (сведений)"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="InfEnvelopeCode" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Код сообщения общего процесса"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value="^P.[A-Z]{2}.[0-9]{2}.MSG.[0-9]{3}$"/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="EDocCode" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Код электронного документа (сведений)"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value="^R(.[A-Z]{2}.[A-Z]{2}.[0-9]{2})?.[0-9]{3}$"/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="EDocId" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Идентификатор электронного документа (сведений)"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value="^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="EDocRefId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Идентификатор исходного электронного документа (сведений)"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value="^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="EDocDateTime" lowerBound="1"
+          eType="ecore:EDataType http://ru.croc.ctp.jxfw/metamodel#//LocalDateTime">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Дата и время электронного документа (сведений)"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="LanguageCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Код языка"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value="^[a-z]{2}$"/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="HCCDTDrugMonitoringItemDetailsType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Сведения о контроле качества лекарственного препарата"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="UnifiedCountryCode" lowerBound="1"
+          eType="#/91/CSDTQualifiedCodeType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Код страны"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="DrugMonitoringDetails"
+          lowerBound="1" upperBound="-1" eType="#/91/HCCDTDrugMonitoringDetailsType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Сведения о результатах контроля качества лекарственного препарата"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="AuthorityActionDetails"
+          lowerBound="1" upperBound="-1" eType="#/91/HCCDTAuthorityActionDetailsType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Сведения о действии, предпринятом государственным органом исполнительной власти"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="ResourceItemStatusDetails"
+          lowerBound="1" eType="#/91/CCDTResourceItemStatusDetailsType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Технологические характеристики записи общего ресурса"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="CSDTQualifiedCodeType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Код"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="codeListId" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="20">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Идентификатор справочника или классификатора"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="Value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Код"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="HCCDTDrugMonitoringDetailsType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Сведения о результатах контроля качества лекарственного препарата"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="StatusLowQualityCode"
+          eType="#/91/HCSDTStatusLowQualityCodeType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Код подраздела единой базы данных о лекарственных препаратах, в отношении которых принято решение об их изъятии из обращения"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="DrugTradeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="300">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Торговое наименование лекарственного препарата"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="DrugNameDetails" upperBound="3"
+          eType="#/91/HCCDTDrugNameDetailsType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Сведения о наименовании лекарственного средства"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="ActiveSubstanceIndicator"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Признак активной фармацевтической субстанции"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="DosageFormDetails" lowerBound="1"
+          eType="#/91/HCCDTDosageFormDetailsType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Сведения о лекарственной форме"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="SubstanceDetails" eType="#/91/HCCDTSubstanceDetailsType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Сведения об ингредиенте, входящем в состав лекарственного препарата"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="PackageFormDetails" lowerBound="1"
+          upperBound="-1" eType="#/91/HCCDTPackageFormDetailsType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Сведения о форме выпуска лекарственного препарата"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="ConsignmentDetails" upperBound="-1"
+          eType="#/91/HCCDTConsignmentDetailsType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Сведения о группе товаров"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="ManufacturingDate" eType="ecore:EDataType http://ru.croc.ctp.jxfw/metamodel#//LocalDate">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Дата производства"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="EndDate" eType="ecore:EDataType http://ru.croc.ctp.jxfw/metamodel#//LocalDate">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Конечная дата"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="ManufacturingAuthorizationHolderDetailsV2"
+          lowerBound="1" eType="#/91/CCDTBusinessEntityDetailsType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Сведения о производителе"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="RegistrationCertificateHolderDetails"
+          eType="#/91/CCDTBusinessEntityDetailsType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Сведения о держателе (заявителе) регистрационного удостоверения"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="CounterfeitPackageQuantity"
+          lowerBound="1" eType="#/91/CSDTUnifiedDimensionalMeasureType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Количество выявленных упаковок недоброкачественного, фальсифицированного или контрафактного лекарственного препарата"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="OrganizationRestrictionDetails"
+          lowerBound="1" eType="#/91/HCCDTOrganizationRestrictionDetailsType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Сведения о контролируемой организации"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="AuthorityName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="300">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Наименование уполномоченного органа государства-члена"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="LowQualityDetails" upperBound="-1"
+          eType="#/91/HCCDTLowQualityDetailsType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Сведения о показателе нормативного документа по качеству, по которому выявлены несоответствия"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="FalsificationSignDetails"
+          upperBound="-1" eType="#/91/HCCDTFalsificationSignDetailsType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Сведения о признаке фальсификации и (или) контрафактного происхождения лекарственного препарата"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="HCCDTDrugNameDetailsType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Сведения о наименовании лекарственного средства"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="DrugCode" eType="#/91/CSDTQualifiedCodeType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Код наименования лекарственного средства"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="DrugName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="250">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Наименование лекарственного средства"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="HCCDTDosageFormDetailsType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Сведения о лекарственной форме"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="DosageFormCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Код лекарственной формы"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value="^.{4}$"/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="DosageFormName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="500">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Наименование лекарственной формы"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="HCCDTSubstanceDetailsType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Сведения об ингредиенте лекарственного препарата"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="SubstanceName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="250">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Наименование ингредиента"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="DrugSubstanceRoleCode"
+          eType="#/91/HCSDTDrugSubstanceRoleCodeType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Код функции субстанции (вещества, материала) в составе лекарственного препарата"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="DrugSubstanceRoleName"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="500">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Наименование функции субстанции (вещества, материала) в составе лекарственного препарата"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="SubstanceMeasure" eType="#/91/HCSDTSubstanceDimensionalMeasureType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Дозировка (концентрация)"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="HCSDTSubstanceDimensionalMeasureType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Дозировка (концентрация) с единицей измерения"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="SubstanceMeasureCode"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="6">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Код единицы измерения дозировки и концентрации"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="SubstanceMeasureName"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="500">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Имя"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="HCCDTPackageFormDetailsType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Форма выпуска лекарственного препарата"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="PackageDetails" lowerBound="1"
+          upperBound="-1" eType="#/91/HCCDTPackageDetailsType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Сведения об упакованной единице лекарственного препарата"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="MiddlePackageText" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="100">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Описание промежуточной упаковки лекарственного препарата"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="ComponentDetails" upperBound="-1"
+          eType="#/91/HCCDTComponentDetailsType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Сведения о комплектующем устройстве в упаковке лекарственного средства"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="SecondaryPackageText"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="250">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Описание вторичной упаковки лекарственного препарата"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="DrugSetIndicator" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Признак наличия набора упакованных единиц во вторичной упаковке лекарственного препарата"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="HCCDTPackageDetailsType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Упакованная единица лекарственного препарата"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="DosageFormCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Код лекарственной формы"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value="^.{4}$"/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="DosageFormName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="500">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Наименование лекарственной формы"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="DosageFormAdditionalFeaturesDetails"
+          eType="#/91/HCCDTDosageFormAdditionalFeaturesDetailsType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Дополнительные признаки лекарственной формы"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="SubstanceDetails" upperBound="-1"
+          eType="#/91/HCCDTSubstanceDetailsType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Сведения об ингредиенте, входящем в состав лекарственного препарата"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="DrugPackageKindCode"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Код вида первичной упаковки лекарственного препарата"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value="^.{2}$"/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="DrugPackageKindName"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="500">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Наименование вида первичной упаковки лекарственного препарата"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="PackageMaterialText"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="4000">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Материал первичной упаковки"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="PackageMeasure" lowerBound="1"
+          upperBound="-1" eType="#/91/CSDTUnifiedDimensionalMeasureType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Количество в упаковке"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="ComponentPackageQuantity"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Количество упакованных единиц во вторичной упаковке"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="ShelfLifeDuration" eType="ecore:EDataType http://ru.croc.ctp.jxfw/metamodel#//Duration">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Срок годности лекарственного препарата"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="HCCDTDosageFormAdditionalFeaturesDetailsType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Сведения о дополнительных признаках лекарственной формы"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="DosedIndicator" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Признак дозированности"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="ChildIndicator" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Признак применимости у детей"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="SugarIndicator" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Признак наличия сахара в лекарственном препарате"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="TasteAromaAdditiveText"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="120">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Описание вкусоароматической добавки"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="SolventText" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="100">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Природа растворителя лекарственного препарата"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="RawPartMaterialText"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="250">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Сырьевая часть растительного ингредиента"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="DegreeRefinementRawMaterialCode"
+          eType="#/91/HCSDTDegreeRefinementRawMaterialCodeType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Степень измельченности сырьевой части растительного ингредиента"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="DegreeRefinementRawMaterialName"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="500">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Наименование степени измельченности сырьевой части растительного ингредиента"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="CSDTUnifiedDimensionalMeasureType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Величина с единицей измерения"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="measurementUnitCode"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Код единицы измерения"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value="^[0-9A-Z]{2,3}$"/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="measurementUnitCodeListId"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="20">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Идентификатор справочника или классификатора"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="HCCDTComponentDetailsType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Сведения о комплектующем устройстве в упаковке лекарственного средства"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="ComponentCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Код комплектующего"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value="^.{2}$"/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="ComponentName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="40">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Наименование комплектующего"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="HCCDTConsignmentDetailsType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Сведения о группе товаров"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="ConsignmentNumberId"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="50">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Номер партии лекарственного препарата"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="UnifiedCommodityMeasure"
+          eType="#/91/CSDTUnifiedDimensionalMeasureType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Количество товара"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="DistributorDetails" eType="#/91/CCDTBusinessEntityDetailsType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Сведения о дистрибьюторе (поставщике)"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="BatchDetails" upperBound="-1"
+          eType="#/91/HCCDTBatchDetailsType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Сведения о серии лекарственного препарата"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="CCDTBusinessEntityDetailsType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Хозяйствующий субъект"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="UnifiedCountryCode" eType="#/91/CSDTQualifiedCodeType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Код страны"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="BusinessEntityName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="300">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Наименование хозяйствующего субъекта"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="BusinessEntityBriefName"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="120">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Краткое наименование хозяйствующего субъекта"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="BusinessEntityTypeCode"
+          eType="#/91/CSDTQualifiedCodeType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Код организационно-правовой формы"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="BusinessEntityTypeName"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="300">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Наименование организационно-правовой формы"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="BusinessEntityId" eType="#/91/CSDTBusinessEntityIdType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Идентификатор хозяйствующего субъекта"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="UniqueCustomsNumberId"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="17">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Уникальный идентификационный таможенный номер"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="TaxpayerId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="20">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Идентификатор налогоплательщика"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="TaxRegistrationReasonCode"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Код причины постановки на учет"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value="^.{9}$"/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="SubjectAddressDetails"
+          upperBound="-1" eType="#/91/CCDTSubjectAddressDetailsType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Адрес"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="CommunicationDetails"
+          upperBound="-1" eType="#/91/CCDTCommunicationDetailsType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Контактный реквизит"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="CSDTBusinessEntityIdType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Идентификатор хозяйствующего субъекта"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="kindId" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Метод идентификации хозяйствующих субъектов"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="Value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="20">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Идентификатор"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="CCDTSubjectAddressDetailsType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Адрес"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="AddressKindCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="20">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Код вида адреса"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="UnifiedCountryCode" eType="#/91/CSDTQualifiedCodeType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Код страны"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="TerritoryCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="17">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Код территории"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="RegionName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="120">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Регион"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="DistrictName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="120">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Район"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="CityName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="120">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Город"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="SettlementName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="120">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Населенный пункт"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="StreetName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="120">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Улица"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="BuildingNumberId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="50">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Номер дома"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="RoomNumberId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="20">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Номер помещения"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="PostCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Почтовый индекс"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value="^[A-Z0-9][A-Z0-9 -]{1,8}[A-Z0-9]$"/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="PostOfficeBoxId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="20">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Номер абонентского ящика"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="CCDTCommunicationDetailsType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Контактный реквизит"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="CommunicationChannelCode"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="20">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Код вида связи"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="CommunicationChannelName"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="120">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Наименование вида связи"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="CommunicationChannelId"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="1000">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Идентификатор канала связи"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="HCCDTBatchDetailsType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Сведения о серии лекарственного препарата"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="BatchNumberId" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="50">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Номер серии лекарственного препарата"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="UnifiedCommodityMeasure"
+          eType="#/91/CSDTUnifiedDimensionalMeasureType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Количество товара"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="HCCDTOrganizationRestrictionDetailsType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Сведения о контролируемой организации"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="OrganizationRestrictionKindCode"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Код вида контролируемой организации"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value="^.{2}$"/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="OrganizationRestrictionKindName"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="500">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Наименование вида контролируемой организации"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="HCCDTLowQualityDetailsType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Сведения о показателе нормативного документа по качеству, по которому выявлены несоответствия"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="LowQualityCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Код показателя несоответствия качества"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value="^.{2}$"/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="LowQualityName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="500">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Наименование показателя несоответствия качества"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="NoteText" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="4000">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Примечание"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="HCCDTFalsificationSignDetailsType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Сведения о признаке фальсификации и (или) контрафактного происхождения лекарственного препарата"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="DescriptionText" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="4000">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Описание"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="FalsificationSignPicture"
+          upperBound="-1" eType="#/91/CSDTPictureType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Иллюстрация признака фальсифицированного или контрафактного лекарственного препарата"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="CSDTPictureType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Рисунок с кодом формата данных"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="mediaTypeCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="255">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Код формата данных"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="Value" eType="ecore:EDataType http://ru.croc.ctp.jxfw/metamodel#//Blob">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Рисунок"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="HCCDTAuthorityActionDetailsType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Сведения о действии, предпринятом государственным органом исполнительной власти"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="DescriptionText" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="4000">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Описание"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="OfficialDocDetails" lowerBound="1"
+          eType="#/91/HCCDTOfficialDocDetailsType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Официальный документ"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="HCCDTOfficialDocDetailsType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Сведения официального документа"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="DocId" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="50">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Номер документа"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="DocName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="500">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Наименование документа"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="DocCreationDate" eType="ecore:EDataType http://ru.croc.ctp.jxfw/metamodel#//LocalDate">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Дата документа"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="DocValidityDate" eType="ecore:EDataType http://ru.croc.ctp.jxfw/metamodel#//LocalDate">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Дата истечения срока действия документа"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="AuthorityId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="20">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Идентификатор уполномоченного органа государства-члена"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="AuthorityName" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="300">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Наименование уполномоченного органа государства-члена"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="DocBinaryText" eType="ecore:EDataType http://ru.croc.ctp.jxfw/metamodel#//Blob">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Документ в бинарном формате"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="CCDTResourceItemStatusDetailsType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Технологические характеристики записи общего ресурса"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="ValidityPeriodDetails"
+          eType="#/91/CCDTPeriodDetailsType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Период действия"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="UpdateDateTime" eType="ecore:EDataType http://ru.croc.ctp.jxfw/metamodel#//LocalDateTime">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Дата и время обновления"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="CCDTPeriodDetailsType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Период"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="StartDateTime" eType="ecore:EDataType http://ru.croc.ctp.jxfw/metamodel#//LocalDateTime">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Начальная дата и время"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="EndDateTime" eType="ecore:EDataType http://ru.croc.ctp.jxfw/metamodel#//LocalDateTime">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Конечная дата и время"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="CounterfeitDrugCorrespondenceDetailsType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Дополнительные сведения, связанные с фактом выявления фальсифицированного, контрафактного и (или) не соответствующего требованиям по качеству лекарственного средства"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="EDocHeader" lowerBound="1"
+          eType="#/91/CCDTEDocHeaderType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Заголовок электронного документа (сведений)"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="CounterfeitDrugRequestDetails"
+          lowerBound="1" eType="#/91/HCCDTCounterfeitDrugCorrespondenceDetailsType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Сведения запроса дополнительных сведений, связанных с фактом выявления фальсифицированного, контрафактного и (или) не соответствующего требованиям по качеству лекарственного средства"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="CounterfeitDrugAnswerDetails"
+          upperBound="-1" eType="#/91/HCCDTCounterfeitDrugCorrespondenceDetailsType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Сведения ответа на запрос дополнительных сведений, связанных с фактом выявления фальсифицированного, контрафактного и (или) не соответствующего требованиям по качеству лекарственного средства"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="NoteText" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="4000">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Примечание"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="PdfBinaryText" upperBound="-1"
+          eType="#/91/CSDTBinaryTextType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Документ в формате PDF"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="AnyDetails" upperBound="-1"
+          eType="#/91/HCCDTAnyDetailsType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="XML-документ"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="ConfidentialityIndicator"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Признак конфиденциальности сведений"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="OfficialDocDetails" eType="#/91/HCCDTOfficialDocDetailsType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Официальный документ"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="HCCDTCounterfeitDrugCorrespondenceDetailsType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Сведения о переписке по факту выявления фальсифицированного, контрафактного и (или) не соответствующего требованиям по качеству лекарственного средства"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="DocCreationDate" lowerBound="1"
+          eType="ecore:EDataType http://ru.croc.ctp.jxfw/metamodel#//LocalDate">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Дата документа"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="DocId" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="50">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Номер документа"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="DocName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="500">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Наименование документа"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="CSDTBinaryTextType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Бинарный текст с кодом формата данных"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="mediaTypeCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="255">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Код формата данных"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="Value" eType="ecore:EDataType http://ru.croc.ctp.jxfw/metamodel#//Blob">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Бинарный текст"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="HCCDTAnyDetailsType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="XML-документ"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="AnyContent" lowerBound="1"
+          eType="ecore:EDataType http://ru.croc.ctp.jxfw/metamodel#//Blob">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="XML-документ"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="ProcessingResultDetailsType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Уведомление о результате обработки"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="EDocHeader" lowerBound="1"
+          eType="#/91/CCDTEDocHeaderType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Заголовок электронного документа (сведений)"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="EventDateTime" lowerBound="1"
+          eType="ecore:EDataType http://ru.croc.ctp.jxfw/metamodel#//LocalDateTime">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Дата и время"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="ProcessingResultV2Code"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Код результата обработки"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="DescriptionText" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          maxLength="4000">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Описание"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="ResourceStatusDetailsType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Состояние актуализации общего ресурса"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="EDocHeader" lowerBound="1"
+          eType="#/91/CCDTEDocHeaderType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Заголовок электронного документа (сведений)"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="UpdateDateTime" eType="ecore:EDataType http://ru.croc.ctp.jxfw/metamodel#//LocalDateTime">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Дата и время обновления"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/patternValidation">
+          <details key="regexp" value=""/>
+          <details key="message" value="Значение свойства не соответствует заданному шаблону"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="UnifiedCountryCode" upperBound="-1"
+          eType="#/91/CSDTQualifiedCodeType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Код страны"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="HCSDTStatusLowQualityCodeType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Код подраздела единой базы данных о лекарственных препаратах, в отношении которых принято решение об их изъятии из обращения"/>
+      </eAnnotations>
+      <eLiterals name="01">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="не соответствующее требованиям по качеству"/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="02" value="1">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="контрафактное"/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="03" value="2">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="фальсифицированное"/>
+        </eAnnotations>
+      </eLiterals>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="HCSDTDrugSubstanceRoleCodeType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Код функции субстанции (вещества, материала) в составе лекарственного препарата"/>
+      </eAnnotations>
+      <eLiterals name="01">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="действующее вещество"/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="02" value="1">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="вспомогательное вещество"/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="03" value="2">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="реагент"/>
+        </eAnnotations>
+      </eLiterals>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="HCSDTDegreeRefinementRawMaterialCodeType">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Степень измельченности сырьевой части растительного ингредиента"/>
+      </eAnnotations>
+      <eLiterals name="01">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="цельное"/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="02" value="1">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="измельченное"/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="03" value="2">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="порошок"/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="99" value="3">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="другое"/>
+        </eAnnotations>
+      </eLiterals>
+    </eClassifiers>
+  </xfw:XFWPackage>
+</xmi:XMI>

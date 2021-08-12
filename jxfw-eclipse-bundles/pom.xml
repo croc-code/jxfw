@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+
+    <artifactId>jxfw-eclipse-bundles-root</artifactId>
+
+    <parent>
+        <groupId>ru.croc.ctp</groupId>
+        <artifactId>jxfw-eclipse-bundles-configuration</artifactId>
+        <version>1.9.7-SNAPSHOT</version>
+        <relativePath>./releng/configuration</relativePath>
+    </parent>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>ru.croc.ctp</groupId>
+                <artifactId>jxfw-bom</artifactId>
+                <version>1.9.7-SNAPSHOT</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <modules>
+        <module>bundles</module>
+        <module>releng</module>
+    </modules>
+</project>

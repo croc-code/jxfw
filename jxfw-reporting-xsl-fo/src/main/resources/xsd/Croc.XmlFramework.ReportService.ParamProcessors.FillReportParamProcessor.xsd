@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<xs:schema 
+    targetNamespace="http://www.croc.ru/Schemas/XmlFramework/ReportService" 
+    xmlns="http://www.croc.ru/Schemas/XmlFramework/ReportService" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified"
+    attributeFormDefault="qualified">
+
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.Types.xsd">
+        <xs:annotation>
+            <xs:documentation>Стандартные типы, используемые в ReportService</xs:documentation>
+        </xs:annotation>
+    </xs:include>
+
+    <xs:element name="fill-params-processor" substitutionGroup="abstract-param-processor">
+        <xs:annotation>
+            <xs:documentation><![CDATA[
+                Обработчик параметров, заполняющий приведенные в профиле параметры отчета результатами, 
+                возвращаемыми источником данных, указанном в атрибуте профиля data-source. Заполняемые параметры 
+                указаны во вложенных элементах профиля fill-param, причем наименования параметров отчета приводятся в 
+                атрибуте n, а соответствующие     им     наименования параметров, возвращаемых источником данных 
+                (например названия столбцов рекордсета) в атрибуте ds-field.
+            ]]></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="abstract-param-processor">
+                    <xs:sequence>
+                        <xs:element name="fill-param" minOccurs="1" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Элемент, где указывается наименование параметра, значение для которого берется из источника данных</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:attribute name="n" type="xs:string" use="required" form="qualified">
+                                    <xs:annotation>
+                                        <xs:documentation>Наименование параметра отчета</xs:documentation>
+                                    </xs:annotation>
+                                </xs:attribute>
+                                <xs:attribute 
+                                    name="ds-field" 
+                                    type="xs:string" 
+                                    use="optional" 
+                                    form="qualified">
+                                    <xs:annotation>
+                                        <xs:documentation>Наименование соответствующего поля в источнике данных</xs:documentation>
+                                    </xs:annotation>
+                                </xs:attribute>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                    <xs:attribute 
+                        name="data-source" 
+                        type="parsed-string" 
+                        use="required" 
+                        form="qualified">
+                        <xs:annotation>
+                            <xs:documentation>Источник данных на основании которого заполняются параметры</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute 
+                        name="single-param"
+                        type="xs:boolean"
+                        default="0"
+                        use="optional"
+                        form="qualified">
+                        <xs:annotation>
+                            <xs:documentation>Признак того, что источник данных возвращает одно значение</xs:documentation>
+                        </xs:annotation>    
+                    </xs:attribute>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

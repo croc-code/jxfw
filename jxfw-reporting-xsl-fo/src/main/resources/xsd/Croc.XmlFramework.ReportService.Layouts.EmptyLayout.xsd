@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="windows-1251" ?> 
+<xs:schema 
+    targetNamespace="http://www.croc.ru/Schemas/XmlFramework/ReportService"
+    xmlns="http://www.croc.ru/Schemas/XmlFramework/ReportService" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified"
+    attributeFormDefault="qualified">
+    
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.Types.xsd">
+        <xs:annotation>
+            <xs:documentation>Стандартные типы, используемые в ReportService</xs:documentation>
+        </xs:annotation>
+    </xs:include>
+
+    <xs:element name="empty-layout" substitutionGroup="abstract-layout">
+        <xs:annotation>
+            <xs:documentation><![CDATA[
+Компонент формирования табличного разделителя (таблица с одной колонкой и одной строкой).
+Поддерживает возможность добавления дополнительных xslfo-тегов внутри разделителя (например <fo:block>текcm</fo:block>).
+Если table-style-class не указан, то берется стиль EMPTY.
+Если table-style-class = "", то вместо таблицы формируется простой вывод в виде <fo:block>. Значение стиля, описанного в cell-style-class подставляется как атрибут у fo:block
+        ]]></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="abstract-layout">
+                    <xs:sequence>
+                        <xs:element 
+                            name="add-xslfo" 
+                            type="xs:string"                             
+                            minOccurs="0" 
+                            maxOccurs="1">
+                            <xs:annotation>
+                                <xs:documentation><![CDATA[
+                                    Контейнер для дополнительного текста, помещающегося внутри пустой ячейки таблицы.
+                                    Возможно использование XSLFO.
+                                ]]>
+                                </xs:documentation>
+                            </xs:annotation>                            
+                        </xs:element>
+                    </xs:sequence>
+                    <xs:attribute ref="t" use="optional"/>
+                    <xs:attribute
+                        name="table-style-class" 
+                        type="xs:string" 
+                        form="qualified" 
+                        use="optional">
+                        <xs:annotation>
+                            <xs:documentation>Название класса стиля для всей таблицы</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute
+                        name="cell-style-class" 
+                        type="xs:string" 
+                        form="qualified" 
+                        use="optional">
+                        <xs:annotation>
+                            <xs:documentation>Название класса стиля для ячейки таблицы</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated xtend -->
+      <editor
+            id="ru.croc.ctp.jxfw.XtendMetaModel.presentation.XMMEditorID"
+            name="%_UI_XMMEditor_label"
+            icon="icons/full/obj16/XMMModelFile.gif"
+            extensions="xmeta"
+            class="ru.croc.ctp.jxfw.XtendMetaModel.presentation.XMMEditor"
+            contributorClass="ru.croc.ctp.jxfw.XtendMetaModel.presentation.XMMActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated jxfw -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="ru.croc.ctp.jxfw.metamodel.presentation.XFWMMModelWizardID"
+            name="%_UI_XFWMMModelWizard_label"
+            class="ru.croc.ctp.jxfw.metamodel.presentation.XFWMMModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/XFWMMModelFile.gif">
+         <description>%_UI_XFWMMModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated jxfw -->
+      <editor
+            id="ru.croc.ctp.jxfw.metamodel.presentation.XFWMMEditorID"
+            name="%_UI_XFWMMEditor_label"
+            icon="icons/full/obj16/XFWMMModelFile.gif"
+            extensions="ecore"
+            class="ru.croc.ctp.jxfw.metamodel.presentation.XFWMMEditor"
+            contributorClass="ru.croc.ctp.jxfw.metamodel.presentation.XFWMMActionBarContributor">
+      </editor>
+   </extension>
+</plugin>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+	<include resource="org/springframework/boot/logging/logback/base.xml" />
+	<logger name="org.hibernate" level="INFO" />
+	<!--<logger name="org.hibernate.sql" level="TRACE" />-->
+	<!--<logger name="org.hibernate.engine.query" level="TRACE" />-->
+	<!--<logger name="org.hibernate.type" level="TRACE" />-->
+	<!--<logger name="org.hibernate.jdbc" level="TRACE" />-->
+	<logger name="org.springframework" level="INFO" />
+	<logger name="ru.croc" level="TRACE" />
+</configuration>

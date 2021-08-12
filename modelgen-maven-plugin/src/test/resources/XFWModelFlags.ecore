@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xfw:XFWPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xfw="http://ru.croc.ctp.jxfw/metamodel" name="jxfwmodel" nsURI="http://ru.croc.ctp.jxfw/XFWPackage/jxfwmodel" nsPrefix="jxfwmodel">
+  <eSubpackages xsi:type="xfw:XFWPackage" name="ru.croc.ctp.integration.domain" nsURI="http://ru.croc.ctp.jxfw/XFWPackage/ru.croc.ctp.integration.domain" nsPrefix="ru.croc.ctp.integration.domain">
+    <eClassifiers xsi:type="xfw:XFWClass" name="MessageType" instanceClassName="ru.croc.ctp.integration.domain.MessageType" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="name" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="handler" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="MessageBody" instanceClassName="ru.croc.ctp.integration.domain.MessageBody" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="messageId" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="body" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/blobAdditionalFields">
+          <details key="value" value="true"/>
+          <details key="contentSizeSuffix" value="Size"/>
+          <details key="fileNameSuffix" value="FileName"/>
+          <details key="contenTypeSuffix" value="MimeContentType"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://ru.croc.ctp.jxfw/metamodel#//Blob"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="Message" instanceClassName="ru.croc.ctp.integration.domain.Message" abstract="true" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="messageType" eType="//ru.croc.ctp.integration.domain/MessageType">
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWManyToOne"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="MessageType"/>
+          <details key="actualType" value="ru.croc.ctp.integration.domain.MessageType"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="creationDate" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://ru.croc.ctp.jxfw/metamodel#//LocalDateTime"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" upperBound="-1" name="status" eType="//ru.croc.ctp.integration.domain/MessageStatus" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="statusDate" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://ru.croc.ctp.jxfw/metamodel#//LocalDateTime"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="expirationDate" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+        <eType xsi:type="ecore:EDataType" href="http://ru.croc.ctp.jxfw/metamodel#//LocalDateTime"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="InboundMessage" instanceClassName="ru.croc.ctp.integration.domain.InboundMessage" eSuperTypes="//ru.croc.ctp.integration.domain/Message" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="OutboundMessage" instanceClassName="ru.croc.ctp.integration.domain.OutboundMessage" eSuperTypes="//ru.croc.ctp.integration.domain/Message" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="inboundMessageId" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="MessageArchive" instanceClassName="ru.croc.ctp.integration.domain.MessageArchive" eSuperTypes="//ru.croc.ctp.integration.domain/Message" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="messageId" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="inboundMessageId" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="MessageStatus" instanceClassName="ru.croc.ctp.integration.domain.MessageStatus">
+      <eLiterals name="NEW" value="1"/>
+      <eLiterals name="PROCESSING" value="2"/>
+      <eLiterals name="COMPLETE" value="3"/>
+      <eLiterals name="ERROR" value="4"/>
+    </eClassifiers>
+  </eSubpackages>
+</xfw:XFWPackage>

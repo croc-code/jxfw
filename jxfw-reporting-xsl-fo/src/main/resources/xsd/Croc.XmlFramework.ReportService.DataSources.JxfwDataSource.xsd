@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="windows-1251" ?> 
+<xs:schema
+    targetNamespace="http://www.croc.ru/Schemas/XmlFramework/ReportService" 
+    xmlns="http://www.croc.ru/Schemas/XmlFramework/ReportService" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:ds="http://www.croc.ru/Schemas/XmlFramework/Data/1.0" 
+    elementFormDefault="qualified"
+    attributeFormDefault="qualified">
+
+    <xs:complexType name="jxfw-data-source">
+        <xs:complexContent>
+            <xs:extension base="abstract-data-source">
+                <xs:attribute name="class-name" use="required"/>
+                <xs:attribute name="method-name" use="optional"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:schema>

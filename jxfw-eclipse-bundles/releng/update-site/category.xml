@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <bundle id="jxfw-metamodel" version="1.9.7.qualifier">
+      <category name="jxfw-bundles"/>
+   </bundle>
+   <category-def name="jxfw-bundles" label="jXFW Plugins"/>
+</site>

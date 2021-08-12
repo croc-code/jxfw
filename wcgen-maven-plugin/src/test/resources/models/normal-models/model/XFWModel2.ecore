@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xfw:XFWPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xfw="http://ru.croc.ctp.jxfw/metamodel" name="jxfwmodel" nsURI="http://ru.croc.ctp.jxfw/XFWPackage/jxfwmodel" nsPrefix="jxfwmodel">
+  <eSubpackages xsi:type="xfw:XFWPackage" name="ru.croc.ctp.jxfw.domain" nsURI="http://ru.croc.ctp.jxfw/XFWPackage/ru.croc.ctp.jxfw.domain" nsPrefix="ru.croc.ctp.jxfw.domain">
+    <eClassifiers xsi:type="xfw:XFWClass" name="AbstractObject" instanceClassName="ru.croc.ctp.jxfw.domain.AbstractObject" abstract="true" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="en" value="AbstractObject"/>
+        <details key="ru" value="&#x410;&#x431;&#x441;&#x442;&#x440;&#x430;&#x43a;&#x442;&#x43d;&#x44b;&#x439; &#x43e;&#x431;&#x44a;&#x435;&#x43a;&#x442;"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="name" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="en" value="Name"/>
+          <details key="ru" value="&#x418;&#x43c;&#x44f;"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="PersistentObject" instanceClassName="ru.croc.ctp.jxfw.domain.PersistentObject" eSuperTypes="//ru.croc.ctp.jxfw.domain/AbstractObject" keyTypeName="java.lang.String" persistenceType="FULL">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="&#x425;&#x440;&#x430;&#x43d;&#x438;&#x43c;&#x44b;&#x439; &#x43e;&#x431;&#x44a;&#x435;&#x43a;&#x442;"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="title" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41d;&#x430;&#x437;&#x432;&#x430;&#x43d;&#x438;&#x435;"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column">
+          <details key="length" value="255"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="xfw:XFWAttribute" name="lang" eType="//ru.croc.ctp.jxfw.domain.enums/Language" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x420;&#x43e;&#x434;&#x43d;&#x43e;&#x439; &#x44f;&#x437;&#x44b;&#x43a;"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages xsi:type="xfw:XFWPackage" name="ru.croc.ctp.jxfw.domain.enums" nsURI="http://ru.croc.ctp.jxfw/XFWPackage/ru.croc.ctp.jxfw.domain.enums" nsPrefix="ru.croc.ctp.jxfw.domain.enums">
+    <eClassifiers xsi:type="ecore:EEnum" name="Language" instanceClassName="ru.croc.ctp.jxfw.domain.enums.Language">
+      <eAnnotations source="http://www.croc.ru/ctp/model/enumType">
+        <details key="isFlags" value="false"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="&#x420;&#x43e;&#x434;&#x43d;&#x43e;&#x439; &#x44f;&#x437;&#x44b;&#x43a;"/>
+      </eAnnotations>
+      <eLiterals name="RUS" value="10">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x420;&#x443;&#x441;&#x441;&#x43a;&#x438;&#x439;"/>
+          <details key="en" value="Russian"/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="ENG" value="20">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x410;&#x43d;&#x433;&#x43b;&#x438;&#x439;&#x441;&#x43a;&#x438;&#x439;"/>
+          <details key="en" value="English"/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="BEL" value="30">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x411;&#x435;&#x43b;&#x43e;&#x440;&#x443;&#x441;&#x441;&#x43a;&#x438;&#x439;"/>
+        </eAnnotations>
+      </eLiterals>
+    </eClassifiers>
+  </eSubpackages>
+</xfw:XFWPackage>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+	<include resource="org/springframework/boot/logging/logback/base.xml" />
+    <logger name="org.springframework.transaction.interceptor" level="ERROR" />
+	<logger name="ru.croc" level="ERROR" />
+	<root level="error">
+		<appender-ref ref="console" />
+	</root>
+</configuration>

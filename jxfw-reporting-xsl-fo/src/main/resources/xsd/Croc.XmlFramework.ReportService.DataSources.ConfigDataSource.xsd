@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="windows-1251" ?> 
+<xs:schema
+    targetNamespace="http://www.croc.ru/Schemas/XmlFramework/ReportService" 
+    xmlns="http://www.croc.ru/Schemas/XmlFramework/ReportService" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified"
+    attributeFormDefault="qualified">
+    
+    <xs:element name="config-data-source" substitutionGroup="abstract-data-source">
+        <xs:annotation>
+            <xs:documentation><![CDATA[
+Источник данных для чтения скалярного значения из файла конфигурации.
+Читает из файла конфигурации значения ключа заданного аттрибутом "section" в профиле.    
+            ]]></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="abstract-data-source">
+                    <xs:attribute ref="t" use="optional"/>
+                    <xs:attribute name="section" use="required" form="qualified">
+                        <xs:annotation><xs:documentation>Значение аттрибута "section" в файле конфигурации</xs:documentation></xs:annotation>
+                    </xs:attribute>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>        
+    </xs:element>
+</xs:schema>

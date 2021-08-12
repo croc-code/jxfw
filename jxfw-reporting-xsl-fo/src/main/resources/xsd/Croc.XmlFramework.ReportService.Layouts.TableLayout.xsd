@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<xs:schema 
+    targetNamespace="http://www.croc.ru/Schemas/XmlFramework/ReportService" 
+    xmlns="http://www.croc.ru/Schemas/XmlFramework/ReportService"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified" attributeFormDefault="qualified">
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.Types.xsd">
+        <xs:annotation>
+            <xs:documentation>Стандартные типы, используемые в ReportService</xs:documentation>
+              </xs:annotation>
+       </xs:include>
+    <!--
+    #########################################################################
+    aggregation-function-type - тип функции-агрегата
+    -->
+    <xs:simpleType name="aggregation-function-type">
+        <xs:annotation>
+            <xs:documentation>Тип функции-агрегата</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="min">
+                <xs:annotation>
+                    <xs:documentation>минимальное значение</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="max">
+                <xs:annotation>
+                    <xs:documentation>максимальное значение</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="sum">
+                <xs:annotation>
+                    <xs:documentation>суммарное значение</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="count">
+                <xs:annotation>
+                    <xs:documentation>количество</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="distinct-count">
+                <xs:annotation>
+                    <xs:documentation>количество уникальных значений</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="average">
+                <xs:annotation>
+                    <xs:documentation>среднее арифметическое</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <!--
+    #########################################################################
+    upper-bound-presentation-type - тип отображения верхней границы группировки
+    -->
+    <xs:simpleType name="upper-bound-presentation-enum">
+        <xs:annotation>
+            <xs:documentation>Тип отображения верхней границы группировки</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="none">
+                <xs:annotation>
+                    <xs:documentation>не выводить верхнюю границу</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="sub-title">
+                <xs:annotation>
+                    <xs:documentation>вывод подзаголовка</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <!--
+        Тип отображения верхней границы группировки
+    -->
+    <xs:simpleType name="upper-bound-presentation-type">
+        <xs:list itemType="upper-bound-presentation-enum"/>
+    </xs:simpleType>
+    <!--
+    #########################################################################
+    bound-presentation-type - тип отображения границы группировки
+    -->
+    <xs:simpleType name="bound-presentation-enum">
+        <xs:annotation>
+            <xs:documentation>Тип отображения границы группировки</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="none">
+                <xs:annotation>
+                    <xs:documentation>не выводить нижнюю границу</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="separator">
+                <xs:annotation>
+                    <xs:documentation>пустая строка с колспаном на всю таблицу</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="sub-total">
+                <xs:annotation>
+                    <xs:documentation>вывод предварительных итогов</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <!--
+        Тип отображения границы группировки
+    -->
+    <xs:simpleType name="bound-presentation-type">
+        <xs:list itemType="bound-presentation-enum"/>
+    </xs:simpleType>
+    <!--
+    #########################################################################
+    row - описание строки
+    -->
+    <xs:element name="row">
+        <xs:annotation>
+            <xs:documentation>Описание строки таблицы лэйаута</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attribute name="style-class" type="xs:string" use="optional" form="qualified">
+                <xs:annotation>
+                    <xs:documentation>наименование style class'а для строки.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="hide-if" type="xs:string" use="optional" form="qualified">
+                <xs:annotation>
+                    <xs:documentation>Признак скрытия строки из отчета</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <!--
+    #########################################################################
+    col - описание колонки 
+    -->
+    <xs:element name="col">
+        <xs:annotation>
+            <xs:documentation>Описание колонки таблицы лэйаута</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="formatters" type="formatters" minOccurs="0" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>агрегативный тэг, содержащий набор эвалуаторов/форматеров</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element ref="col" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>вложенные колонки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+            <!-- атрибуты -->
+            <xs:attribute ref="t" use="optional" />
+            <xs:attribute name="data" type="parsed-string" use="optional" form="qualified">
+                <xs:annotation>
+                    <xs:documentation>выражение, описывающее откуда берутся данные для ячеек колонки</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="align" type="align" use="optional" form="qualified">
+                <xs:annotation>
+                    <xs:documentation>выравнивание по горизонтали</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="valign" type="valign" use="optional" form="qualified">
+                <xs:annotation>
+                    <xs:documentation>выравнивание по вертикали</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="w" type="xs:string" use="optional" form="qualified">
+                <xs:annotation>
+                    <xs:documentation>ширина</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="style-class" type="xs:string" use="optional" form="qualified">
+                <xs:annotation>
+                    <xs:documentation>наименование style class'а для ячеек колонки. По умолчанию = CELL_CLASS</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="header-style-class" type="xs:string" use="optional" form="qualified">
+                <xs:annotation>
+                    <xs:documentation>наименование  style class'а для ячеек заголовка колонки. По умолчанию = TABLE_HEADER</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="total-style-class" type="xs:string" use="optional" form="qualified">
+                <xs:annotation>
+                    <xs:documentation>наименование style class'а для ячейки итоговой строки колонки. По умолчанию = SUBTOTAL</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="subtitle-style-class" type="xs:string" use="optional" form="qualified">
+                <xs:annotation>
+                    <xs:documentation>наименование style class'а для ячейки строки подзаголовка колонки. По умолчанию = SUBTITLE</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="subtotal-style-class" type="xs:string" use="optional" form="qualified">
+                <xs:annotation>
+                    <xs:documentation>наименование style class'а для ячейки подитоговой строки колонки. По умолчанию = SUBTOTAL</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="counter-start" type="xs:integer" use="optional" form="qualified">
+                <xs:annotation>
+                    <xs:documentation>Если колонка является автонумератором строк - начало счетчика</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="counter-increment" type="xs:integer" use="optional" form="qualified">
+                <xs:annotation>
+                    <xs:documentation>Если колонка является автонумератором строк - приращение счетчика</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="hide-if" type="xs:NMTOKEN" use="optional" form="qualified">
+                <xs:annotation>
+                    <xs:documentation>Наименование параметра типа boolean - признака скрытия колонки, если параметр равен true</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="hide-if-not" type="xs:NMTOKEN" use="optional" form="qualified">
+                <xs:annotation>
+                    <xs:documentation>Наименование параметра типа boolean - признака скрытия колонки, если параметр равен false</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="aggregation-function" type="aggregation-function-type" use="optional" form="qualified">
+                <xs:annotation>
+                    <xs:documentation>тип функции-агрегата значений ячейки</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="aggregation-string" type="xs:string" use="optional" form="qualified">
+                <xs:annotation>
+                    <xs:documentation>строка выводимая в строке итогов</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="aggregation-string-subtotals" type="xs:string" use="optional" form="qualified">
+                <xs:annotation>
+                    <xs:documentation>строка выводимая в строке подитогов</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="aggregation-string-subtitle" type="xs:string" use="optional" form="qualified">
+                <xs:annotation>
+                    <xs:documentation>строка, выводимая в строке подзаголовка</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="aggregation-colspan" type="xs:string" use="optional" form="qualified">
+                <xs:annotation>
+                    <xs:documentation>количество объединяемых столбцов в строке итогов, 
+                        можно использовать параметры в стандартной форме {...}</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="rowspan-by" type="xs:string" use="optional" form="qualified">
+                <xs:annotation>
+                    <xs:documentation>
+                        наименование колонок в рекордсете на основании 
+                        равенства последовательных данных в которых (всего множества)
+                        производится rowspan соответствующей колонки таблицы лэйаута
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="encoding" type="encoding-type" use="optional" form="qualified">
+                <xs:annotation>
+                    <xs:documentation>Признак кодировки</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="vt" type="var-types" use="optional" form="qualified">
+                <xs:annotation>
+                    <xs:documentation>Тип данных в данной ячейке. Используется при экспорте в Excel.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <!--
+    #########################################################################
+    table - описание таблицы лэйаута
+    -->
+    <xs:element name="table-layout" substitutionGroup="abstract-layout">
+        <xs:annotation>
+            <xs:documentation><![CDATA[
+                Стандартный лэйаут для построения таблицы отчета
+            ]]></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="abstract-layout">
+                    <!-- вложенные элементы -->
+                    <xs:sequence>
+                        <xs:element ref="var" minOccurs="0" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Переменные лэйаута</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="formatters" type="formatters" minOccurs="0" maxOccurs="1">
+                            <xs:annotation>
+                                <xs:documentation>набор дефолтных для лэйаута форматтеров/эвалуаторов</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element ref="row" minOccurs="0" maxOccurs="1">
+                            <xs:annotation>
+                                <xs:documentation>Набор строк таблицы лэйаута</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element ref="col" minOccurs="0" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>набор корневых колонок таблицы лэйаута</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="grouping" minOccurs="0" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Упорядоченная последовательность колонок rs, по которым произодится группировка</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="group-by" minOccurs="1" maxOccurs="unbounded">
+                                        <xs:annotation>
+                                            <xs:documentation>Элемент группировки</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                            <xs:attribute name="n" type="xs:string" use="required">
+                                                <xs:annotation>
+                                                    <xs:documentation>Имя столбца полученного из источника данных</xs:documentation>
+                                                </xs:annotation>
+                                            </xs:attribute>
+                                            <xs:attribute name="upper-bound-presentation" type="upper-bound-presentation-enum" use="optional" form="qualified">
+                                                <xs:annotation>
+                                                    <xs:documentation>описание визуализации верхней границы группировки</xs:documentation>
+                                                </xs:annotation>
+                                            </xs:attribute>
+                                            <xs:attribute name="bound-presentation" type="bound-presentation-enum" use="optional" form="qualified">
+                                                <xs:annotation>
+                                                    <xs:documentation>описание визуализации границы группировки</xs:documentation>
+                                                </xs:annotation>
+                                            </xs:attribute>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                    <!-- атрибуты -->
+                    <xs:attribute name="data-source-name" type="parsed-string" use="required" form="qualified">
+                        <xs:annotation>
+                            <xs:documentation>Источник данных на основании которого строится таблица лэйаута</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="no-data-message" type="xs:string" use="optional" form="qualified">
+                        <xs:annotation>
+                            <xs:documentation>Cообщение, в случае отсутствия данных</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="off-headers" type="xs:boolean" use="optional" form="qualified">
+                        <xs:annotation>
+                            <xs:documentation>Признак сокрытия заголовков колонок</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="transpose-table" type="xs:boolean" use="optional" form="qualified">
+                        <xs:annotation>
+                            <xs:documentation>Признак транспонирования таблицы</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="column-numbers" type="xs:boolean" use="optional" form="qualified">
+                        <xs:annotation>
+                            <xs:documentation>Признак автоматической нумерации столбцов</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="column-numbers-style-class" type="xs:string" use="optional" form="qualified">
+                        <xs:annotation>
+                            <xs:documentation>Класс ячеек для автоматической нумерации колонок. По умолчанию = CAPTION_CLASS</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="hidden-columns-param-name" type="xs:NMTOKEN" use="optional" form="qualified">
+                        <xs:annotation>
+                            <xs:documentation>Имя атрибута, в котором передается перечень скрываемых колонок в виде {#Column1}{#Column2}</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="style-class" type="xs:string" use="optional" form="qualified">
+                        <xs:annotation>
+                            <xs:documentation>Класс стиля самой таблицы. По умолчанию = TABLE</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

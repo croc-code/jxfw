@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<xs:schema 
+    targetNamespace="http://www.croc.ru/Schemas/XmlFramework/ReportService" 
+    xmlns="http://www.croc.ru/Schemas/XmlFramework/ReportService" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified" 
+    attributeFormDefault="qualified">
+        
+    <xs:include schemaLocation="Croc.XmlFramework.ReportService.Types.xsd">
+        <xs:annotation>
+            <xs:documentation>Стандартные типы, используемые в ReportService</xs:documentation>
+        </xs:annotation>
+    </xs:include>
+
+    <xs:annotation>
+        <xs:documentation>
+            Мастер-дитейл лейаут.
+            Лейаут позволяет строить последовательность вложенных лейатутов на основании данных, получаемых из
+            источника данных, указанного в атрибуте data-source-name. Каждая строчка рекордсета, получаемого из
+            этого источника данных, определяет одну последовательность элементов master-data и/или detail-data.
+            Количество таких последовательностей определяется количеством строк в этом рекордсете. Содержание 
+            элементов master-data и detail-data может быть параметризированно по значению колонок из рекордсета
+            data-source-name. Для определения номера текущей записи рекордсета опеределен макрос {$RowId}.
+            </xs:documentation>
+    </xs:annotation>
+        
+    <xs:complexType name="master-data-fragment">
+        <xs:annotation>
+            <xs:documentation>Фрагмент master-data</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="formatters" type="formatters" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="value" type="xs:string" use="required" form="qualified">
+            <xs:annotation>
+                <xs:documentation><![CDATA[
+                        Строковое значение для макро-подстановки.
+                        Используются {#field-name}, {@param-name}
+                    ]]></xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="encoding" type="encoding-type" use="optional" form="qualified">
+            <xs:annotation>
+                <xs:documentation>Признак кодировки</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    
+    <xs:complexType name="master-data">
+        <xs:annotation>
+            <xs:documentation>Элемент master-data</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="master-data-fragment" type="master-data-fragment" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        
+        <xs:attribute name="style-class" type="xs:string" use="optional" form="qualified">
+            <xs:annotation>
+                <xs:documentation>наимнование style class'а для данного фрагмента</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    
+        <xs:attribute name="hide-if" type="parsed-string" use="optional" form="qualified">
+            <xs:annotation>
+                <xs:documentation><![CDATA[
+                    C#-выражение, возвращающее TRUE/FALSE.
+                    В случае TRUE, фрагмент не выводится.
+                ]]></xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        
+    </xs:complexType>
+    
+    <xs:complexType name="detail-data">
+        <xs:annotation>
+            <xs:documentation>Элемент detail-data</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="param-column" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation><![CDATA[
+                        Наименование колонки из рекордсета, получаемого из источника данных, 
+                        указанного в атрибуте data-source-name элемента master-detail-layout,
+                        значение из которой будет передаваться в источник данных лейаута, используемого
+                        в элементе detail-data.
+                        Пример использования: <r:param-column r:name="Column1"/>
+                        
+                        Внимание! При текущей реализации, имя колонки, указанной в r:name не должно совпадать с 
+                        именем существующего параметра отчета. Иначе происходит инициализация ArgumentException.                                        
+                        ]]>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:attribute name="name" type="parsed-string" use="required" form="qualified"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="detail-layout-name" type="parsed-string" use="required" form="qualified">
+            <xs:annotation>
+                <xs:documentation><![CDATA[
+                    Имя лейаута, который будет подставлятся для каждой строки из рекордсета источника данных
+                    указанного в атрибуте data-source-name элемента master-detail-layout. По идее, предназначен для отображения
+                    детализирующей информации. Лейаут должен быть объявлен в отчете.
+                ]]></xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="hide-if" type="parsed-string" use="optional" form="qualified">
+            <xs:annotation>
+                <xs:documentation><![CDATA[
+                    C#-выражение, возвращающее TRUE/FALSE.
+                    В случае TRUE, фрагмент не выводится.
+                ]]></xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    
+    <xs:element name="master-detail-layout" substitutionGroup="abstract-layout">
+        <xs:annotation>
+            <xs:documentation><![CDATA[
+            Лейаут позволяет строить последовательность вложенных лейатутов на основании данных, получаемых из
+            источника данных, указанного в атрибуте data-source-name. Каждая строчка рекордсета, получаемого из
+            этого источника данных, определяет одну последовательность элементов master-data и/или detail-data.
+            Количество таких последовательностей определяется количеством строк в этом рекордсете. Содержание 
+            элементов master-data и detail-data может быть параметризированно по значению колонок из рекордсета
+            data-source-name. Для определения номера текущей записи рекордсета опеределен макрос {$RowId}.
+            ]]></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="abstract-layout">
+                    <xs:choice maxOccurs="unbounded">
+                        <xs:element name="master-data" type="master-data">
+                            <xs:annotation>
+                                <xs:documentation>
+                                        Фрагмент лейаута
+                                    </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="detail-data" type="detail-data">
+                            <xs:annotation>
+                                <xs:documentation>
+                                        Фрагмент лейаута
+                                    </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:choice>
+                    <xs:attribute ref="t" use="optional"/>
+                    <xs:attribute name="data-source-name" type="parsed-string" use="required" form="qualified">
+                        <xs:annotation>
+                            <xs:documentation>Источник данных на основании которого строится последовательность из master-data и/или detail-data</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="no-data-message" type="xs:string" use="optional" form="qualified">
+                        <xs:annotation>
+                            <xs:documentation>Cообщение, в случае отсутствия данных</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

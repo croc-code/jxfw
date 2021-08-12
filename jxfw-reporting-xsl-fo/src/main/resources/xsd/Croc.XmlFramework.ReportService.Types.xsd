@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<xs:schema
+    targetNamespace="http://www.croc.ru/Schemas/XmlFramework/ReportService"
+    attributeFormDefault="qualified"
+    elementFormDefault="qualified"
+    xmlns="http://www.croc.ru/Schemas/XmlFramework/ReportService"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:ds="http://www.croc.ru/Schemas/XmlFramework/Data/1.0"
+           >
+    <xs:annotation>
+        <xs:documentation><![CDATA[
+              Схема сборки, содержащая общие типы
+              ]]></xs:documentation>
+       </xs:annotation>
+    <!--
+        Типы данных    
+    -->
+    <xs:simpleType name="var-types">
+        <xs:annotation>
+            <xs:documentation>Типы данных</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="i4"/>
+            <xs:enumeration value="fixed.14.4"/>
+            <xs:enumeration value="r8"/>
+            <xs:enumeration value="date"/>
+            <xs:enumeration value="dateTime.tz"/>
+            <xs:enumeration value="time.tz"/>
+            <xs:enumeration value="string"/>
+            <xs:enumeration value="boolean"/>
+            <xs:enumeration value="uuid"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="parsed-string">
+        <xs:annotation>
+            <xs:documentation>
+                <![CDATA[
+                Строчка подлежащая обработке в MacroProcessor
+                Синтаксис:
+                ******************************
+
+                строчка ::= [список_функций_преобразования]цель
+                цель ::= переменная|параметр|поле|встроенная_функция
+                встроенная_функция ::=$Value|$Now|$TM|$Guid
+                переменная ::= %имя_переменной
+                параметр ::=@имя_параметра
+                поле ::= #имя_поля
+                список_функций_преобразования ::=функция_преобразования1 функция_преобразования2 ... функция_преобразованияN
+                функция_преобразования ::= url|html|xml|format(argument)
+
+                Пример: текущая дата в виде xml data types
+                xml $Now
+
+                Пример: текущая дата отформотированная в соотв. с локалью сервера и подготовленная к вставке в тело отчета (закодированная)
+                format(dd MMMM yyyy) html $Now
+                
+                Встроенные функции:
+                $Value    - текущее значение
+                $Now    - текущее время
+                $TM    - уникальная строка для предотвр. кэширования
+                $Guid    - GUID
+                
+                Функции преобразования:
+                url    - приводит значение к строке (object.ToString()) и делает UrlEncode строчке
+                html    - приводит значение к строке (object.ToString()) и делает UrlEncode строчке
+                xml    - в зависимости от типа значения преобразует в строчку в соотв. с правилами Xml Data Types
+                format(argument)
+                    Пытается привести значение к IFormattable и вызывает метод IFormattable.Format(argument)
+
+            ]]>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+    <!--
+        тип кодировки
+    -->
+    <xs:simpleType name="encoding-type">
+        <xs:annotation>
+            <xs:documentation>
+                <![CDATA[
+                Тип кодирования значения ячейки таблицы лэйаута. Говорит Report Service'у кодировать специальные                 
+                символы в тексте( < , & и т.д) в &lt; , &amp; ... Необходим для того, чтобы при ренедеринге отчета,
+                точно знать где есть тескт, а где xml.
+            ]]>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="text">
+                <xs:annotation>
+                    <xs:documentation>Значение кодируется. Воспринимаем содержимое, как текст</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="xml">
+                <xs:annotation>
+                    <xs:documentation>Значение не кодируется. Считаем, что внутри xml</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <!--
+    #########################################################################
+    align - выравнивание данных в ячейках колонки по горизонтали
+    -->
+    <xs:simpleType name="align">
+        <xs:annotation>
+            <xs:documentation>Выравнивание данных в ячейках колонки</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="ALIGN_NONE">
+                <xs:annotation>
+                    <xs:documentation>выравнивание не указано</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="ALIGN_LEFT">
+                <xs:annotation>
+                    <xs:documentation>влево</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="ALIGN_RIGHT">
+                <xs:annotation>
+                    <xs:documentation>вправо</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="ALIGN_CENTER">
+                <xs:annotation>
+                    <xs:documentation>по центру</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <!--
+    #########################################################################
+    valign - выравнивание данных в ячейках колонки по вертикали
+    -->
+    <xs:simpleType name="valign">
+        <xs:annotation>
+            <xs:documentation>Выравнивание данных в ячейках колонки</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="VALIGN_NONE">
+                <xs:annotation>
+                    <xs:documentation>выравнивание не указано</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="VALIGN_TOP">
+                <xs:annotation>
+                    <xs:documentation>вверх</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="VALIGN_MIDDLE">
+                <xs:annotation>
+                    <xs:documentation>центр</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="VALIGN_BOTTOM">
+                <xs:annotation>
+                    <xs:documentation>низ</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:attribute name="n" type="xs:NMTOKEN">
+        <xs:annotation>
+            <xs:documentation>Имя</xs:documentation>
+        </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="t" type="xs:string">
+        <xs:annotation>
+            <xs:documentation>Описание или наименование</xs:documentation>
+        </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="use-data-sources" type="xs:NMTOKENS">
+        <xs:annotation>
+            <xs:documentation>
+                <![CDATA[
+                Перечисление имен используемых источников данных
+            ]]>
+            </xs:documentation>
+        </xs:annotation>
+    </xs:attribute>
+
+    <xs:complexType name="abstract-component" abstract="true">
+        <xs:annotation>
+            <xs:documentation>Некоторый абстракный тип - компонент</xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="class" type="xs:string" use="optional" form="qualified">
+            <xs:annotation>
+                <xs:documentation>Имя класса (FullName) компонента</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="assembly" type="xs:string" use="optional" form="qualified">
+            <xs:annotation>
+                <xs:documentation>Имя класса сборки с компонентом</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="abstract-layout">
+        <xs:annotation>
+            <xs:documentation>
+                Абстрактный тип фрагмента отчета
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="abstract-component">
+                <xs:attribute ref="use-data-sources" use="optional">
+                    <xs:annotation>
+                        <xs:documentation>Перечисление имен используемых источников данных</xs:documentation>
+                    </xs:annotation>
+                </xs:attribute>
+                <xs:attribute name="master-detail-part" type="xs:boolean" use="optional">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Признак, что лейаут является детализирующим лейаутом для master-detail-layout'a и его отдельно
+                            выводить не надо.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:attribute>
+                <xs:attribute ref="n" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="abstract-layout" type="abstract-layout">
+        <xs:annotation>
+            <xs:documentation>
+                Абстрактный элемент для фрагмента отчета
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:simpleType name="use-type">
+        <xs:annotation>
+            <xs:documentation>Использование эвалуатора/форматтера</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="all">
+                <xs:annotation>
+                    <xs:documentation>на всех ячейках в пределах действия эвалуатора</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="data-cell">
+                <xs:annotation>
+                    <xs:documentation>на ячейках с данными отчета</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="total-cell">
+                <xs:annotation>
+                    <xs:documentation>на ячейках строк итогов</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:attribute name="use" type="use-type"/>
+    <xs:complexType name="abstract-formatter">
+        <xs:annotation>
+            <xs:documentation>
+                Абстрактный компонент форматирования ячейки таблицы
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="abstract-component">
+                <xs:attribute ref="use" use="optional">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Область действия форматтера
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:attribute>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!--
+        Абстрактный элемент компоненты форматирования ячейки таблицы
+    -->
+    <xs:element name="abstract-formatter" type="abstract-formatter">
+        <xs:annotation>
+            <xs:documentation>Абстрактный элемент компоненты форматирования ячейки таблицы</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <!--
+        Контейнер для форматтеров
+    -->
+    <xs:complexType name="formatters">
+        <xs:annotation>
+            <xs:documentation>Контейнер для форматтеров</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element ref="abstract-formatter" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <!--
+    #################################################################################################
+    Переменные фрагмента отчета
+    -->
+    <xs:element name="var">
+        <xs:annotation>
+            <xs:documentation>Переменная уровня фрагмента отчета</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="macros" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>
+                            <![CDATA[
+                                Строковое значение для макро-подстановки.
+                                Используются {#field-name}, {@param-name}, {%variable-name}
+                            ]]>
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="formatters" type="formatters" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Форматтеры уровня переменной</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute ref="n" use="required">
+                <xs:annotation>
+                    <xs:documentation>Наименование переменной</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="vt" type="var-types" use="required" form="qualified">
+                <xs:annotation>
+                    <xs:documentation>Тип данных</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="not-evaluate-if-param" type="xs:NMTOKEN" use="optional" form="qualified">
+                <xs:annotation>
+                    <xs:documentation>Название параметра типа BOOLEAN, в случае равенства 1 которого, переменная не вычисляется</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="abstract-param-processor">
+        <xs:annotation>
+            <xs:documentation>
+                Абстрактный обработчик параметров
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="abstract-component"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="abstract-param-processor" type="abstract-param-processor">
+        <xs:annotation>
+            <xs:documentation>Абстрактный элемент типа обработчика параметров</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+
+</xs:schema>

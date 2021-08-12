@@ -1,0 +1,608 @@
+{"scenarioName":"UsersAndGroups","exportTime":"2017-03-23T11:20:53.525","objects":[
+{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "0b19f92a-4a4a-449c-a3bb-bad6abb95520",
+  "lastName" : "Doe3",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : 4,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "employee3",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ ]
+},{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "0b43b7ee-c2c9-435e-ae1e-2a7917b2744e",
+  "lastName" : "Doe2",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : 4,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "employee2",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ ]
+},{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "1936da32-c68c-4c54-a421-fce43f0fd184",
+  "lastName" : "Doe16",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : 4,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "employee16",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ ]
+},{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "1e4791ea-f640-447c-99a0-2c77e4e47a24",
+  "lastName" : "Doe9",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : 4,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "employee9",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ ]
+},{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "214ed301-226f-4356-9a44-28fdcd156ae4",
+  "lastName" : "Doe23",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : 4,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "employee23",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ ]
+},{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "2659d2ec-69b8-498c-9e86-0e4f30a59279",
+  "lastName" : "Doe7",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : 4,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "employee7",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ ]
+},{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "3e5c21d3-503d-4ea3-9de5-2eca16983427",
+  "lastName" : "Doe14",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : 4,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "employee14",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ ]
+},{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "42567377-a91b-47b6-b8ae-b3e8ce0af403",
+  "lastName" : "Doe12",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : 4,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "employee12",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ ]
+},{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "447dcff2-3ecb-4f25-b0e4-85ff7bcacba0",
+  "lastName" : "Doe25",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : 4,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "employee25",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ ]
+},{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "4bc23dfa-3f79-4e54-973d-1b09c4c572cf",
+  "lastName" : "Doe1",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : 4,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "employee1",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ ]
+},{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "4feb93c1-4422-4b68-82d9-7699e4dca67f",
+  "lastName" : "Doe26",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : 4,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "employee26",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ ]
+},{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "592c62f6-66ef-45b4-83e0-c3df40b345da",
+  "lastName" : "Doe",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : null,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "user",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ "e023a899-22c3-4a23-9776-82ef1ec123e6" ]
+},{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "5aa204a4-2586-4570-9f08-c49357f0fc62",
+  "lastName" : "Doe18",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : 4,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "employee18",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ ]
+},{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "5ad1f36b-dfd5-4ee1-819f-f4b7080d8b8c",
+  "lastName" : "Doe17",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : 4,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "employee17",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ ]
+},{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "62897401-ed4d-41ce-84ca-be5c621ee656",
+  "lastName" : "Doe8",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : 4,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "employee8",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ ]
+},{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "6dda30e5-eb27-42d8-b46a-83a8bc4f076e",
+  "lastName" : "Doe29",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : 4,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "employee29",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ ]
+},{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "87c3fb96-1449-4fc7-9690-a284cce6529f",
+  "lastName" : "Doe10",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : 4,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "employee10",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ ]
+},{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "8b4abd83-d62d-4d02-851e-d09384637c97",
+  "lastName" : "Doe20",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : 4,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "employee20",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ ]
+},{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "8e5a3b01-9691-4d95-89c1-5b9540b406b9",
+  "lastName" : "Doe4",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : 4,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "employee4",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ ]
+},{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "8f1bc950-1911-4016-84d5-c8b3cce560c6",
+  "lastName" : "Doe6",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : 4,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "employee6",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ ]
+},{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "9f5f70b2-644b-4447-9ff0-9ee327fec7ae",
+  "lastName" : "Doe5",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : 4,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "employee5",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ ]
+},{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "9feb44f2-d946-4c54-8b1f-d10e3ad02f94",
+  "lastName" : "Doe21",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : 4,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "employee21",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ ]
+},{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "af587f04-f890-41a6-a59d-50888675d866",
+  "lastName" : "Doe24",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : 4,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "employee24",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ ]
+},{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "b44b47d2-0e71-4f33-bc08-1e728079d648",
+  "lastName" : "Пользователь русскими символами.",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : 4,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "employee27",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ ]
+},{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "bbdf0033-2ad3-4a7c-82b6-57e7d7828ec1",
+  "lastName" : "Doe22",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : 4,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "employee22",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ ]
+},{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "c07df913-7c09-43a1-8b89-311fa3d62d55",
+  "lastName" : "Doe28",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : 4,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "employee28",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ ]
+},{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "d0d1f9d9-ad56-46a2-a638-d5a73daac326",
+  "lastName" : "Doe15",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : 4,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "employee15",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ ]
+},{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "e227e7dd-9b30-41f8-9b40-0e9c9b442ad4",
+  "lastName" : "Doe19",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : 4,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "employee19",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ ]
+},{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "e2fa87b2-9301-4612-b6b1-6c4e36bba6f3",
+  "lastName" : "Doe11",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : 4,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "employee11",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ ]
+},{
+  "__metadata" : {
+    "type" : "User",
+    "ts" : 1
+  },
+  "id" : "e8e20d97-6923-4e51-9a28-e19ebb0ec561",
+  "lastName" : "Doe13",
+  "lastLogin" : null,
+  "karma" : 0,
+  "role" : 4,
+  "created" : null,
+  "lastVisit" : null,
+  "groups" : [ ],
+  "avatar" : null,
+  "login" : "employee13",
+  "firstName" : "John",
+  "password" : "[PROTECTED]",
+  "createdTime" : null,
+  "votes" : [ ]
+},{
+  "__metadata" : {
+    "type" : "Group",
+    "ts" : 1
+  },
+  "id" : "0224a1e9-9114-4656-8ef3-05418aac88f6",
+  "roles" : 1,
+  "name" : "Super Group #3",
+  "users" : [ "592c62f6-66ef-45b4-83e0-c3df40b345da" ]
+},{
+  "__metadata" : {
+    "type" : "Group",
+    "ts" : 1
+  },
+  "id" : "38050a2e-6beb-460b-a019-ead348d0ecc2",
+  "roles" : 6,
+  "name" : "Super Group #0",
+  "users" : [ "592c62f6-66ef-45b4-83e0-c3df40b345da" ]
+},{
+  "__metadata" : {
+    "type" : "Group",
+    "ts" : 1
+  },
+  "id" : "888dd33f-0e60-4a70-a041-7a2cd9555d47",
+  "roles" : 1,
+  "name" : "Super Group #4",
+  "users" : [ "592c62f6-66ef-45b4-83e0-c3df40b345da" ]
+},{
+  "__metadata" : {
+    "type" : "Group",
+    "ts" : 1
+  },
+  "id" : "f0574486-81a9-4e94-810a-2828b206222c",
+  "roles" : 6,
+  "name" : "Super Group #1",
+  "users" : [ "592c62f6-66ef-45b4-83e0-c3df40b345da" ]
+}]}

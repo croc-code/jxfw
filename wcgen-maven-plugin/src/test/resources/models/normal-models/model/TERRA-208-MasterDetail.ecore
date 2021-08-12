@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xfw="http://ru.croc.ctp.jxfw/metamodel">
+  <xfw:XFWPackage name="ru" nsURI="http://ru.croc.ctp.jxfw/metamodel" nsPrefix="ru">
+    <eSubpackages href="#/1"/>
+  </xfw:XFWPackage>
+  <xfw:XFWPackage name="croc" nsURI="http://ru.croc.ctp.jxfw/metamodel" nsPrefix="ru.croc">
+    <eSubpackages href="#/2"/>
+  </xfw:XFWPackage>
+  <xfw:XFWPackage name="ctp" nsURI="http://ru.croc.ctp.jxfw/metamodel" nsPrefix="ru.croc.ctp">
+    <eSubpackages href="#/3"/>
+  </xfw:XFWPackage>
+  <xfw:XFWPackage name="survey" nsURI="http://ru.croc.ctp.jxfw/metamodel" nsPrefix="ru.croc.ctp.survey">
+    <eSubpackages href="#/4"/>
+    <eSubpackages href="#/5"/>
+  </xfw:XFWPackage>
+  <xfw:XFWPackage name="domain" nsURI="http://ru.croc.ctp.jxfw/metamodel" nsPrefix="ru.croc.ctp.survey.domain">
+    <eClassifiers xsi:type="xfw:XFWClass" name="UserList" instanceClassName="ru.croc.ctp.survey.domain.UserList"
+                  keyTypeName="java.lang.String">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Пользователь"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+    <eClassifiers xsi:type="xfw:XFWClass" name="Group" instanceClassName="ru.croc.ctp.survey.domain.Group"
+                  keyTypeName="java.lang.String">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="Группа"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="xfw:XFWReference" name="users" upperBound="-1"
+                           eType="#/4/UserList" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="Члены группы"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_many_column"/>
+        <eAnnotations source="http://www.croc.ru/ctp/model/relation_column">
+          <details key="name" value="XFWManyToMany"/>
+          <details key="lazyLoad" value="false"/>
+          <details key="container" value="Set"/>
+          <details key="actualType" value="ru.croc.ctp.survey.domain.UserList"/>
+          <details key="mappedBy" value=""/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/column"/>
+      </eStructuralFeatures>
+      <persistenceModule>JPA</persistenceModule>
+    </eClassifiers>
+  </xfw:XFWPackage>
+</xmi:XMI>

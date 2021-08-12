@@ -1,0 +1,42 @@
+package ru.croc.ctp.jxfw.cli.command;
+
+import static ru.croc.ctp.jxfw.cli.command.CliConstants.JXFW_CLI_COMMAND_GROUP;
+
+import org.jline.terminal.Terminal;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.shell.result.ThrowableResultHandler;
+import org.springframework.shell.standard.ShellCommandGroup;
+import org.springframework.shell.standard.ShellComponent;
+import org.springframework.shell.standard.ShellMethod;
+import org.springframework.shell.standard.commands.Stacktrace;
+
+/**
+ * Реализация стандарной {@link Stacktrace}, сделана для подмены описания.
+ *
+ * @author SMufazzalov
+ * @since 1.8.x
+ */
+@ShellComponent
+@ShellCommandGroup(JXFW_CLI_COMMAND_GROUP)
+public class XfwStacktrace implements Stacktrace.Command {
+
+    @Autowired
+    @Lazy
+    private Terminal terminal;
+
+    @Autowired
+    private ThrowableResultHandler throwableResultHandler;
+
+
+    /**
+     * Показать последнюю ошибку.
+     */
+    @ShellMethod(key = ThrowableResultHandler.DETAILS_COMMAND_NAME, value = "Показать stacktrace последней ошибки.")
+    public void stacktrace() {
+        if (throwableResultHandler.getLastError() != null) {
+            throwableResultHandler.getLastError().printStackTrace(terminal.writer());
+        }
+    }
+
+}

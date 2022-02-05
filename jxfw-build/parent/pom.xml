@@ -9,7 +9,7 @@
     <properties>
         <ctp.version>1.9.7-SNAPSHOT</ctp.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <xtend.version>2.16.0</xtend.version>
+        <xtend.version>2.25.0</xtend.version>
         <java.version>1.8</java.version>
         <spring.boot.version>2.0.9.RELEASE</spring.boot.version>
 	    <spring-data.version>Kay-SR9</spring-data.version>

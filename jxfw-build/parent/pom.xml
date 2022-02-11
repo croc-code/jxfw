@@ -55,6 +55,7 @@
         <spring.version>5.0.17.RELEASE</spring.version>
         <tomcat.version>8.5.54</tomcat.version>
         <jackson.version>2.9.10.20200411</jackson.version>
+        <maven.deploy.plugin.version>2.7</maven.deploy.plugin.version>
     </properties>
 
     <modules>
@@ -536,6 +537,11 @@
                     <groupId>org.jvnet.jaxb2.maven2</groupId>
                     <artifactId>maven-jaxb2-plugin</artifactId>
                     <version>${maven.jaxb2.plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>${maven.deploy.plugin.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>

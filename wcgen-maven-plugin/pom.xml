@@ -121,10 +121,10 @@
             <groupId>com.jayway.jsonpath</groupId>
             <artifactId>json-path-assert</artifactId>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>ru.croc.ctp</groupId>
             <artifactId>jxfw-reporting-birt</artifactId>
-        </dependency>
+        </dependency>-->
     </dependencies>
 
     <build>

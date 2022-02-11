@@ -2,7 +2,7 @@ package ru.croc.ctp.jxfw.core.reporting;
 
 public enum ReportingEngine {
     NO_REPORT("jxfw-no-reporting"),
-    BIRT("jxfw-reporting-birt"),
+    //BIRT("jxfw-reporting-birt"),
     XSLFO("jxfw-reporting-xsl-fo"),
     JASPER("jxfw-reporting-jasper");
 

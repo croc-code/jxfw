@@ -10,6 +10,7 @@ import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.ParameterSpec;
 import com.squareup.javapoet.ParameterizedTypeName;
 import com.squareup.javapoet.TypeSpec;
+import com.squareup.javapoet.TypeVariableName;
 import com.squareup.javapoet.WildcardTypeName;
 import java.util.stream.Collectors;
 import org.apache.commons.io.IOUtils;
@@ -400,15 +401,13 @@ public class WebClientControllerCreator implements ControllerCreator {
     }
 
     public static MethodSpec getToDomainToListMethod(boolean generateControllerForFulltext) {
+        TypeVariableName domainObjectType = TypeVariableName.get("T", ParameterizedTypeName.get(get(DomainObject.class), WildcardTypeName.subtypeOf(Object.class)));
         MethodSpec.Builder specBuilder = MethodSpec
             .methodBuilder("toDomainToList")
-            .addAnnotation(AnnotationSpec.builder(SuppressWarnings.class)
-                .addMember("value", "{\"unchecked\", \"rawtypes\"}").build())
+            .addTypeVariable(domainObjectType)
             .addModifiers(Modifier.PRIVATE)
             .returns(ParameterizedTypeName.get(get(Iterable.class), JXFW_DOMAIN_TO))
-            .addParameter(ParameterSpec.builder(ParameterizedTypeName.get(get(Iterable.class),
-                WildcardTypeName.subtypeOf(ParameterizedTypeName.get(get(DomainObject.class), WildcardTypeName.subtypeOf(Object.class)))),
-                "data").build())
+            .addParameter(ParameterizedTypeName.get(get(Iterable.class), domainObjectType), "data")
             .addParameter(ArrayTypeName.of(String.class), "expand")
             .varargs(true)
             .addStatement("$T<DomainTo> result = new $T<>()", List.class, ArrayList.class);
@@ -422,10 +421,10 @@ public class WebClientControllerCreator implements ControllerCreator {
 
         } else {
             specBuilder
-                .addStatement("$T<String, List<DomainObject>> groupOfDomainObjects = $T.stream(data.spliterator(),false)\n" +
+                .addStatement("$T<String, List<T>> groupOfDomainObjects = $T.stream(data.spliterator(),false)\n" +
                 "   .collect(Collectors.groupingBy(o -> o.getTypeName(), Collectors.toList()))", Map.class, StreamSupport.class)
                 .beginControlFlow("for (String type: groupOfDomainObjects.keySet())")
-                .addStatement("$T domainToService = domainToServicesResolver.resolveToService(type)", DomainToService.class)
+                .addStatement("$T domainToService = domainToServicesResolver.resolveToService(type)", ParameterizedTypeName.get(get(DomainToService.class), domainObjectType, WildcardTypeName.subtypeOf(Object.class)))
                 .addStatement("List<DomainTo> domainTo = domainToService.toToPolymorphic(groupOfDomainObjects.get(type), type, expand)")
                 .addStatement("result.addAll(domainTo)")
                 .endControlFlow();

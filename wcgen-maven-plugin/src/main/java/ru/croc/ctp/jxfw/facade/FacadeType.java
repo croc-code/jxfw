@@ -11,9 +11,5 @@ public enum FacadeType {
     /**
      * Контроллеры для экспрорта вебклиента.
      */
-    WEBCLIENT_EXPORT,
-    /**
-     * Контроллеры для отчетов на BIRT.
-     */
-    BIRT_REPORT
+    WEBCLIENT_EXPORT
 }

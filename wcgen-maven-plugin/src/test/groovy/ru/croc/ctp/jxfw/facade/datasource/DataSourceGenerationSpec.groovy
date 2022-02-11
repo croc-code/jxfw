@@ -30,7 +30,7 @@ class DataSourceGenerationSpec extends Specification {
         def dataSourceCreator = new WebClientDataSourceCreator();
 
         when:
-        def files = dataSourceCreator.create("DS", dsList, options, false)
+        def files = dataSourceCreator.create("DS", dsList, options)
 
         then:
         print(files)

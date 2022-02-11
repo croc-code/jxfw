@@ -65,7 +65,7 @@ import ru.croc.ctp.jxfw.metamodel.XFWDataSource;
 import ru.croc.ctp.jxfw.metamodel.XFWMMPackage;
 import ru.croc.ctp.jxfw.metamodel.XFWOperation;
 import ru.croc.ctp.jxfw.metamodel.XFWReference;
-import ru.croc.ctp.jxfw.reporting.birt.BirtReportService;
+//import ru.croc.ctp.jxfw.reporting.birt.BirtReportService;
 
 import java.util.HashMap;
 import java.util.List;
@@ -94,7 +94,7 @@ public class WebClientDataSourceCreator implements DataSourceCreator {
 
     @Override
     public List<JavaFile> create(String dataSourceServiceName, Iterable<XFWDataSource> xfwDataSources,
-                                 Map<String, Object> options, boolean birtReports) {
+                                 Map<String, Object> options) {
         boolean generateExport = (boolean) options.getOrDefault(GENERATE_EXPORT_OPTION, true);
 
         boolean dataSourceClasses = xfwDataSources.iterator().next().getOperationCount() == 0;
@@ -151,15 +151,15 @@ public class WebClientDataSourceCreator implements DataSourceCreator {
                                 LoggerFactory.class).build());
 
 
-        final FieldSpec reportService = FieldSpec
-                .builder(BirtReportService.class, "reportService", Modifier.PRIVATE)
-                .addAnnotation(AnnotationSpec.builder(Autowired.class)
-                        .addMember("required", "$L", Boolean.FALSE)
-                        .build())
-                .build();
-        if (birtReports) {
-            controllerBuilder.addField(reportService);
-        }
+        //final FieldSpec reportService = FieldSpec
+        //        .builder(BirtReportService.class, "reportService", Modifier.PRIVATE)
+        //        .addAnnotation(AnnotationSpec.builder(Autowired.class)
+        //                .addMember("required", "$L", Boolean.FALSE)
+        //                .build())
+        //        .build();
+        //if (birtReports) {
+        //    controllerBuilder.addField(reportService);
+        //}
 
 
         if (!dataSourceClasses) {
@@ -232,14 +232,13 @@ public class WebClientDataSourceCreator implements DataSourceCreator {
             });
         } else {
             xfwDataSources.forEach(xfwDataSource -> {
-                generateControllerMethod(xfwDataSource, controllerBuilder,
-                        birtReports ? FacadeType.BIRT_REPORT : FacadeType.WEBCLIENT_CONTROLLER);
+                generateControllerMethod(xfwDataSource, controllerBuilder, FacadeType.WEBCLIENT_CONTROLLER);
             });
 
         }
 
 
-        if (generateExport && !birtReports) {
+        if (generateExport) {
             addExportFieldsToController(controllerBuilder);
             if (!dataSourceClasses) {
                 createExportAllMethod(controllerBuilder, xfwDataSources);
@@ -260,9 +259,9 @@ public class WebClientDataSourceCreator implements DataSourceCreator {
     private void generateControllerMethod(XFWDataSource xfwDataSource, TypeSpec.Builder controllerBuilder, FacadeType facadeType) {
         String url = xfwDataSource.getRequestMapping();
         switch (facadeType) {
-            case BIRT_REPORT:
-                url = "reports/" + url;
-                break;
+            //case BIRT_REPORT:
+            //    url = "reports/" + url;
+            //    break;
             case WEBCLIENT_EXPORT:
                 url = "_export/" + url;
                 break;
@@ -305,15 +304,15 @@ public class WebClientDataSourceCreator implements DataSourceCreator {
             }
         }
 
-        if (facadeType == FacadeType.BIRT_REPORT) {
-            method
-                    .addParameter(ParameterSpec.builder(HttpServletRequest.class, "request").build())
-                    .addParameter(ParameterSpec.builder(HttpServletResponse.class, "response").build())
-                    .addParameter(ParameterSpec.builder(String.class, "format")
-                            .addAnnotation(AnnotationSpec.builder(RequestParam.class)
-                                    .addMember("required", "$L", Boolean.FALSE)
-                                    .addMember("defaultValue", "$S", "html").build()).build());
-        }
+        //if (facadeType == FacadeType.BIRT_REPORT) {
+        //    method
+        //            .addParameter(ParameterSpec.builder(HttpServletRequest.class, "request").build())
+        //            .addParameter(ParameterSpec.builder(HttpServletResponse.class, "response").build())
+        //            .addParameter(ParameterSpec.builder(String.class, "format")
+        //                    .addAnnotation(AnnotationSpec.builder(RequestParam.class)
+        //                            .addMember("required", "$L", Boolean.FALSE)
+        //                            .addMember("defaultValue", "$S", "html").build()).build());
+        //}
         if (facadeType == WEBCLIENT_EXPORT) {
             addExportParametersToMethod(method);
 
@@ -351,12 +350,12 @@ public class WebClientDataSourceCreator implements DataSourceCreator {
 
 
         switch (facadeType) {
-            case BIRT_REPORT:
-                method.addStatement("ds.setParams(expand, top, skip, orderby, fetchTotal, filter)");
-                method.addStatement("$T loadResult = ds.load(loadContext)", get(GeneralLoadResult.class));
-                method.addStatement("data = loadResult.getData()");
-                birtReportBody(xfwDataSource, method);
-                break;
+            //case BIRT_REPORT:
+            //    method.addStatement("ds.setParams(expand, top, skip, orderby, fetchTotal, filter)");
+            //    method.addStatement("$T loadResult = ds.load(loadContext)", get(GeneralLoadResult.class));
+            //    method.addStatement("data = loadResult.getData()");
+            //    birtReportBody(xfwDataSource, method);
+            //    break;
             case WEBCLIENT_CONTROLLER:
                 method.addStatement("ds.setParams(expand, top, skip, orderby, fetchTotal, filter)");
                 method.addStatement("$T loadResult = ds.load(loadContext)", get(GeneralLoadResult.class));

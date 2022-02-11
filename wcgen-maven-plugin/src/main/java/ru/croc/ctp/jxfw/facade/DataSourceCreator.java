@@ -19,9 +19,9 @@ public interface DataSourceCreator {
      * @param controllerName - имя контроллера для datasource
      * @param xfwDataSources - ecore представление datasource
      * @param options - параметры для генерации
-     * @param birtReports  Признак того, что делаем контроллер для отчетов BIRT
+     //* @param birtReports  Признак того, что делаем контроллер для отчетов BIRT
      * @return - коллекция java-файлов
      */
     List<JavaFile> create(String controllerName, Iterable<XFWDataSource> xfwDataSources,
-                          Map<String, Object> options, boolean birtReports);
+                          Map<String, Object> options);
 }

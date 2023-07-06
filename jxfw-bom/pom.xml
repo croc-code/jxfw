@@ -633,7 +633,7 @@
             <dependency>
                 <groupId>org.bouncycastle</groupId>
                 <artifactId>bcprov-jdk14</artifactId>
-                <version>1.67</version>
+                <version>1.74</version>
             </dependency>
 
             <!--по порядку должны быть последними, чтобы можно было переопределить -->
